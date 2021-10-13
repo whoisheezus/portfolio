@@ -103,7 +103,7 @@ window.addEventListener("touchend", function () {
   if (clickTimer == null) {
     clickTimer = setTimeout(function () {
       clickTimer = null;
-    }, 500);
+    }, 50);
   } else {
     clearTimeout(clickTimer);
     clickTimer = null;

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты > ШХД</title>
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+
+<body>
+
+    <!-- navigation -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/index.html"><img src="/img/logo-2.png" alt=""></a>
+        </div>
+
+        <div class="media">
+            <ul>
+                <li>проекты > шхд </li>
+                <li><a href="/personalities.html">персоналии</a></li>
+                <li><a href="/classics.html">классика</a></li>
+                <li><a href="/ar.html">AR</a></li>
+                <li><a href="/3d.html">3D</a></li>
+                <li><a href="/about-me.html">обо мне</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- content  -->
+
+    <div class="mazo">
+        <div onclick="buttonclick()" class="mazframe">
+            <img  src="m/tumblr_43e72d4f126b1ed70a6cc0d277add410_004f97ba_1280.jpg" alt=""
+                class="one slide" id="one">
+            <img  src="m/tumblr_d0699b81fccdbcc259466dad23184b7b_875f0f9a_540.jpg" alt=""
+                class="two slide">
+            <img src="m/tumblr_pzgfibGyRj1rmb4jeo1_540.jpg" alt="" class="three slide">
+            <img src="m/tumblr_q0cv6ciE8W1qem4c8o1_1280.jpg" alt="" class="four slide">
+
+            <div class="hidden_text"><a href="../../projects.html">ПРОЕКТЫ</a> <BR> <a
+                    href="javascript:history.go(0)">ПОСМОТРЕТЬ СНАЧАЛА</a> </div>
+
+                   
+
+                
+        </div>
+
+        <div class="text-container">
+            <div class="text-mob">шхд: зима <br> 2019 <br>        <br></div>
+        </div>
+
+        
+
+
+        <div class="nazad"><p>шхд: зима <br> 2019 <br>        <br></p></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        var number = 0;
+        let blocks = document.getElementsByClassName("slide");
+
+        function buttonclick() {
+            number++;
+            i = number - 1;
+            blocks[i].style.display = "none";
+
+
+        }
+    </script>
+</body>
+
+</html>
