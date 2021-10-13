@@ -1,4 +1,5 @@
 body {
+  overflow-x: hidden;
     --color-bg: #060606;
     --color-text: #ffffff;
     --color-link: #a5271b;
@@ -163,6 +164,14 @@ body {
     }
   
     @media screen and (max-width: 900px) {
+
+      .bg-text{
+        position:fixed;
+      }
+
+      .bg-text h1 {
+        font-size: 80px;
+      }
   
       .content__img__2 {
       
@@ -195,9 +204,19 @@ body {
           margin-left: auto;
           margin-right: auto;
     }
+
+
   }
   
     @media screen and (min-width: 900px) and (max-width : 1100px) {
+
+      .bg-text{
+        position:fixed;
+      }
+
+      .bg-text h1 {
+        font-size: 100px;
+      }
   
       .content__img__2 {
       
@@ -235,6 +254,8 @@ body {
           margin-left: auto;
           margin-right: auto;
         }
+
+        
     }
   
     @media screen and (min-width: 1100px) {
