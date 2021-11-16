@@ -167,6 +167,7 @@ h1 {
         position: absolute;
         bottom: 0;
         width: 100vw;
+        z-index: 20;
 
     }
 
@@ -174,6 +175,7 @@ h1 {
         width: 70%;
         margin: auto;
         text-align: center;
+        
     }
 }
 
@@ -187,6 +189,7 @@ h1 {
         position: absolute;
         bottom: 0;
         width: 100vw;
+        z-index: 20;
 
     }
 
@@ -194,7 +197,7 @@ h1 {
         width: 70%;
         margin: auto;
         text-align: center;
-        z-index: 2;
+        
     }
 
 
