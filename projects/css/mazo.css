@@ -196,10 +196,11 @@ h1 {
         z-index: 2;
     }
 
+
     .mazo .one, .mazo .two, .mazo .three, .mazo .four{
         top: 50%;
         left: 50%;
-        width: 100%;
+        width: 90%;
     }
     
 }
