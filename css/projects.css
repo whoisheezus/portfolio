@@ -74,7 +74,8 @@ h1 {
     height: 100vh;
     width: 100%;
     overflow-y: hidden;
-    background-color: #b62561;
+    /* background-color: #b62561; */
+    background-color: #060606;
 }
 
 .kurt-1 {
@@ -86,18 +87,23 @@ h1 {
 }
 
 .kurt-2 {
-    width: 20vw;
+    width: 25vw;
     position: absolute;
     left: 64%;
-    top: 15%;
+    top: 22%;
     z-index: 1;
 }
 
 .kurt-3 {
-    width: 14vw;
+    /* width: 14vw;
     position: absolute;
     left: 21%;
     top: 0%;
+    z-index: 1; */
+    width: 18vw;
+    position: absolute;
+    left: 3%;
+    top: 7%;
     z-index: 1;
 }
 
@@ -110,18 +116,18 @@ h1 {
 }
 
 .kurt-5 {
-    width: 15vw;
+    width: 18vw;
     position: absolute;
     left: 40%;
-    top: 12%;
+    top: 6%;
     z-index: 1;
 }
 
 .kurt-6 {
-    width: 10vw;
+    width: 20vw;
     position: absolute;
     left: 80%;
-    top: 82%;
+    top: 42%;
     z-index: 1;
 }
 
@@ -129,16 +135,22 @@ h1 {
     width: 15vw;
     position: absolute;
     left: 27%;
-    top: 72%;
+    top: 69%;
     z-index: 1;
 }
 
 .kurt-8 {
     width: 12vw;
     position: absolute;
+    left: 24%;
+    top: 0%;
+    z-index: 1;
+
+    /* width: 12vw;
+    position: absolute;
     left: 4%;
     top: 11%;
-    z-index: 1;
+    z-index: 1; */
 }
 
 

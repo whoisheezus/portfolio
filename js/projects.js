@@ -1,6 +1,6 @@
 function setBg1(){
-    document.getElementById("mainBg").style.backgroundColor = '#f17d0d';
-    document.getElementById("mainOverlay").style.backgroundColor = '#f17d0d';
+    document.getElementById("mainBg").style.backgroundColor = '#c4daf5';
+    document.getElementById("mainOverlay").style.backgroundColor = '#c4daf5';
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
@@ -11,8 +11,8 @@ function setBg1(){
 
 function returnBg1(){
 
-    document.getElementById("mainBg").style.backgroundColor = '#b62561';
-    document.getElementById("mainOverlay").style.backgroundColor = '#b62561';
+    document.getElementById("mainBg").style.backgroundColor = '#060606';
+    document.getElementById("mainOverlay").style.backgroundColor = '#060606';
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '0';
@@ -22,8 +22,8 @@ function returnBg1(){
 }
 
 function setBg2(){
-    document.getElementById("mainBg").style.backgroundColor = '#01a6ba';
-    document.getElementById("mainOverlay").style.backgroundColor = '#01a6ba';
+    document.getElementById("mainBg").style.backgroundColor = '#515877';
+    document.getElementById("mainOverlay").style.backgroundColor = '#515877';
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
@@ -34,8 +34,8 @@ function setBg2(){
 
 function returnBg2(){
 
-    document.getElementById("mainBg").style.backgroundColor = '#b62561';
-    document.getElementById("mainOverlay").style.backgroundColor = '#b62561';
+    document.getElementById("mainBg").style.backgroundColor = '#060606';
+    document.getElementById("mainOverlay").style.backgroundColor = '#060606';
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '0';
@@ -45,8 +45,8 @@ function returnBg2(){
 }
 
 function setBg3(){
-    document.getElementById("mainBg").style.backgroundColor = '#dc493f';
-    document.getElementById("mainOverlay").style.backgroundColor = '#dc493f';
+    document.getElementById("mainBg").style.backgroundColor = '#dfb3a1';
+    document.getElementById("mainOverlay").style.backgroundColor = '#dfb3a1';
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
@@ -57,8 +57,8 @@ function setBg3(){
 
 function returnBg3(){
 
-    document.getElementById("mainBg").style.backgroundColor = '#b62561';
-    document.getElementById("mainOverlay").style.backgroundColor = '#b62561';
+    document.getElementById("mainBg").style.backgroundColor = '#060606';
+    document.getElementById("mainOverlay").style.backgroundColor = '#060606';
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '0';
@@ -68,8 +68,8 @@ function returnBg3(){
 }
 
 function setBg4(){
-    document.getElementById("mainBg").style.backgroundColor = '#efbd36';
-    document.getElementById("mainOverlay").style.backgroundColor = '#efbd36';
+    document.getElementById("mainBg").style.backgroundColor = '#992315';
+    document.getElementById("mainOverlay").style.backgroundColor = '#992315';
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
@@ -80,8 +80,8 @@ function setBg4(){
 
 function returnBg4(){
 
-    document.getElementById("mainBg").style.backgroundColor = '#b62561';
-    document.getElementById("mainOverlay").style.backgroundColor = '#b62561';
+    document.getElementById("mainBg").style.backgroundColor = '#060606';
+    document.getElementById("mainOverlay").style.backgroundColor = '#060606';
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '0';
@@ -91,8 +91,8 @@ function returnBg4(){
 }
 
 function setBg5(){
-    document.getElementById("mainBg").style.backgroundColor = '#75c095';
-    document.getElementById("mainOverlay").style.backgroundColor = '#75c095';
+    document.getElementById("mainBg").style.backgroundColor = '#bc3f1f';
+    document.getElementById("mainOverlay").style.backgroundColor = '#bc3f1f';
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
@@ -103,8 +103,8 @@ function setBg5(){
 
 function returnBg5(){
 
-    document.getElementById("mainBg").style.backgroundColor = '#b62561';
-    document.getElementById("mainOverlay").style.backgroundColor = '#b62561';
+    document.getElementById("mainBg").style.backgroundColor = '#060606';
+    document.getElementById("mainOverlay").style.backgroundColor = '#060606';
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '0';
@@ -114,8 +114,8 @@ function returnBg5(){
 }
 
 function setBg6(){
-    document.getElementById("mainBg").style.backgroundColor = '#ebb8d9';
-    document.getElementById("mainOverlay").style.backgroundColor = '#ebb8d9';
+    document.getElementById("mainBg").style.backgroundColor = '#c38d9b';
+    document.getElementById("mainOverlay").style.backgroundColor = '#c38d9b';
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
@@ -126,8 +126,8 @@ function setBg6(){
 
 function returnBg6(){
 
-    document.getElementById("mainBg").style.backgroundColor = '#b62561';
-    document.getElementById("mainOverlay").style.backgroundColor = '#b62561';
+    document.getElementById("mainBg").style.backgroundColor = '#060606';
+    document.getElementById("mainOverlay").style.backgroundColor = '#060606';
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '0';
@@ -137,8 +137,8 @@ function returnBg6(){
 }
 
 function setBg7(){
-    document.getElementById("mainBg").style.backgroundColor = '#ebb8d9';
-    document.getElementById("mainOverlay").style.backgroundColor = '#ebb8d9';
+    document.getElementById("mainBg").style.backgroundColor = '#403766';
+    document.getElementById("mainOverlay").style.backgroundColor = '#403766';
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
@@ -149,8 +149,8 @@ function setBg7(){
 
 function returnBg7(){
 
-    document.getElementById("mainBg").style.backgroundColor = '#b62561';
-    document.getElementById("mainOverlay").style.backgroundColor = '#b62561';
+    document.getElementById("mainBg").style.backgroundColor = '#060606';
+    document.getElementById("mainOverlay").style.backgroundColor = '#060606';
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '0';
@@ -160,8 +160,8 @@ function returnBg7(){
 }
 
 function setBg8(){
-    document.getElementById("mainBg").style.backgroundColor = '#ebb8d9';
-    document.getElementById("mainOverlay").style.backgroundColor = '#ebb8d9';
+    document.getElementById("mainBg").style.backgroundColor = '#135a8f';
+    document.getElementById("mainOverlay").style.backgroundColor = '#135a8f';
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
@@ -172,8 +172,8 @@ function setBg8(){
 
 function returnBg8(){
 
-    document.getElementById("mainBg").style.backgroundColor = '#b62561';
-    document.getElementById("mainOverlay").style.backgroundColor = '#b62561';
+    document.getElementById("mainBg").style.backgroundColor = '#060606';
+    document.getElementById("mainOverlay").style.backgroundColor = '#060606';
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '0';
