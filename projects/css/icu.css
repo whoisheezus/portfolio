@@ -11,7 +11,7 @@ html,
 body {
     margin: 0;
     overflow: hidden;
-    background-color: #992315;
+    background-color: #c38d9b;
 }
 
 /* navigation */
@@ -127,8 +127,8 @@ h1 {
 
 .mazo .one{
     top: 51%;
-    left: 41%;
-    width: 650px;
+    left: 43%;
+    width: 680px;
     z-index: 4;
  }
 
@@ -140,8 +140,8 @@ h1 {
  }
 
  .mazo .three {
-    top: 51%;
-    left: 45%;
+    top: 54%;
+    left: 39%;
     width: 660px;
     z-index: 2;
 }
@@ -154,30 +154,30 @@ h1 {
 }
 
 .five {
-    top: 49%;
-    left: 45%;
+    top: 44%;
+    left: 43%;
     width: 620px;
     z-index: 0;
 }
 
 .six {
     top: 51%;
-    left: 49%;
-    width: 615px;
+    left: 53%;
+    width: 635px;
     z-index: -1;
 }
 
 .seven {
     top: 53%;
-    left: 52%;
-    width: 610px;
+    left: 44%;
+    width: 600px;
     z-index: -2;
 }
 
 .eight{
-    top: 44%;
+    top: 43%;
     left: 45%;
-    width: 621px;
+    width: 647px;
     z-index: -3;
 }
 
@@ -198,7 +198,7 @@ h1 {
 .eleven{
     top: 52%;
     left: 57%;
-    width: 619px;
+    width: 586px;
     z-index: -6;
 }
 
@@ -210,23 +210,23 @@ h1 {
 }
 
 .thirteen{
-    top: 47%;
+    top: 44%;
     left: 50%;
-    width: 610px;
+    width: 590px;
     z-index: -8;
 }
 
 .fourteen{
     top: 51%;
-    left: 52%;
-    width: 620px;
+    left: 53%;
+    width: 606px;
     z-index: -9;
 }
 
 .fifteen{
     top: 49%;
-    left: 55%;
-    width: 615px;
+    left: 57%;
+    width: 580px;
     z-index: -10;
 }
 
