@@ -237,6 +237,27 @@ h1 {
     z-index: -11;
 }
 
+.seventeen{
+    top: 53%;
+    left: 49%;
+    width: 612px;
+    z-index: -12;
+}
+
+.eighteen{
+    top: 53%;
+    left: 49%;
+    width: 612px;
+    z-index: -13;
+}
+
+.nineteen{
+    top: 53%;
+    left: 49%;
+    width: 612px;
+    z-index: -14;
+}
+
 .text-container{
     display: none;
 }
@@ -285,7 +306,8 @@ h1 {
     }
 
 
-    .mazo .one, .mazo .two, .mazo .three, .mazo .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .thirteen, .fourteen, .fifteen, .sixteen{
+    .mazo .one, .mazo .two, .mazo .three, .mazo .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .thirteen, .fourteen, .fifteen, .sixteen,
+    .seventeen, .eighteen, .nineteen{
         top: 50%;
         left: 50%;
         width: 92%;
