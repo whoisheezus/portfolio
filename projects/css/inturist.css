@@ -1,0 +1,294 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+
+    font-family: 'JetBrains Mono', monospace;
+}
+
+html,
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #515877;
+}
+
+/* navigation */
+
+.navbar{
+    font-family: Helvetica;
+    text-transform: uppercase;
+    z-index: 20;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 30px;
+  }
+
+
+  
+  .navbar .media li {
+    display: inline-block;
+    padding-left: 24px;
+    font-style: italic;
+  }
+  
+  .navbar .media li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-style: normal;
+  
+  }
+  
+  .navbar .logo i {
+    padding-right: 24px;
+  }
+
+  .navbar .logo img {
+      height: 60px;
+padding: 0 0 0 0;}
+
+/* desktop text */
+
+.nazad{
+    position: absolute;
+    
+    font-size: 2em;
+    width: 20%;
+    top: 68%;
+    left: 75%;
+    z-index: -15;
+
+    overflow: hidden;
+}
+
+
+h1 {
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    font-size: 6em;
+    text-align: center;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index:0;
+    pointer-events: none;
+}
+
+.main {
+    /* height: 100vh; */
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.mazo {
+    overflow: hidden;
+    /* height: 100vh; */
+    width: 100%;
+    overflow-y: hidden;
+    background-color: #efbd36;
+}
+
+.mazframe{
+    overflow: hidden;
+    /* width: 500px; */
+    /* height: 800px; */
+    /* position: absolute;
+    transform: translateX(-50%) translateY(-50%); */
+    top: 50%;
+    left: 50%;
+}
+
+.hidden_text{
+    position: absolute;
+    z-index: -20;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+
+}
+
+.mazo img {
+    /* max-width: 450px; */
+    position: absolute;
+   
+    transform: translateX(-50%) translateY(-50%);
+
+}
+
+.mazo .one{
+    top: 51%;
+    left: 43%;
+    width: 680px;
+    z-index: 4;
+ }
+
+ .mazo .two {
+     top: 48%;
+     left: 57%;
+     width: 600px;
+     z-index:3;
+ }
+
+ .mazo .three {
+    top: 54%;
+    left: 39%;
+    width: 660px;
+    z-index: 2;
+}
+
+.mazo .four {
+    top: 48%;
+    left: 47%;
+    width: 610px;
+    z-index: 1;
+}
+
+.five {
+    top: 44%;
+    left: 43%;
+    width: 620px;
+    z-index: 0;
+}
+
+.six {
+    top: 51%;
+    left: 53%;
+    width: 635px;
+    z-index: -1;
+}
+
+.seven {
+    top: 53%;
+    left: 44%;
+    width: 600px;
+    z-index: -2;
+}
+
+.eight{
+    top: 43%;
+    left: 45%;
+    width: 647px;
+    z-index: -3;
+}
+
+.nine{
+    top: 55%;
+    left: 53%;
+    width: 600px;
+    z-index: -4;
+}
+
+.ten{
+    top: 44%;
+    left: 43%;
+    width: 613px;
+    z-index: -5;
+}
+
+.eleven{
+    top: 52%;
+    left: 57%;
+    width: 586px;
+    z-index: -6;
+}
+
+.twelve{
+    top: 49%;
+    left: 45%;
+    width: 621px;
+    z-index: -7;
+}
+
+.thirteen{
+    top: 44%;
+    left: 50%;
+    width: 590px;
+    z-index: -8;
+}
+
+.fourteen{
+    top: 51%;
+    left: 53%;
+    width: 606px;
+    z-index: -9;
+}
+
+.fifteen{
+    top: 49%;
+    left: 57%;
+    width: 580px;
+    z-index: -10;
+}
+
+.sixteen{
+    top: 53%;
+    left: 49%;
+    width: 612px;
+    z-index: -11;
+}
+
+.text-container{
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .nazad{
+        display: none;
+    }
+
+    .text-container{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        z-index: 20;
+
+    }
+
+    .text-mob{
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .nazad{
+        display: none;
+    }
+
+    .text-container{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        z-index: 20;
+
+    }
+
+    .text-mob{
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        
+    }
+
+
+    .mazo .one, .mazo .two, .mazo .three, .mazo .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .thirteen, .fourteen, .fifteen, .sixteen{
+        top: 50%;
+        left: 50%;
+        width: 92%;
+    }
+    
+}
