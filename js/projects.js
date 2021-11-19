@@ -137,8 +137,8 @@ function returnBg6(){
 }
 
 function setBg7(){
-    document.getElementById("mainBg").style.backgroundColor = '#403766';
-    document.getElementById("mainOverlay").style.backgroundColor = '#403766';
+    document.getElementById("mainBg").style.backgroundColor = '#463a5f';
+    document.getElementById("mainOverlay").style.backgroundColor = '#463a5f';
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
