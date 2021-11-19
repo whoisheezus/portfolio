@@ -1,6 +1,6 @@
 function setBg1(){
-    document.getElementById("mainBg").style.backgroundColor = '#c4daf5';
-    document.getElementById("mainOverlay").style.backgroundColor = '#c4daf5';
+    document.getElementById("mainBg").style.backgroundColor = '#c3203c';
+    document.getElementById("mainOverlay").style.backgroundColor = '#c3203c';
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
