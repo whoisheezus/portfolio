@@ -91,8 +91,8 @@ function returnBg4(){
 }
 
 function setBg5(){
-    document.getElementById("mainBg").style.backgroundColor = '#bc3f1f';
-    document.getElementById("mainOverlay").style.backgroundColor = '#bc3f1f';
+    document.getElementById("mainBg").style.backgroundColor = '#e34b24';
+    document.getElementById("mainOverlay").style.backgroundColor = '#e34b24';
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
