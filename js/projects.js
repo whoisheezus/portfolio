@@ -160,8 +160,8 @@ function returnBg7(){
 }
 
 function setBg8(){
-    document.getElementById("mainBg").style.backgroundColor = '#135a8f';
-    document.getElementById("mainOverlay").style.backgroundColor = '#135a8f';
+    document.getElementById("mainBg").style.backgroundColor = '#0b86e1';
+    document.getElementById("mainOverlay").style.backgroundColor = '#0b86e1';
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты > Металлострой</title>
+    <link rel="stylesheet" href="css/metal.css">
+</head>
+
+<body>
+
+    <!-- navigation -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/index.html"><img src="/img/logo-2.png" alt=""></a>
+        </div>
+
+        <div class="media">
+            <ul>
+                <li><a href="/projects.html">проекты</a> > металлострой </li>
+                <li><a href="/personalities.html">персоналии</a></li>
+                <li><a href="/classics.html">классика</a></li>
+                <li><a href="/ar.html">AR</a></li>
+                <li><a href="/3d.html">3D</a></li>
+                <li><a href="/about-me.html">обо мне</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- content  -->
+
+    <div class="mazo">
+        <div onclick="buttonclick()" class="mazframe">
+            <img src="metal/1.jpg" alt="" class="one slide" id="one">
+            <img src="metal/2.jpg" alt="" class="two slide">
+            <img src="metal/3.jpg" alt="" class="three slide">
+            <img src="metal/4.jpg" alt="" class="four slide">
+            <img src="metal/5.jpg" alt="" class="five slide">
+            <img src="metal/6.jpg" alt="" class="six slide">
+
+            <div class="hidden_text"><a href="../../projects.html">ПРОЕКТЫ</a> <BR> <a
+                    href="javascript:history.go(0)">ПОСМОТРЕТЬ СНАЧАЛА</a> </div>
+
+
+
+
+        </div>
+
+        <div class="text-container">
+            <div class="text-mob">металлострой <br> 2018 <br>тапните по фото &#60;3 <br> <br></div>
+        </div>
+
+
+
+
+        <div class="nazad">
+            <p>металлострой <br> 2018 <br> <br></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        var number = 0;
+        let blocks = document.getElementsByClassName("slide");
+
+        function buttonclick() {
+            number++;
+            i = number - 1;
+            blocks[i].style.display = "none";
+
+
+        }
+    </script>
+</body>
+
+</html>
