@@ -133,15 +133,15 @@ h1 {
  }
 
  .mazo .two {
-     top: 48%;
+     top: 49%;
      left: 57%;
-     width: 600px;
+     width: 840px;
      z-index:3;
  }
 
  .mazo .three {
     top: 54%;
-    left: 39%;
+    left: 30%;
     width: 660px;
     z-index: 2;
 }
@@ -154,22 +154,22 @@ h1 {
 }
 
 .five {
-    top: 44%;
-    left: 43%;
+    top: 34%;
+    left: 31%;
     width: 620px;
     z-index: 0;
 }
 
 .six {
     top: 51%;
-    left: 53%;
-    width: 635px;
+    left: 64%;
+    width: 505px;
     z-index: -1;
 }
 
 .seven {
-    top: 53%;
-    left: 44%;
+    top: 55%;
+    left: 38%;
     width: 600px;
     z-index: -2;
 }
@@ -183,28 +183,28 @@ h1 {
 
 .nine{
     top: 55%;
-    left: 53%;
+    left: 56%;
     width: 600px;
     z-index: -4;
 }
 
 .ten{
     top: 44%;
-    left: 43%;
+    left: 40%;
     width: 613px;
     z-index: -5;
 }
 
 .eleven{
-    top: 52%;
-    left: 57%;
+    top: 54%;
+    left: 58%;
     width: 586px;
     z-index: -6;
 }
 
 .twelve{
     top: 49%;
-    left: 45%;
+    left: 35%;
     width: 621px;
     z-index: -7;
 }
@@ -217,23 +217,23 @@ h1 {
 }
 
 .fourteen{
-    top: 51%;
+    top: 52%;
     left: 53%;
-    width: 606px;
+    width: 575px;
     z-index: -9;
 }
 
 .fifteen{
-    top: 49%;
-    left: 57%;
-    width: 580px;
+    top: 40%;
+    left: 59%;
+    width: 620px;
     z-index: -10;
 }
 
 .sixteen{
     top: 53%;
     left: 49%;
-    width: 612px;
+    width: 872px;
     z-index: -11;
 }
 
