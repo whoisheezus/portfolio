@@ -1,6 +1,7 @@
 html, body {
     position: relative;
     height: 100%;
+    overflow-x: hidden;
   }
   body {
     background: black;
@@ -97,4 +98,10 @@ padding: 20px 0 0 0;}
     color: transparent;
     -webkit-text-stroke: 3px #444;
     text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 900px){
+    .bg-text h1{
+      font-size: 20vh;
+    }
   }
