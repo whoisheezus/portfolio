@@ -54,7 +54,7 @@ padding: 10px;
   }
 
   .navbar .logo img {
-      height: 60px;
+      width: 40px;
 padding: auto 0px;}
 
 
@@ -75,3 +75,15 @@ padding: auto 0px;}
     }
 }
 
+/* new gallery macy */
+
+.container{
+  width: 80%;
+  margin: 20px auto;
+}
+
+.box img{
+  width: 100%;
+  height: auto;
+  display: block;
+}

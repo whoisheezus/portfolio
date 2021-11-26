@@ -16,10 +16,10 @@
 
 
     </header>
-    <div class="grid-container">
 
-        <div class="grid-item">
-            <nav class="navbar">
+    <section class="container">
+        <div id="macy">
+            <div class="box"><nav class="navbar">
                 <div class="logo">
                     <a href="/index.html"><img src="/img/logo-black.png" alt=""></a>
                 </div>
@@ -34,97 +34,41 @@
                         <li><a href="/about-me.html">обо мне</a></li>
                     </ul>
                 </div>
-            </nav>
+            </nav></div>
+            <div class="box"><a href="img/c-1.jpg" class="swipebox"><img src="img/c-1.jpg" alt=""></a></div>
+            <div class="box"><a href="img/c-2.jpg" class="swipebox"><img src="img/c-2.jpg" alt=""></a></div>
+            <div class="box"><a href="img/c-3.jpg" class="swipebox"><img src="img/c-3.jpg" alt=""></a></div>
+            <div class="box"><a href="img/c-4.jpg" class="swipebox"><img src="img/c-4.jpg" alt=""></a></div>
+            <div class="box"><a href="img/c-5.jpg" class="swipebox"><img src="img/c-5.jpg" alt=""></a></div>
+            <div class="box"><a href="img/c-6.jpg" class="swipebox"><img src="img/c-6.jpg" alt=""></a></div>
+            <div class="box"><a href="img/1.jpg" class="swipebox"><img src="img/1.jpg" alt=""></a></div>
+            <div class="box"><a href="img/2.jpg" class="swipebox"><img src="img/2.jpg" alt=""></a></div>
+            <div class="box"><a href="img/3.jpg" class="swipebox"><img src="img/3.jpg" alt=""></a></div>
+            <div class="box"><a href="img/4.jpg" class="swipebox"><img src="img/4.jpg" alt=""></a></div>
+            <div class="box"><a href="img/5.jpg" class="swipebox"><img src="img/5.jpg" alt=""></a></div>
+            <div class="box"><a href="img/6.jpg" class="swipebox"><img src="img/6.jpg" alt=""></a></div>
         </div>
+    </section>
 
 
-        <a href="img/1-2.jpg" class="swipebox">
-            <img src="img/1-2.jpg" alt="" class="grid-item">
-        </a>
+</div>
 
-        <a href="img/2-2.jpg" class="swipebox">
-            <img src="img/2-2.jpg" alt="" class="grid-item">
-        </a>
 
-        <a href="img/3-2.jpg" class="swipebox">
-            <img src="img/3-2.jpg" alt="" class="grid-item">
-        </a>
 
-        <a href="img/4-2.jpg" class="swipebox">
-            <img src="img/4-2.jpg" alt="" class="grid-item">
-        </a>
-
-        <a href="img/5-2.jpg" class="swipebox">
-            <img src="img/5-2.jpg" alt="" class="grid-item">
-        </a>
-
-        <a href="img/6.jpg" class="swipebox">
-            <img src="img/6.jpg" alt="" class="grid-item">
-        </a>
-
-        <a href="img/7.jpg" class="swipebox">
-            <img src="img/7.jpg" alt="" class="grid-item">
-        </a>
-
-        <a href="img/8.jpg" class="swipebox">
-            <img src="img/8.jpg" alt="" class="grid-item">
-        </a>
-
-        <a href="img/8.jpg" class="swipebox">
-            <img src="img/8.jpg" alt="" class="grid-item">
-        </a>
-
-        <a href="img/1.jpg" class="swipebox">
-            <img src="img/1.jpg" alt="" class="grid-item">
-        </a>
-
-        <a href="img/2.jpg" class="swipebox">
-            <img src="img/2.jpg" alt="" class="grid-item">
-        </a>
-
-        <a href="img/3.jpg" class="swipebox">
-            <img src="img/3.jpg" alt="" class="grid-item">
-        </a>
-
-        <a href="img/4.jpg" class="swipebox">
-            <img src="img/4.jpg" alt="" class="grid-item">
-        </a>
-
-        <a href="img/5.jpg" class="swipebox">
-            <img src="img/5.jpg" alt="" class="grid-item">
-        </a>
-
-        <a href="img/6.jpg" class="swipebox">
-            <img src="img/6.jpg" alt="" class="grid-item">
-        </a>
-
-        <a href="img/7.jpg" class="swipebox">
-            <img src="img/7.jpg" alt="" class="grid-item">
-        </a>
-
-        <a href="img/8.jpg" class="swipebox">
-            <img src="img/8.jpg" alt="" class="grid-item">
-        </a>
-
-        <!-- <img src="img/1.jpg" alt="" class="grid-item">
-        <img src="img/2.jpg" alt="" class="grid-item">
-        <img src="img/3.jpg" alt="" class="grid-item">
-        <img src="img/4.jpg" alt="" class="grid-item">
-        <img src="img/5.jpg" alt="" class="grid-item">
-        <img src="img/6.jpg" alt="" class="grid-item">
-        <img src="img/7.jpg" alt="" class="grid-item">
-        <img src="img/8.jpg" alt="" class="grid-item">
-        <img src="img/8.jpg" alt="" class="grid-item">
-        <img src="img/1.jpg" alt="" class="grid-item">
-        <img src="img/2.jpg" alt="" class="grid-item">
-        <img src="img/3.jpg" alt="" class="grid-item">
-        <img src="img/4.jpg" alt="" class="grid-item">
-        <img src="img/5.jpg" alt="" class="grid-item">
-        <img src="img/6.jpg" alt="" class="grid-item">
-        <img src="img/7.jpg" alt="" class="grid-item">
-        <img src="img/8.jpg" alt="" class="grid-item"> -->
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+    <script>
+        var macy = Macy({
+            container: '#macy',
+            trueOrder: false,
+            waitForImages: false,
+            margin: 30,
+            columns: 3,
+            breakAt: {
+                1200: 2,
+                768: 1,
+            }
+        });
+    </script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.swipebox.js"></script>
     <script type="text/javascript">
