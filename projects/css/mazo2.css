@@ -275,17 +275,18 @@ h1 {
         display: none;
     }
 
-    html, body{
-        /* background-color: #b62561; */
+    /* html, body{
+        background-color: #b62561;
         
         
-    }
+    } */
 
     p{
         color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-style: normal;
+    margin: 0 0 10px 0;
     }
 
     .navbar{
