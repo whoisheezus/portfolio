@@ -3,8 +3,6 @@
     margin: 0;
     box-sizing: border-box;
     color: white;
-
-    font-family: 'JetBrains Mono', monospace;
 }
 
 html,
@@ -12,6 +10,8 @@ body {
     margin: 0;
     overflow: hidden;
     background-color: #515877;
+    font-family: 'Helvetica';
+    text-transform: uppercase;
 }
 
 /* navigation */
@@ -62,7 +62,7 @@ padding: 0 0 0 0;}
     width: 20%;
     top: 68%;
     left: 75%;
-    z-index: -15;
+    z-index: 15;
 
     overflow: hidden;
 }
@@ -262,55 +262,143 @@ h1 {
     display: none;
 }
 
-@media (max-width: 1200px) {
-    .nazad{
-        display: none;
-    }
-
-    .text-container{
-        display: block;
-        position: absolute;
-        bottom: 0;
-        width: 100vw;
-        z-index: 20;
-
-    }
-
-    .text-mob{
-        width: 70%;
-        margin: auto;
-        text-align: center;
-        
-    }
+.zone, .right, .left{
+    display: none;
 }
 
-@media (max-width: 768px) {
-    .nazad{
+@media screen and (max-width: 1023px) {
+
+    .mazo{
         display: none;
     }
 
-    .text-container{
-        display: block;
-        position: absolute;
-        bottom: 0;
-        width: 100vw;
-        z-index: 20;
-
-    }
-
-    .text-mob{
-        width: 70%;
-        margin: auto;
-        text-align: center;
-        
-    }
-
-
-    .mazo .one, .mazo .two, .mazo .three, .mazo .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .thirteen, .fourteen, .fifteen, .sixteen,
-    .seventeen, .eighteen, .nineteen{
+    h1{
         top: 50%;
-        left: 50%;
-        width: 92%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 3em;
+    }
+
+    .kurt-1, .kurt-2, .kurt-3, .kurt-4, .kurt-5, .kurt-6, .kurt-7, .kurt-8{
+        display: none;
+    }
+
+    #title, #mainBg, #mainOverlay{
+        display: none;
+    }
+
+    /* html, body{
+        background-color: #b62561;
+        
+        
+    } */
+
+    p{
+        color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-style: normal;
+    margin: 0 0 10px 0;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    html, body{
+        overflow: visible;
+    }
+
+    .zone{
+        display: block;
+        margin: 18px auto;
+        width: calc(100vw - 2*60px);
+        /* position: absolute; */
+        z-index: 2;
+        top: 0;
     }
     
+    .zone img{
+        width: 100%;
+    }
+
+    .hmobile{
+        width: 70%;
+    margin: auto;
+    padding: 15px 0;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    }
+
+    .right{
+        /* background-color: yellowgreen; */
+        display: block;
+        position: fixed;
+        width: 100vh;
+        height: 42px;
+        z-index: 2;
+        transform: rotate(90deg);
+        transform-origin: left top;
+        top: 18px;
+        left: calc(100vw - 18px);
+        font-family: Helvetica;
+    text-transform: uppercase;
+    font-size: 24px;
+    
+    }
+
+
+
+    .right a {
+        color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-style: normal;
+  
+    }
+
+    .left{
+        /* display: flex;
+        position: fixed;
+        width: 100vh;
+        height: 42px;
+        z-index: 2;
+        transform: rotate(-90deg) translateX(-100%);
+        transform-origin: left top;
+        font-family: Helvetica;
+        text-transform: uppercase;
+        font-size: 24px;
+        margin-left: 18px; */
+
+        display: flex;
+        position: fixed;
+        /* background-color: yellowgreen; */
+        width: 100vh;
+        transform: rotate(270deg) translateX(-100vh);
+        transform-origin: left top;
+        height: 42px;
+        font-family: Helvetica;
+        text-transform: uppercase;
+        font-size: 24px;
+        margin-left: 18px;
+    
+    }
+
+    .lpages{
+        margin-left: auto;
+    }
+
+    .left a {
+        color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-style: normal;
+  
+    }
+
+    
+
+
 }
