@@ -234,7 +234,7 @@ h1 {
     display: none;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .nazad{
         display: none;
     }
@@ -254,9 +254,9 @@ h1 {
         text-align: center;
         
     }
-}
+} */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1023px) {
 
     .mazo{
         display: none;
