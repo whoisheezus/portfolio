@@ -57,14 +57,12 @@ canvas {
   left: 50%;
   margin-top: -119px;
   margin-left: -193px;
-  
-}
-
-.logo img {
   backface-visibility: hidden;
   transform: translateZ(0);
   -webkit-font-smoothing: subpixel-antialiased;
+  
 }
+
 
 
 .container {
