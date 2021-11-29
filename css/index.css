@@ -11,6 +11,13 @@ canvas {
   touch-action: none;
 }
 
+.body{
+  -webkit-perspective: 0px !important; 
+  -webkit-backface-visibility: visible !important;
+  -webkit-transform: translate3d(0,0,0);
+
+}
+
 video {
   position: absolute;
   top: 0;
@@ -77,3 +84,4 @@ canvas {
   grid-template-columns: 144px 144px;
   grid-template-rows: repeat (6, 55px) ;
 }
+
