@@ -146,6 +146,15 @@ a:focus {
 	outline: none;
 }
 
+.content__type a{
+	text-decoration: underline;
+}
+
+.content__type a{  display:inline-block; color:#fff;}
+/* .content__type a:hover{color: #69140c;} */
+.content__type a span { position:absolute; display:none; z-index:99; overflow: visible;}
+.content__type a:hover span { display:block;  }
+
 .message {
 	background: var(--color-text);
 	color: var(--color-bg);

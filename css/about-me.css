@@ -4,6 +4,7 @@
   
   html {
     font-size: 16px;
+    /* font-family: Helvetica; */
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 300;
     line-height: 1.25;
@@ -20,6 +21,7 @@
   .site__header,
   .site__nav-list {
     display: flex;
+    font-family: Helvetica;
   }
   
   .site__header {
