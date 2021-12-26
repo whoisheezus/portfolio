@@ -17,6 +17,15 @@
     min-height: 120vh; 
     height: 100%;
   }
+
+  body a{
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  body a:hover{
+    text-decoration: underline;
+  }
   
   .site__header,
   .site__nav-list {
