@@ -6,8 +6,8 @@
     font-size: 16px;
     /* font-family: Helvetica; */
     font-family: 'IBM Plex Mono', monospace;
-    font-weight: 300;
-    line-height: 1.25;
+    /* font-weight: 300;
+    line-height: 1.25; */
     overflow: scroll;
     overflow-x: hidden;
   }
@@ -28,6 +28,8 @@
     min-height: 120vh; 
     height: 100%;
     margin: 0;
+    font-weight: 300;
+    line-height: 1.25;
   }
 
   body a{
@@ -337,6 +339,19 @@ padding: 0 0 0 0;}
   }
 
   .main{
-    padding: 3rem 0;
+    padding: 1rem 0;
+  }
+
+  .lpages{
+    margin-left: auto;
+    margin-right: 18px;
+  }
+
+  .right{
+    top: 18px;
+  }
+
+  .pages{
+    margin: 0;
   }
 }
