@@ -61,7 +61,7 @@
   }
 
   .lpages{
-    margin: auto;
+    margin: 0 auto 0 auto;
     /* margin-right: 98px; */
   }
 
@@ -336,6 +336,7 @@ padding: 0 0 0 0;}
 
   .heading{
     left: 3.5rem;
+    top: 13.5rem;
   }
 
   .main{
