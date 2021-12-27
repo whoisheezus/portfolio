@@ -139,7 +139,8 @@
   .main {
     width: 100%;
     margin: 0 auto;
-    max-width: 50rem;
+    /* max-width: 50rem; */
+    max-width: 800px;
   }
   
   .heading {
@@ -150,7 +151,8 @@
   
   
   .main {
-    padding: 5rem 0;
+    /* padding: 5rem 0; */
+    padding: 80px 0;
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -165,11 +167,14 @@
   .heading {
     font-size: 2rem;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
+    margin-bottom: 160px;
     position: absolute;
   z-index: 10;
-  top: 12rem;
-  left: 2rem;
+  /* top: 12rem; */
+  top: 192px;
+  /* left: 2rem; */
+  left: 32px;
   }
     @media screen and (min-width: 40rem) { .heading{/*.heading{font-size: 0.2rem;
       left: 0;
@@ -335,12 +340,15 @@ padding: 0 0 0 0;}
   }
 
   .heading{
-    left: 3.5rem;
-    top: 13.5rem;
+    /* left: 3.5rem; */
+    left: 56px;
+    /* top: 13.5rem; */
+    top: 216px;
   }
 
   .main{
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
+    padding: 16px 0;
   }
 
   .lpages{
