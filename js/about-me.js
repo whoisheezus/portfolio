@@ -1,4 +1,6 @@
-const rellax = new Rellax('.rellax');
+var rellax = new Rellax('.rellax', {
+    breakpoints: [576, 768, 1201]
+  });
 
 // grabs the media query
 const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
