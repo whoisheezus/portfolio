@@ -244,13 +244,13 @@ mark {
       }
 
       .grid-container{
-          width: 150%;
+          width: 165%;
           z-index: -1;
       }
 
       .heading{
           font-size: 2rem;
-          top: 0.5rem;
+          top: 5rem;
           left: 0rem;
           margin: 0;
       }
