@@ -240,6 +240,7 @@ mark {
       .center{
         width: calc(100vw - 2*60px);
         z-index: -1;
+        padding: 10px 0 0 0;
       }
 
       .grid-container{
@@ -257,6 +258,7 @@ mark {
         width: calc(100vw - 2*60px);
         margin: 0 auto;
         z-index: 290;
+        padding: 25px 0;
     }
 
     .lpages{
