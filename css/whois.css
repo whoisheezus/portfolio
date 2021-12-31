@@ -246,11 +246,12 @@ mark {
       .grid-container{
           width: 165%;
           z-index: -1;
+          padding: 25px 0 0 0;
       }
 
       .heading{
           font-size: 2rem;
-          top: 5rem;
+          top: 4rem;
           left: 0rem;
           margin: 0;
       }
@@ -279,6 +280,6 @@ mark {
         grid-column: 6 / span 6;
         z-index: 3;
         grid-row: 1 / -1;
-        clip-path: polygon(5% 10%, 27% 3%, 94% 25%, 84% 98%, 39% 90%, 11% 90%, 4% 66%, 4% 34%);
+        clip-path: polygon(5% 10%, 27% 3%, 94% 25%, 84% 98%, 39% 88%, 11% 88%, 4% 66%, 4% 34%);
       }
   }
