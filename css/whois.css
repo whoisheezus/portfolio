@@ -8,8 +8,8 @@
     font-family: 'IBM Plex Mono', monospace;
     /* font-weight: 300;
     line-height: 1.25; */
-    overflow: scroll;
-    overflow-x: hidden;
+    /* overflow: scroll;
+    overflow-x: hidden; */
     margin: 0;
   }
 
@@ -237,11 +237,11 @@ mark {
   @media screen and (max-width: 900px){
       .center{
         width: calc(100vw - 2*60px);
-        z-index: 26;
       }
 
       .grid-container{
           width: 150%;
+          z-index: -1;
       }
 
       .heading{
@@ -249,4 +249,8 @@ mark {
           top: 1rem;
           left: 0rem;
       }
+
+    .bio, .bio p{
+        z-index: 9;
+    }
   }
