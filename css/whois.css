@@ -90,11 +90,11 @@
 
 .center{
     width: 800px;
-    min-height: 100vh;
+    min-height: 40vh;
     display: block;
     margin: 0 auto;
     /* background-color: cyan; */
-    padding: 80px 0;
+    padding: 80px 0 0 0;
 }
 
 .main{
@@ -231,12 +231,15 @@ mark {
   }
 
   .bio{
-      padding: 50px 0 0 0;
+    width: 800px;
+    margin: 0 auto;  
+    padding: 40px 0;
   }
 
   @media screen and (max-width: 900px){
       .center{
         width: calc(100vw - 2*60px);
+        z-index: -1;
       }
 
       .grid-container{
@@ -250,8 +253,10 @@ mark {
           left: 0rem;
       }
 
-    .bio, .bio p{
-        z-index: 9;
+    .bio{
+        width: calc(100vw - 2*60px);
+        margin: 0 auto;
+        z-index: 290;
     }
 
     .lpages{
@@ -265,5 +270,12 @@ mark {
     
       .rpages{
         margin: 0;
+      }
+
+      .grid__item--portrait-half {
+        grid-column: 6 / span 6;
+        z-index: 3;
+        grid-row: 1 / -1;
+        clip-path: polygon(5% 10%, 27% 3%, 94% 25%, 84% 98%, 39% 90%, 11% 90%, 4% 66%, 4% 34%);
       }
   }
