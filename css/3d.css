@@ -171,6 +171,7 @@ html, body {
   
   .menu{
     width: 60%;
+    table-layout: fixed;
     margin: auto;
     color: black;
       text-decoration: none;
