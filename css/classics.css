@@ -57,6 +57,20 @@ padding: 10px;
       width: 40px;
 padding: auto 0px;}
 
+#preloader{
+  background: white;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+}
+
+
+
 
 @media (max-width: 1200px) {
     .grid-container {

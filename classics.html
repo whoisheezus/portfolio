@@ -8,14 +8,28 @@
     <title>Классическая съёмка</title>
     <link rel="stylesheet" href="css/classics.css">
     <link rel="stylesheet" href="css/swipebox.css">
+    <link rel="stylesheet" href="css/preloader.css">
 
 </head>
 
 <body>
     <header>
-
-
     </header>
+
+
+    <div id="preloader">
+        <div class="overlay-loader">
+            <div class="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
 
     <section class="container">
         <div id="macy">
@@ -90,6 +104,7 @@
             }
         });
     </script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.swipebox.js"></script>
     <script type="text/javascript">
@@ -99,6 +114,12 @@
             $('.swipebox').swipebox();
 
         })(jQuery);
+    </script>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+            loader.style.display="none";
+        })
     </script>
 </body>
 

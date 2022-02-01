@@ -191,7 +191,8 @@ body {
         }
   
         .content__type {
-          font-size: 2.5vw;
+          /* font-size: 2.5vw; */
+          font-size: 15px;
         }
   
         .demo__1column {
