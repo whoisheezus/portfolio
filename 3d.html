@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D</title>
     <link rel="stylesheet" href="css/3d.css">
+    <link rel="stylesheet" href="css/preloader.css">
 </head>
 
 
@@ -29,6 +30,19 @@
 
     <div class="bg-small-10"><img src="img/doodle-10.png" alt="">
     </div> -->
+    <div id="preloader">
+        <div class="overlay-loader">
+            <div class="loader2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
 
     <div class = "logo">
         <a href="/index.html"><img src="/img/logo-black.png" alt=""></a>
@@ -109,6 +123,12 @@
          
             
 
+          <script>
+            var loader = document.getElementById("preloader");
+            window.addEventListener("load", function(){
+                loader.style.display="none";
+            })
+        </script>
            
         
    
