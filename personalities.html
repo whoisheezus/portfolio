@@ -10,6 +10,22 @@
     <title>Персоналии</title>
 </head>
 <body>
+
+    <!-- preloader -->
+
+    <div id="preloader">
+        <div class="overlay-loader">
+            <div class="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
    
     <!-- navigation --> 
 
@@ -118,6 +134,13 @@
       },
         });
       </script>
+
+<script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function(){
+        loader.style.display="none";
+    })
+</script>
 
 </body>
 </html>
