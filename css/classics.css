@@ -80,6 +80,10 @@ padding: auto 0px;}
         column-gap: 20px;
         margin: 10px ;
     }
+
+    .overlay-loader{
+      top: 39%;
+    }
 }
 
 @media (max-width: 768px) {

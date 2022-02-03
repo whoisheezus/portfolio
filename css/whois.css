@@ -409,6 +409,10 @@ mark {
         padding: 10px 0 0 0;
       }
 
+      .overlay-loader{
+        top: 39%;
+      }
+
       .grid-container{
           width: 165%;
           z-index: -1;

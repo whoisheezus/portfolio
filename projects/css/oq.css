@@ -363,6 +363,10 @@ h1 {
 
 @media screen and (max-width: 1023px) {
 
+    .overlay-loader{
+        top: 39%;
+      }
+
     .mazo{
         display: none;
     }

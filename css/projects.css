@@ -417,6 +417,10 @@ h1 {
     font-size: 3em;
     }
 
+    .overlay-loader{
+        top: 39%;
+      }
+
     .kurt-1, .kurt-2, .kurt-3, .kurt-4, .kurt-5, .kurt-6, .kurt-7, .kurt-8{
         display: none;
     }

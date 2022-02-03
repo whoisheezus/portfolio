@@ -206,6 +206,10 @@ body {
           margin-right: auto;
     }
 
+    .overlay-loader{
+      top: 39%;
+    }
+
 
   }
   
@@ -254,6 +258,10 @@ body {
           width: 260px;
           margin-left: auto;
           margin-right: auto;
+        }
+
+        .overlay-loader{
+          top: 39%;
         }
 
         
