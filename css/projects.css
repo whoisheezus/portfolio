@@ -478,7 +478,7 @@ h1 {
         display: block;
         position: fixed;
         width: 100vh;
-        height: 42px;
+        height: 40px;
         z-index: 2;
         transform: rotate(90deg);
         transform-origin: left top;
@@ -486,7 +486,7 @@ h1 {
         left: calc(100vw - 18px);
         font-family: Helvetica;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 20px;
     
     }
 
@@ -519,10 +519,10 @@ h1 {
         width: 100vh;
         transform: rotate(270deg) translateX(-100vh);
         transform-origin: left top;
-        height: 42px;
+        height: 40px;
         font-family: Helvetica;
         text-transform: uppercase;
-        font-size: 24px;
+        font-size: 20px;
         margin-left: 18px;
     
     }
