@@ -242,7 +242,7 @@ to {
     z-index: 2;
     transform: rotate(90deg);
     transform-origin: left top;
-    left: calc(100vw - 18px);
+    left: calc(100vw - 20px);
     font-family: Helvetica;
     text-transform: uppercase;
     font-size: 20px;
