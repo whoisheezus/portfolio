@@ -25,7 +25,7 @@ const camera = new THREE.PerspectiveCamera(
 const mouse = new THREE.Vector2(0.7, 0.7);
 let imgArrIndex = 0;
 
-const imgArr = ["2.jpg", "3.jpg", "4.jpg", "5.jpg"];
+const imgArr = ["2.jpg", "3.jpg", "4.jpg", "5.jpg", "1.jpg"];
 const imgTexture = new THREE.TextureLoader().load("./img/1.jpg");
 
 var quad = new THREE.Mesh(
