@@ -4,7 +4,7 @@ function setBg1(){
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
-    document.getElementById("title").textContent = "отваал";
+    document.getElementById("title").textContent = "otvaal";
     document.getElementById("kurt1").style.zIndex = '10';
 
 }
@@ -16,7 +16,7 @@ function returnBg1(){
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '11';
-    document.getElementById("title").textContent = "проекты и сюжеты";
+    document.getElementById("title").textContent = "projects + studies";
     document.getElementById("kurt1").style.zIndex = '1';
 
 }
@@ -27,7 +27,7 @@ function setBg2(){
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
-    document.getElementById("title").textContent = "интурист";
+    document.getElementById("title").textContent = "inturist";
     document.getElementById("kurt2").style.zIndex = '10';
 
 }
@@ -39,7 +39,7 @@ function returnBg2(){
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '11';
-    document.getElementById("title").textContent = "проекты и сюжеты";
+    document.getElementById("title").textContent = "projects + studies";
     document.getElementById("kurt2").style.zIndex = '1';
 
 }
@@ -62,7 +62,7 @@ function returnBg3(){
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '11';
-    document.getElementById("title").textContent = "проекты и сюжеты";
+    document.getElementById("title").textContent = "projects + studies";
     document.getElementById("kurt3").style.zIndex = '1';
 
 }
@@ -73,7 +73,7 @@ function setBg4(){
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
-    document.getElementById("title").textContent = "шхд: зима";
+    document.getElementById("title").textContent = "it's winter";
     document.getElementById("kurt4").style.zIndex = '10';
 
 }
@@ -85,7 +85,7 @@ function returnBg4(){
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '11';
-    document.getElementById("title").textContent = "проекты и сюжеты";
+    document.getElementById("title").textContent = "projects + studies";
     document.getElementById("kurt4").style.zIndex = '1';
 
 }
@@ -108,7 +108,7 @@ function returnBg5(){
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '11';
-    document.getElementById("title").textContent = "проекты и сюжеты";
+    document.getElementById("title").textContent = "projects + studies";
     document.getElementById("kurt5").style.zIndex = '1';
 
 }
@@ -131,7 +131,7 @@ function returnBg6(){
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '11';
-    document.getElementById("title").textContent = "проекты и сюжеты";
+    document.getElementById("title").textContent = "projects + studies";
     document.getElementById("kurt6").style.zIndex = '1';
 
 }
@@ -154,7 +154,7 @@ function returnBg7(){
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '11';
-    document.getElementById("title").textContent = "проекты и сюжеты";
+    document.getElementById("title").textContent = "projects + studies";
     document.getElementById("kurt7").style.zIndex = '1';
 
 }
@@ -165,7 +165,7 @@ function setBg8(){
     document.getElementById("mainOverlay").style.opacity = '0.7';
     document.getElementById("mainOverlay").style.zIndex = '2';
     document.getElementById("title").style.zIndex = '11';
-    document.getElementById("title").textContent = "металлострой";
+    document.getElementById("title").textContent = "metallostroy";
     document.getElementById("kurt8").style.zIndex = '10';
 
 }
@@ -177,7 +177,7 @@ function returnBg8(){
     document.getElementById("mainOverlay").style.opacity = '0';
     document.getElementById("mainOverlay").style.zIndex = '0';
     document.getElementById("title").style.zIndex = '11';
-    document.getElementById("title").textContent = "проекты и сюжеты";
+    document.getElementById("title").textContent = "projects + studies";
     document.getElementById("kurt8").style.zIndex = '1';
 
 }
