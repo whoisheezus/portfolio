@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects + studies > OQJAV</title>
+    <link rel="stylesheet" href="css/oq.css">
+    <link rel="shortcut icon" href="../img/heezus.ico" />
+</head>
+
+<body>
+
+    <!-- preloader -->
+
+    <div id="preloader">
+        <div class="overlay-loader">
+            <div class="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- mobile navigation -->
+
+    <div class="right">
+        <div class="pages">
+            <a href="/personalities">personalities</a> /
+            <a href="/classics">classics</a> /
+            <a href="/ar">AR</a> /
+            <a href="/3d">3D</a> /
+            <a href="/whois">about</a>
+        </div>
+    </div>
+
+    <div class="left">
+        <div class="lpages">
+            <a href="../../ru">heezus</a> /
+            <a href="/projects">projects + studies > oqjav</a>
+        </div>
+    </div>
+
+    <!-- navigation -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../../ru"><img src="/img/logo-2.png" alt=""></a>
+        </div>
+
+        <div class="media">
+            <ul>
+                <li><a href="/projects">projects + studies</a> > oqjav </li>
+                <li><a href="/personalities">personalities</a></li>
+                <li><a href="/classics">classics</a></li>
+                <li><a href="/ar">AR</a></li>
+                <li><a href="/3d">3D</a></li>
+                <li><a href="/whois">about</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- content  -->
+
+    <div class="mazo">
+        <div onclick="buttonclick()" class="mazframe">
+            <img src="../../projects/oq/1.jpg" alt="" class="one slide" id="one">
+            <img src="../../projects/oq/2.jpg" alt="" class="two slide">
+            <img src="../../projects/oq/3.jpg" alt="" class="three slide">
+            <img src="../../projects/oq/4.jpg" alt="" class="four slide">
+            <img src="../../projects/oq/5.jpg" alt="" class="five slide">
+            <img src="../../projects/oq/6.jpg" alt="" class="six slide">
+            <img src="../../projects/oq/7.jpg" alt="" class="seven slide">
+            <img src="../../projects/oq/8.jpg" alt="" class="eight slide">
+            <img src="../../projects/oq/9.jpg" alt="" class="nine slide">
+
+
+            <div class="hidden_text"><a href="../../projects">projects + studies</a> <BR> <a
+                    href="javascript:history.go(0)">reload</a> </div>
+
+
+
+
+        </div>
+
+        <div class="text-container">
+            <div class="text-mob">oqjav <br> 2018 <br>tap the photo &#60;3 <br> <br></div>
+        </div>
+
+
+
+
+        <div class="nazad">
+            <p>oqjav <br> 2018 <br> <br></p>
+        </div>
+    </div>
+
+    <!-- mobile options -->
+
+    <div class="zone">
+
+        <!-- <p class="hmobile">projects + studies</p> -->
+        <!-- <p>it's winter, 2019</p> -->
+        <img src="../../projects/oq/1.jpg" alt="">
+        <img src="../../projects/oq/2.jpg" alt="">
+        <img src="../../projects/oq/3.jpg" alt="">
+        <img src="../../projects/oq/4.jpg" alt="">
+        <img src="../../projects/oq/5.jpg" alt="">
+        <img src="../../projects/oq/6.jpg" alt="">
+        <img src="../../projects/oq/7.jpg" alt="">
+        <img src="../../projects/oq/8.jpg" alt="">
+        <img src="../../projects/oq/9.jpg" alt="">
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        var number = 0;
+        let blocks = document.getElementsByClassName("slide");
+
+        function buttonclick() {
+            number++;
+            i = number - 1;
+            blocks[i].style.display = "none";
+
+
+        }
+    </script>
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+    </script>
+</body>
+
+</html>
