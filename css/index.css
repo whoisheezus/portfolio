@@ -60,7 +60,7 @@ canvas {
 .logo {
   position: absolute;
   z-index: 1001;
-  top: 50%;
+  top: 43%;
   left: 50%;
   margin-top: -119px;
   margin-left: -193px;
@@ -75,7 +75,7 @@ canvas {
 
 .container {
   position: absolute;
-  top: 50%;
+  top: 43%;
   left: 50%;
   margin-top: 0px;
   margin-left: -144px;
