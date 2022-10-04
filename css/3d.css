@@ -225,7 +225,7 @@ html, body {
     padding: 20px 0 0 0;
   }
   
-  @media (max-width: 540px) {
+  @media (max-width: 850px) {
     .menu{
       display: none;
     }
