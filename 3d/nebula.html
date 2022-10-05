@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D / Hypnos</title>
+    <link rel="stylesheet" href="../css/preloader.css">
+    <link rel="stylesheet" href="3d-proj.css">
+    <link rel="shortcut icon" href="../img/heezus.ico" />
+    <link rel="stylesheet" href="macy.css">
+    <link rel="stylesheet" href="../css/swipebox.css">
+</head>
+<body>
+    <div id="preloader">
+        <div class="overlay-loader">
+            <div class="loader2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "logo">
+        <a href="/index"><img src="/img/logo-black.png" alt=""></a>
+   </div>
+
+          
+
+            <table class="menu">
+                <tr>
+                 <td><a href="/projects">projects + studies</a></td>
+                 <td><a href="/personalities">personalities</a></td>
+                 <td><a href="/classics">classics</a></td>
+                 <td><a href="/ar">AR</a></td>
+                </tr>
+
+                <tr>
+                    <td><a href="/3d">3d</a></td>
+                    <td><a href="https://smorgasbord.heez.us/">gigs</a></td>
+                    <td><a href="https://honoryourvomit.heez.us/">wip</a></td>
+                    <td><a href="/whois">about</a></td>
+               </tr>
+              </table>
+
+              <table class="menu-mobile">
+                <tr>
+                    <td><a href="/projects">projects + studies</a></td>
+                </tr>
+
+                <tr>
+                    <td><a href="/personalities">personalities</a></td></tr>
+                <tr>
+                
+                <tr>
+                    <td><a href="/ar">AR</a></td>
+                </tr>    
+
+                <tr>
+                    <td><a href="/3d">3d</a></td>
+                </tr>  
+
+                
+                <tr>
+                    <td><a href="https://smorgasbord.heez.us/">gigs</a></td>
+                </tr>
+
+                <tr>
+                    <td><a href="https://honoryourvomit.heez.us/">wip</a></td>
+                </tr>
+                
+
+                <tr>
+                    <td><a href="/whois">about</a></td>
+                </tr>  
+                    
+                    
+              </table>
+
+              <div class="art-item"><p>nebulas for masha maria's single artwork</p></div>
+            
+            <section class="container">
+                <div id="macy">
+                    
+                    <!-- портреты -->
+                    <div class="box"><a href="../img/087-nebula-1.png" class="swipebox"><img src="../img/087-nebula-1.png" alt=""></a></div>
+                    <div class="box">
+                        <p>здесь текст хаха</p>
+                    </div>
+                    <div class="box"><a href="../img/087-nebula-2.jpg" class="swipebox"><img src="../img/087-nebula-2.png" alt=""></a></div>
+                    <div class="box"><a href="../img/087-nebula-3.png" class="swipebox"><img src="../img/087-nebula-3.png" alt=""></a></div>
+                    
+                </div>
+            </section>
+
+             
+            <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+    <script>
+        var macy = Macy({
+            container: '#macy',
+            trueOrder: false,
+            waitForImages: false,
+            margin: 30,
+            columns: 3,
+            breakAt: {
+                1200: 2,
+                768: 1,
+            }
+        });
+    </script>
+    <script src="../js/imagesloaded.pkgd.min.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery.swipebox.js"></script>
+    <script type="text/javascript">
+        ;
+        (function ($) {
+
+            $('.swipebox').swipebox();
+
+        })(jQuery);
+    </script>
+
+              <script>
+                var loader = document.getElementById("preloader");
+                window.addEventListener("load", function(){
+                    loader.style.display="none";
+                })
+            </script>
+</body>
+</html>
