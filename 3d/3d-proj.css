@@ -109,6 +109,9 @@ html, body {
   .art-item a span { position:absolute; display:none; z-index:99; overflow: visible;}
   .art-item a:hover span { display:block;  }
 
+  .box a{
+    color: #000;
+  }
   
   @media (max-width: 850px) {
     .menu{
