@@ -31,130 +31,7 @@ html, body {
   margin: 0;
 }
   
-  /* doodle 1 */
-  
-  .d-1{
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    top: 28vh;
-  
-  }
-  
-  .d-1 img{
-    width: 100%;
-  }
-  
-  /* doodle 2 */
-  
-  .d-2{
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    top: 95vh;
-    left: 36%;
-  
-  }
-  
-  .d-2 img{
-    width: 100%;
-  }
-  
-  /* doodle 3 */
-  
-  .d-3{
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    top: 150vh;
-    left: -36%;
-  
-  }
-  
-  .d-3 img{
-    width: 100%;
-  }
-  
-  /* doodle 4 */
-  
-  .d-4{
-    position: absolute;
-    overflow: hidden;
-    z-index: -1;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    top: 200%;
-    left: 46%;
-  
-  }
-  
-  .d-4 img{
-    width: 100%;
-  }
-  
-  /* doodle 5 */
-  
-  .d-5{
-    position: absolute;
-    overflow: hidden;
-    z-index: -1; 
-    width: 100%;
-    margin: auto;
-    top: 74vh;
-    left: -15%;
-  }
-  
-  .d-5 img{
-    width: 40%;
-  }
-  
-  
-  
-  /* .bg{
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    top: 190%;
-    left: 0%;
-  }
-  
-  .bg-small-1{
-    position: absolute;
-    z-index: -1;
-    width: 10%;
-    margin: 0;
-    padding: 0;
-    top: 110%;
-    left: 8%;
-  }
-  
-  .bg-small-10{
-    position: absolute;
-    z-index: -1;
-    width: 90%;
-    margin: 0;
-    padding: 0;
-    top: 40%;
-    left: 7%;
-  }
-  
-  .bg-small-1 img, .bg-small-10 img{
-    width: 100%;
-  }
-  
-  
-  .bg img{
-    width: 100%;
-  } */
+ 
   
   .logo{
     width: 60%;
@@ -231,6 +108,7 @@ html, body {
   /* .content__type a:hover{color: #69140c;} */
   .art-item a span { position:absolute; display:none; z-index:99; overflow: visible;}
   .art-item a:hover span { display:block;  }
+
   
   @media (max-width: 850px) {
     .menu{

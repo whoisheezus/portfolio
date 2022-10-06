@@ -239,11 +239,14 @@ html, body {
     padding: 20px 0 0 0;
   }
 
+
+/* .content__type a:hover{color: #69140c;} */
   .art-item a{  display:inline-block; color:#000;}
-  /* .content__type a:hover{color: #69140c;} */
-  .art-item a span { position:absolute; display:none; z-index:99; overflow: visible;}
-  .art-item a:hover span { display:block;  
-  text-decoration: underline;}
+  .art-item span { position:absolute; display:none; z-index:-1; overflow: visible;}
+  .art-item a:hover span { display:block;  }
+/* .art-item a:hover + .hiddenImg {display: block;} */
+
+
 
   @media (max-width: 1400px){
     .bg{
