@@ -9,6 +9,7 @@ canvas {
   overflow: hidden;
   -ms-touch-action: none;
   touch-action: none;
+  background-color: black;
 }
 
 .body{
@@ -34,7 +35,7 @@ form {
 }
 
 form label {
-  background: white;
+  /* background: white; */
   font-family: sans-serif;
   padding: 5px 10px;
   border-radius: 100px;
