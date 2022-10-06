@@ -277,6 +277,10 @@ html, body {
       text-transform: uppercase;
     }
 
+    .art-item a:hover span {
+      display: none;
+    }
+
     
   
   
