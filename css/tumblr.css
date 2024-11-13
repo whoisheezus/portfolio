@@ -28,6 +28,10 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+.stash-credit{
+    display:none;
+}
+
 @media (min-width:740px) {
     body.index-page {
         overflow-y:hidden;
