@@ -377,7 +377,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
-
+    <script>
+        // Спроецировать клик по кнопке с фильтром "*" при загрузке страницы
+        $(document).ready(function () {
+            // Имитируем клик по кнопке с фильтром "*"
+            $('.filter_buttons .boton[data-filter="*"]').click();
+        });
+    </script>
     
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -388,7 +394,7 @@
     <script type="text/javascript">
         var $galleryContainer = $('.filterable_cards').isotope({
             itemSelector: '.card',
-            layoutMode: 'fitRows',
+            layoutMode: 'vertical',
             stagger: 30,
             hiddenStyle: {
                 opacity: 0
