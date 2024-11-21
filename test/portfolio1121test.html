@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<link rel="stylesheet" href="portfolio-o.css">-->
+    <!--<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <style>
+        .text-custom-lg {
+            font-size: 2rem;
+        }
+
+        .text-custom-base {
+            font-size: 1.5rem;
+        }
+
+        .tracking-custom {
+            letter-spacing: -0.05em;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+
+        body {
+            font-family: "stevie-sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+
+        .title {
+            font-family: "antipol-variable", sans-serif;
+            font-variation-settings: "STCH"50, "wght"700, "wdth"100;
+        }
+
+        .stevie-italic {
+            font-family: "stevie-sans", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+
+        /* Настройка высоты для демонстрации эффекта sticky */
+        .sticky-div {
+            height: 33vh;
+            /* Устанавливаем высоту для демонстрации */
+        }
+
+
+        /*для стики меню*/
+
+
+
+        .sticky-container {
+            position: relative;
+            height: 100%;
+            /* Установи нужную высоту */
+            overflow: visible;
+            z-index: 20;
+        }
+
+
+
+        .sticky-row {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .sticky-container::after {
+            content: '';
+            position: absolute;
+            bottom: -25px;
+            /* Position it at the bottom of the sticky container */
+            left: 0;
+            right: 0;
+            height: 25px;
+            /* Height of the gradient */
+            background: linear-gradient(to bottom, white, transparent);
+            /* Gradient from white to transparent */
+            z-index: 1;
+            /* Ensure it's below other content in the container */
+        }
+
+        .hidden-on-scroll {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 1024px)">
+    <link rel="stylesheet" href="https://use.typekit.net/pyu5jsd.css">
+</head>
+
+<body class="bg-green-400 text-custom-base tracking-custom text-lg lg:text-2xl">
+
+
+    <div class="grid mx-5 mt-5 gap-0 grid-cols-12">
+
+        <!-- menu -->
+        <div class="menu hidden lg:block bg-yellow-200 col-span-12">
+            <div class="logo"></div>
+            <div class="menu-box">1</div>
+            <div class="menu-box">2</div>
+            <div class="menu-box">3</div>
+
+        </div>
+
+        <!-- br -->
+
+        <div class="breakme hidden lg:block h-px mt-8 mb-8 col-span-12 bg-black">
+        </div>
+
+        <!-- hello image -->
+        <div
+            class="hello-image h-[33vh] col-span-12 col-start-1 col-end-13 bg-red-400 lg:col-span-6 lg:col-start-7 lg:col-end-13">
+            <p>blah blh blah</p>
+        </div>
+
+        <!-- br -->
+
+        <div class="breakme h-px mt-8 col-span-12 bg-black lg:mt-14 lg:col-span-5 lg:col-start-7"></div>
+
+        <!-- menu -->
+
+        <div
+            class="menu-mob pt-8 grid lg:hidden gap-2 grid-cols-12 col-span-12 bg-yellow-200 sticky-container sticky-row">
+
+            <!-- Первый блок с col-start-1 до col-end-3 -->
+            <div class="col-start-1 col-end-3 bg-blue-300">
+                <!-- Ваш контент для первого блока -->
+            </div>
+
+            <!-- Второй блок с col-start-4 до col-end-13 -->
+            <div class="col-start-4 col-end-13">
+                <!-- Первая строка с ссылками, col-start-4 до col-end-13 -->
+                <div class="grid grid-cols-9 gap-2">
+                    <div class="col-start-1 col-end-10">
+                        <!-- Здесь ваши ссылки -->
+                        <a href="#" class="font-medium mr-5 whitespace-nowrap">heezus</a>
+                        <p class="font-medium mr-5 whitespace-nowrap italic inline">selected works</p>
+                        <a href="#" class="font-medium mr-5 whitespace-nowrap">studies</a>
+                        <a href="#" class="font-medium mr-5 whitespace-nowrap">AR experiences</a>
+                        <a href="#" class="font-medium mr-5 whitespace-nowrap">proto genesis</a>
+                        <a href="#" class="font-medium mr-5 whitespace-nowrap">about me</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Третья строка с блоком "tags:" и текстом -->
+
+            <div class="col-start-1 col-end-2">
+                <p>tags:</p>
+            </div>
+            <div class="filter_buttons col-start-4 col-end-13">
+                <!--filter buttons-->
+                <button class="boton whitespace-nowrap" data-filter=".identity">identity</button>,
+                <button class="boton whitespace-nowrap" data-filter=".social">social media</button>,
+                <button class="boton whitespace-nowrap" data-filter=".motion">motion</button>,
+                <button class="boton active stevie-italic whitespace-nowrap" data-filter="*">( everything
+                    )</button>,
+                <button class="boton whitespace-nowrap" data-filter=".identity">art direction</button>,
+                <button class="boton whitespace-nowrap" data-filter=".social">collage</button>,
+                <button class="boton whitespace-nowrap" data-filter=".motion">3d</button>,
+                <button class="boton whitespace-nowrap" data-filter=".identity">web</button>,
+                <button class="boton whitespace-nowrap" data-filter=".social">print</button>,
+                <button class="boton whitespace-nowrap" data-filter=".motion">merch</button>,
+                <button class="boton whitespace-nowrap" data-filter=".social">photo</button>,
+                <button class="boton whitespace-nowrap" data-filter=".motion">video</button>
+
+            </div>
+
+        </div>
+
+
+        <!-- sticky row -->
+        <div
+            class="hidden lg:grid gap-0 grid-cols-9 col-start-1 col-end-10 sticky-container sticky-row pt-8 bg-green-400">
+            <!-- Desktop Hidden Content -->
+            <div class="col-span-3 col-start-1 col-end-4 hidden-on-scroll hidden md:block">Скрытый контент</div>
+
+            <!-- Tags Section -->
+            <div class="col-span-1 col-start-7 bg-red-100 content">tags</div>
+            <div class="filter_buttons col-span-2 col-start-8 bg-yellow-200 content">
+                <button class="boton whitespace-nowrap" data-filter=".identity">identity</button>,
+                <button class="boton whitespace-nowrap" data-filter=".social">social media</button>,
+                <button class="boton whitespace-nowrap" data-filter=".motion">motion</button>,
+                <button class="boton active stevie-italic whitespace-nowrap" data-filter="*">( everything )</button>,
+                <button class="boton whitespace-nowrap" data-filter=".identity">art direction</button>,
+                <button class="boton whitespace-nowrap" data-filter=".social">collage</button>,
+                <button class="boton whitespace-nowrap" data-filter=".motion">3d</button>,
+                <button class="boton whitespace-nowrap" data-filter=".identity">web</button>,
+                <button class="boton whitespace-nowrap" data-filter=".social">print</button>,
+                <button class="boton whitespace-nowrap" data-filter=".motion">merch</button>,
+                <button class="boton whitespace-nowrap" data-filter=".social">photo</button>,
+                <button class="boton whitespace-nowrap" data-filter=".motion">video</button>
+            </div>
+        </div>
+
+        <div class="filterable_cards  gap-2 bg-red-200 col-span-12 lg:col-span-9 lg:col-start-1">
+            <!-- Карточка 1 -->
+            <div class="card identity grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9"
+                id="hover1" onmouseover="setupHoverEffect('hover1', '2.jpg');">
+                <!-- Линия -->
+                <div class="breakme h-px mb-8 col-start-1 col-end-13 bg-black lg:mt-14 lg:col-span-9 lg:col-end-10">
+                </div>
+
+                <!-- Контент -->
+                <div class="col-span-2 col-start-1 col-end-3 bg-blue-300 lg:hidden">
+                    <!-- Картинка для мобильной версии --> blah blah
+                </div>
+
+                <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
+                    <!-- Название -->
+                    <div
+                        class="title col-span-9 col-start-1 uppercase text-custom-lg bg-red-100 lg:col-span-2 lg:col-start-1">
+                        FESTTECH 2024</div>
+                    <!-- Описание -->
+                    <div class="col-span-9 col-start-1 bg-yellow-100 lg:col-span-4 lg:col-start-4">identity, art
+                        direction, social media design, motion</div>
+                    <!-- Год -->
+                    <div class="col-span-9 col-start-1 bg-green-100 lg:col-span-1 lg:col-start-9">2024</div>
+                </div>
+
+                <!-- Текст -->
+                <div
+                    class="col-start-1 col-end-13 bg-green-300 indent-[25%] lg:col-span-7 lg:col-start-1 lg:indent-[42.86%]">
+                    We created a campaign for the Atoms x Marques Brownlee 251 Low that captures every angle. Blending
+                    rigorous simplicity, iconic form, and vivid color, we went on a journey to uncover what connects the
+                    creative forces at work in this partnership. Upon launch, this campaign literally became larger than
+                    life when it was displayed in Times Square. </div>
+
+                <!-- Галерея -->
+                <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 bg-red-200 lg:grid-cols-9">
+                    <a data-fancybox="gallery1" href="1.jpg" class="col-span-1">
+                        <img src="1.jpg" alt="Image 1" class="w-full h-auto">
+                    </a>
+                    <a data-fancybox="gallery1" href="2.jpg" class="col-span-1">
+                        <img src="2.jpg" alt="Image 2" class="w-full h-auto">
+                    </a>
+                    <a data-fancybox="gallery1" href="3.jpg" class="col-span-1">
+                        <img src="3.jpg" alt="Image 3" class="w-full h-auto">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="card identity grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9"
+                id="hover2" onmouseover="setupHoverEffect('hover2', '3.jpg');">
+                <!-- Линия -->
+                <div
+                    class="breakme h-px mt-8 mb-8 col-start-1 col-end-13 bg-black lg:mt-14 lg:col-span-9 lg:col-end-10">
+                </div>
+
+                <!-- Контент -->
+                <div class="col-span-2 col-start-1 col-end-3 bg-blue-300 lg:hidden">
+                    <!-- Картинка для мобильной версии --> blah blah
+                </div>
+
+                <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
+                    <!-- Название -->
+                    <div
+                        class="title col-span-9 col-start-1 uppercase text-custom-lg bg-red-100 lg:col-span-2 lg:col-start-1">
+                        Music Factory</div>
+                    <!-- Описание -->
+                    <div class="col-span-9 col-start-1 bg-yellow-100 lg:col-span-4 lg:col-start-4">identity, art
+                        direction, social media design, motion</div>
+                    <!-- Год -->
+                    <div class="col-span-9 col-start-1 bg-green-100 lg:col-span-1 lg:col-start-9">2024</div>
+                </div>
+
+                <!-- Текст -->
+                <div
+                    class="col-start-1 col-end-13 bg-green-300 indent-[25%] lg:col-span-7 lg:col-start-1 lg:indent-[42.86%]">
+                    We created a campaign for the Atoms x Marques Brownlee 251 Low that captures every angle. Blending
+                    rigorous simplicity, iconic form, and vivid color, we went on a journey to uncover what connects the
+                    creative forces at work in this partnership. Upon launch, this campaign literally became larger than
+                    life when it was displayed in Times Square.</div>
+
+                <!-- Галерея -->
+                <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 bg-red-200 lg:grid-cols-9">
+                    <a data-fancybox="gallery2" href="1.jpg" class="col-span-1">
+                        <img src="1.jpg" alt="Image 1" class="w-full h-auto">
+                    </a>
+                    <a data-fancybox="gallery2" href="2.jpg" class="col-span-1">
+                        <img src="2.jpg" alt="Image 2" class="w-full h-auto">
+                    </a>
+                    <a data-fancybox="gallery2" href="3.jpg" class="col-span-1">
+                        <img src="3.jpg" alt="Image 3" class="w-full h-auto">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="card identity grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9"
+                id="hover3" onmouseover="setupHoverEffect('hover3', '4.jpg');">
+                <!-- Линия -->
+                <div
+                    class="breakme h-px mt-8 mb-8 col-start-1 col-end-13 bg-black lg:mt-14 lg:col-span-9 lg:col-end-10">
+                </div>
+
+                <!-- Контент -->
+                <div class="col-span-2 col-start-1 col-end-3 bg-blue-300 lg:hidden">
+                    <!-- Картинка для мобильной версии --> blah blah
+                </div>
+
+                <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
+                    <!-- Название -->
+                    <div
+                        class="title col-span-9 col-start-1 uppercase text-custom-lg bg-red-100 lg:col-span-2 lg:col-start-1">
+                        Moscow Music School</div>
+                    <!-- Описание -->
+                    <div class="col-span-9 col-start-1 bg-yellow-100 lg:col-span-4 lg:col-start-4">identity, art
+                        direction, social media design, motion</div>
+                    <!-- Год -->
+                    <div class="col-span-9 col-start-1 bg-green-100 lg:col-span-1 lg:col-start-9">2024</div>
+                </div>
+
+                <!-- Текст -->
+                <div
+                    class="col-start-1 col-end-13 bg-green-300 indent-[25%] lg:col-span-7 lg:col-start-1 lg:indent-[42.86%]">
+                    We created a campaign for the Atoms x Marques Brownlee 251 Low that captures every angle. Blending
+                    rigorous simplicity, iconic form, and vivid color, we went on a journey to uncover what connects the
+                    creative forces at work in this partnership. Upon launch, this campaign literally became larger than
+                    life when it was displayed in Times Square.</div>
+
+                <!-- Галерея -->
+                <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 bg-red-200 lg:grid-cols-9">
+                    <a data-fancybox="gallery2" href="1.jpg" class="col-span-1">
+                        <img src="1.jpg" alt="Image 1" class="w-full h-auto">
+                    </a>
+                    <a data-fancybox="gallery2" href="2.jpg" class="col-span-1">
+                        <img src="2.jpg" alt="Image 2" class="w-full h-auto">
+                    </a>
+                    <a data-fancybox="gallery2" href="3.jpg" class="col-span-1">
+                        <img src="3.jpg" alt="Image 3" class="w-full h-auto">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Липкий элемент с изображением справа -->
+        <div class="mt-16 col-span-2 col-start-11 sticky top-0 sticky-div pt-8 desktop">
+            <img id="mainImage" src="1.jpg" alt="Sticky Image" class="w-full h-auto">
+            <p>Липкий элемент с изображением</p>
+        </div>
+    </div>
+
+
+    <div class="grid m-5 gap-2 grid-cols-12">
+
+
+
+        
+    </div>
+
+
+
+
+
+
+
+
+    <!--   *****   JQuery Link   *****   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!--   *****   Isotope Filter Link   *****  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            Fancybox.bind("[data-fancybox]", {});
+        });
+    </script>
+
+    <script type="text/javascript">
+        var $galleryContainer = $('.filterable_cards').isotope({
+            itemSelector: '.card',
+            layoutMode: 'vertical',
+            stagger: 30,
+            hiddenStyle: {
+                opacity: 0
+            },
+            visibleStyle: {
+                opacity: 1
+            },
+            isOriginLeft: false,
+            isOriginTop: true
+        })
+
+        $('.filter_buttons .boton').on('click', function () {
+            $('.filter_buttons .boton').removeClass('stevie-italic');
+            $(this).addClass('stevie-italic');
+
+            var value = $(this).attr('data-filter');
+
+            // Save current scroll position
+            var scrollPos = $(window).scrollTop();
+
+            $galleryContainer.isotope({
+                filter: value
+            });
+
+            // Restore scroll position
+            $(window).scrollTop(scrollPos);
+        });
+
+
+
+        $('.filter_buttons .boton').on('click', function (event) {
+            // Убираем класс 'stevie-italic' со всех кнопок и добавляем его только на текущую
+            $('.filter_buttons .boton').removeClass('stevie-italic');
+            $(this).addClass('stevie-italic');
+
+            var value = $(this).attr('data-filter');
+            $galleryContainer.isotope({
+                filter: value
+            });
+
+            $('.filter_buttons .boton').each(function () {
+                const buttonText = $(this).text().trim();
+
+                // Если это нажатая кнопка
+                if (this === event.currentTarget) {
+                    // Если у кнопки нет скобок, добавляем их
+                    if (!buttonText.startsWith("( ") || !buttonText.endsWith(" )")) {
+                        $(this).text(`( ${buttonText} )`); // Добавляем скобки
+                    }
+                } else {
+                    // Убираем скобки с других кнопок, если они есть
+                    if (buttonText.startsWith("( ") && buttonText.endsWith(" )")) {
+                        $(this).text(buttonText.slice(2, -2));
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+        function setupHoverEffect(hoverDivId, hoverImageSrc) {
+            const hoverDiv = document.getElementById(hoverDivId);
+            const mainImage = document.getElementById('mainImage');
+
+            hoverDiv.addEventListener('mouseenter', () => {
+                mainImage.src = hoverImageSrc; // Изображение при наведении
+            });
+
+            hoverDiv.addEventListener('mouseleave', () => {
+                mainImage.src = '1.jpg'; // Исходное изображение
+            });
+        }
+    </script>
+
+    <!--sticky -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menu = document.querySelector('.menu');
+            const hiddenContent = document.querySelector('.hidden-on-scroll');
+
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (!entry.isIntersecting) {
+                        // Если меню не видно на экране, показываем скрытый контент
+                        hiddenContent.style.opacity = '1';
+                    } else {
+                        // Если меню видно, скрываем контент
+                        hiddenContent.style.opacity = '0';
+                    }
+                }, {
+                    threshold: 0
+                } // Следим за любым пересечением меню
+            );
+
+            observer.observe(menu); // Отслеживаем элемент меню
+        });
+    </script>
+
+</body>
+
+</html>

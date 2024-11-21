@@ -1,0 +1,9 @@
+.desktop {
+    display: none;
+}
+
+.mobile{
+    display: block;
+    font-family: "stevie-sans", sans-serif;
+    font-weight: 400;
+}
