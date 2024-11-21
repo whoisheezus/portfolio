@@ -100,6 +100,22 @@
 
 <body class="bg-green-400 text-custom-base tracking-custom text-lg lg:text-2xl">
 
+    <!-- preloader -->
+
+  <div id="preloader">
+    <div class="overlay-loader">
+        <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
 
     <div class="grid mx-5 mt-5 gap-0 grid-cols-12">
 
@@ -378,6 +394,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 
+
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+            loader.style.display="none";
+        })
+    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
