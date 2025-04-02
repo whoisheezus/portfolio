@@ -318,7 +318,7 @@ svg {
             <!-- Первый блок с col-start-1 до col-end-3 -->
             <div class="col-start-1 col-end-3 bg-white">
                 <!-- Ваш контент для первого блока --><a href="https://heez.us/" target="_blank">
-                    <img src="./logo.svg" alt="Logo" class="logo h-12">
+                    <img src="./assets/logo.svg" alt="Logo" class="logo h-12">
                 </a>
             </div>
 
@@ -343,7 +343,7 @@ svg {
 
             <div class="title col-start-1 col-end-2 uppercase">
                 <p>tags:</p>
-                <img src="./mob-arrow-2.svg" alt="Logo" class="mob-arrow h-12 hidden cursor-pointer">
+                <img src="./assets/mob-arrow-2.svg" alt="Logo" class="mob-arrow h-12 hidden cursor-pointer">
             </div>
             <div class="filter_buttons col-start-4 col-end-13">
                 <!--new ones-->
@@ -3002,29 +3002,6 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const lazyImages = document.querySelectorAll("img");
-        
-            if ("IntersectionObserver" in window) {
-                let observer = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            let img = entry.target;
-                            if (!img.dataset.lazy) {
-                                img.dataset.lazy = img.src; // Сохраняем оригинальный src
-                                img.src = "";
-                                img.src = img.dataset.lazy; // Перезагружаем при попадании в видимость
-                            }
-                            observer.unobserve(img);
-                        }
-                    });
-                });
-        
-                lazyImages.forEach(img => observer.observe(img));
-            }
-        });
-        </script>
         
 
     <script>
