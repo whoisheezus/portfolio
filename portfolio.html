@@ -224,31 +224,6 @@ svg {
     padding-right: 20px;
 }
 
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}
-.card {
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.card {
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeIn 0.5s forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
 
 
 
@@ -258,26 +233,6 @@ svg {
     <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 1024px)">
     <link rel="stylesheet" href="https://use.typekit.net/pyu5jsd.css">
 </head>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    loadCards(); // Запуск функции загрузки карточек
-});
-
-function loadCards() {
-    // Ваш код для загрузки карточек
-    const cardsContainer = document.querySelector('.cards-container');
-    
-    // Пример динамической загрузки карточек
-    for (let i = 0; i < 10; i++) {
-        const card = document.createElement('div');
-        card.classList.add('card');
-        card.textContent = `Карточка №${i + 1}`;
-        cardsContainer.appendChild(card);
-    }
-}
-
-</script>
 
 <body class=" text-custom-base tracking-custom text-lg lg:text-2xl">
 
@@ -548,10 +503,10 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
     <a data-fancybox="gallery1" href="./content/1-1.webp" class="col-span-1">
-        <img src="./content/1-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/1-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery1" href="./content/1-2.webp" class="col-span-1">
-        <img src="./content/1-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/1-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
 </div>
 </div>
@@ -566,7 +521,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-02.webp" class="w-full object-cover"> 
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-02.webp" class="w-full object-cover"> 
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -588,25 +543,25 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery2" href="./content/2-1.webp" class="col-span-1">
-        <img  src="./content/2-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy"  src="./content/2-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery2" href="./content/2-2.webp" class="col-span-1">
-        <img src="./content/2-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/2-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery2" href="./content/2-3.webp" class="col-span-1">
-        <img src="./content/2-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/2-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery2" href="./content/2-4.webp" class="col-span-1">
-        <img src="./content/2-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/2-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery2" href="./content/2-5.webp" class="col-span-1">
-        <img src="./content/2-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/2-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery2" href="./content/2-6.webp" class="col-span-1">
-        <img src="./content/2-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/2-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery2" href="./content/2-7.webp" class="col-span-1">
-        <img src="./content/2-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/2-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
 </div>
 
@@ -623,7 +578,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-03.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-03.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -644,13 +599,13 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery3" href="./content/3-1.webp" class="col-span-1">
-            <img src="./content/3-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/3-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery3" href="./content/3-2.webp" class="col-span-1">
-            <img src="./content/3-2.webp" alt="Image 2" class="w-full h-auto">
+            <img loading="lazy" src="./content/3-2.webp" alt="Image 2" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery3" href="./content/3-3.webp" class="col-span-1">
-            <img src="./content/3-3.webp" alt="Image 3" class="w-full h-auto">
+            <img loading="lazy" src="./content/3-3.webp" alt="Image 3" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -665,7 +620,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-04.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-04.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -686,43 +641,43 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery4" href="https://vimeo.com/1066881389/09e3d50ac6" class="col-span-1">
-        <img src="./content/4-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/4-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery4" href="./content/4-2.webp" class="col-span-1">
-        <img src="./content/4-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/4-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery4" href="./content/4-3.webp" class="col-span-1">
-        <img src="./content/4-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/4-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery4" href="https://vimeo.com/1066870690/b2e89e4c85" class="col-span-1">
-        <img src="./content/4-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/4-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery4" href="./content/4-5.webp" class="col-span-1">
-        <img src="./content/4-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/4-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery4" href="https://vimeo.com/1066870732/07c33c7935" class="col-span-1">
-        <img src="./content/4-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/4-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery4" href="./content/4-7.webp" class="col-span-1">
-        <img src="./content/4-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/4-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery4" href="./content/4-8.webp" class="col-span-1">
-        <img src="./content/4-8.webp" alt="Image 8" class="w-full h-auto">
+        <img loading="lazy" src="./content/4-8.webp" alt="Image 8" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery4" href="./content/4-9.webp" class="col-span-1">
-        <img src="./content/4-9.webp" alt="Image 9" class="w-full h-auto">
+        <img loading="lazy" src="./content/4-9.webp" alt="Image 9" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery4" href="https://vimeo.com/1066879931/bfde13ad48" class="col-span-1">
-        <img src="./content/4-10.webp" alt="Image 10" class="w-full h-auto">
+        <img loading="lazy" src="./content/4-10.webp" alt="Image 10" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery4" href="./content/4-11.webp" class="col-span-1">
-        <img src="./content/4-11.webp" alt="Image 11" class="w-full h-auto">
+        <img loading="lazy" src="./content/4-11.webp" alt="Image 11" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery4" href="./content/4-12.webp" class="col-span-1">
-        <img src="./content/4-12.webp" alt="Image 12" class="w-full h-auto">
+        <img loading="lazy" src="./content/4-12.webp" alt="Image 12" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery4" href="./content/4-13.webp" class="col-span-1">
-        <img src="./content/4-13.webp" alt="Image 13" class="w-full h-auto">
+        <img loading="lazy" src="./content/4-13.webp" alt="Image 13" class="w-full h-auto">
     </a>
 </div>
 
@@ -737,7 +692,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-05.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-05.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -758,16 +713,16 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery5" href="./content/5-1.webp" class="col-span-1">
-        <img src="./content/5-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/5-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery5" href="./content/5-2.webp" class="col-span-1">
-        <img src="./content/5-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/5-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery5" href="./content/5-3.webp" class="col-span-1">
-        <img src="./content/5-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/5-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery5" href="./content/5-4.webp" class="col-span-1">
-        <img src="./content/5-4-2.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/5-4-2.webp" alt="Image 4" class="w-full h-auto">
     </a>
 </div>
 
@@ -782,7 +737,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-06.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-06.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -807,34 +762,34 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery6" href="./content/6-1.webp" class="col-span-1">
-        <img src="./content/6-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/6-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery6" href="./content/6-2.webp" class="col-span-1">
-        <img src="./content/6-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/6-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery6" href="./content/6-3.webp" class="col-span-1">
-        <img src="./content/6-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/6-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery6" href="https://vimeo.com/1068767825/4bf6752f34" class="col-span-1">
-        <img src="./content/6-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/6-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery6" href="./content/6-5.webp" class="col-span-1">
-        <img src="./content/6-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/6-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery6" href="https://vimeo.com/1068767928/f8aa4aead4" class="col-span-1">
-        <img src="./content/6-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/6-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery6" href="./content/6-7.webp" class="col-span-1">
-        <img src="./content/6-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/6-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery6" href="./content/6-8.webp" class="col-span-1">
-        <img src="./content/6-8.webp" alt="Image 8" class="w-full h-auto">
+        <img loading="lazy" src="./content/6-8.webp" alt="Image 8" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery6" href="./content/6-9.webp" class="col-span-1">
-        <img src="./content/6-9.webp" alt="Image 9" class="w-full h-auto">
+        <img loading="lazy" src="./content/6-9.webp" alt="Image 9" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery6" href="./content/6-10.webp" class="col-span-1">
-        <img src="./content/6-10.webp" alt="Image 10" class="w-full h-auto">
+        <img loading="lazy" src="./content/6-10.webp" alt="Image 10" class="w-full h-auto">
     </a>
 </div>
 
@@ -849,7 +804,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-07.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-07.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -871,28 +826,28 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery7" href="./content/7-1.webp" class="col-span-1">
-        <img src="./content/7-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/7-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery7" href="./content/7-2.webp" class="col-span-1">
-        <img src="./content/7-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/7-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery7" href="./content/7-3.webp" class="col-span-1">
-        <img src="./content/7-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/7-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery7" href="./content/7-4.webp" class="col-span-1">
-        <img src="./content/7-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/7-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery7" href="./content/7-5.webp" class="col-span-1">
-        <img src="./content/7-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/7-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery7" href="https://www.youtube.com/watch?v=DHVKMhYa6NA" data-caption="backdrop animation" class="col-span-1">
-        <img src="./content/7-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/7-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery7" href="https://vimeo.com/1062347853/59da6d1d82?ts=0&share=copy" class="col-span-1">
-        <img src="./content/7-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/7-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery7" href="https://www.youtube.com/watch?v=pYJJOFztvJs" class="col-span-1">
-        <img src="./content/7-8.webp" alt="Image 8" class="w-full h-auto">
+        <img loading="lazy" src="./content/7-8.webp" alt="Image 8" class="w-full h-auto">
     </a>
 </div>
 
@@ -910,7 +865,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-08.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-08.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -931,7 +886,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery8" href="https://vimeo.com/1061756967/7212c3f20c?ts=0&share=copy" class="col-span-1">
-            <img src="./content/8-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/8-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -946,7 +901,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
                 <!-- Контент -->
                 <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
-                    <!-- Картинка для мобильной версии --> <img src="./content/h/h-09.webp" class="w-full object-cover">
+                    <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-09.webp" class="w-full object-cover">
                 </div>
 
                 <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -969,10 +924,10 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
                 <!-- Галерея -->
                 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
                     <a data-fancybox="gallery9" href="./content/9-1.webp" class="col-span-1">
-                        <img src="9-1.jpg" alt="Image 1" class="w-full h-auto">
+                        <img loading="lazy" src="9-1.jpg" alt="Image 1" class="w-full h-auto">
                     </a>
                     <a data-fancybox="gallery9" href="9-2.png" class="col-span-1">
-                        <img src="9-2.png" alt="Image 2" class="w-full h-auto">
+                        <img loading="lazy" src="9-2.png" alt="Image 2" class="w-full h-auto">
                     </a>
                 </div>
             </div>
@@ -989,7 +944,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-12.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-12.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1010,19 +965,19 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery12" href="https://vimeo.com/1061703291/ef45d58bd5" class="col-span-1">
-        <img src="./content/12-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/12-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery12" href="https://vimeo.com/1057475805/6df8fb37d8" class="col-span-1">
-        <img src="./content/12-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/12-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery12" href="https://vimeo.com/1061704544/b8e9325869" class="col-span-1">
-        <img src="./content/12-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/12-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery12" href="https://vimeo.com/1061703268/7b7c6ba8ed" class="col-span-1">
-        <img src="./content/12-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/12-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery12" href="https://vimeo.com/1057476392/0c44f15ab1" class="col-span-1">
-        <img src="./content/12-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/12-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
 </div>
 
@@ -1037,7 +992,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-13.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-13.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1060,28 +1015,28 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery13" href="./content/13-1.webp" class="col-span-1">
-        <img src="./content/13-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/13-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery13" href="https://vimeo.com/1068768243/b0fb14b9cb" class="col-span-1">
-        <img src="./content/13-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/13-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery13" href="https://vimeo.com/1068768421/70956b1e4c" class="col-span-1">
-        <img src="./content/13-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/13-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery13" href="https://vimeo.com/1068768214/940008007e" class="col-span-1">
-        <img src="./content/13-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/13-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery13" href="./content/13-5.webp" class="col-span-1">
-        <img src="./content/13-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/13-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery13" href="./content/13-6.webp" class="col-span-1">
-        <img src="./content/13-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/13-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery13" href="./content/13-7.webp" class="col-span-1">
-        <img src="./content/13-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/13-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery13" href="https://www.youtube.com/live/KKT88WJ6Lok?si=x9JNyIOTXKZXgoIp" data-caption="livestream elements" class="col-span-1">
-        <img src="./content/13-8.webp" alt="Image 8" class="w-full h-auto">
+        <img loading="lazy" src="./content/13-8.webp" alt="Image 8" class="w-full h-auto">
     </a>
 </div>
 
@@ -1096,7 +1051,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-132.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-132.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1117,10 +1072,10 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery132" href="./content/132-1.webp" class="col-span-1">
-        <img src="./content/132-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/132-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery132" href="./content/132-2.webp" class="col-span-1">
-        <img src="./content/132-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/132-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
 </div>
 
@@ -1136,7 +1091,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-133.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-133.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1157,7 +1112,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
         <a data-fancybox="gallery133" href="./content/133-1.webp" class="col-span-1">
-            <img src="./content/133-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/133-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -1172,7 +1127,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-14.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-14.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1195,11 +1150,11 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery14" href="./content/14-1.webp" class="col-span-1">
-            <img src="./content/14-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/14-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
         
         <a data-fancybox="gallery14" href="./content/14-3.webp" class="col-span-1">
-            <img src="./content/14-3.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/14-3.webp" alt="Image 1" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -1213,7 +1168,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-15.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-15.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1238,28 +1193,28 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery15" href="./content/15-1.webp" class="col-span-1">
-        <img src="./content/15-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/15-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery15" href="./content/15-2.webp" class="col-span-1">
-        <img src="./content/15-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/15-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery15" href="./content/15-3.webp" class="col-span-1">
-        <img src="./content/15-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/15-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery15" href="./content/15-4.webp" class="col-span-1">
-        <img src="./content/15-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/15-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery15" href="./content/15-5.webp" class="col-span-1">
-        <img src="./content/15-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/15-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery15" href="./content/15-6.webp" class="col-span-1">
-        <img src="./content/15-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/15-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery15" href="./content/15-7.webp" class="col-span-1">
-        <img src="./content/15-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/15-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery15" href="./content/15-8.webp" class="col-span-1">
-        <img src="./content/15-8.webp" alt="Image 8" class="w-full h-auto">
+        <img loading="lazy" src="./content/15-8.webp" alt="Image 8" class="w-full h-auto">
     </a>
 </div>
 
@@ -1274,7 +1229,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-16.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-16.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1296,16 +1251,16 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
         <!-- Пример изображения, замените на фактические URL -->
         <a data-fancybox="gallery16" href="./content/16-1.webp" class="col-span-1">
-            <img src="./content/16-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/16-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery16" href="./content/16-2.webp" class="col-span-1">
-            <img src="./content/16-2.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/16-2.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery16" href="./content/16-3.webp" class="col-span-1">
-            <img src="./content/16-3.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/16-3.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery16" href="./content/16-4.webp" class="col-span-1">
-            <img src="./content/16-4.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/16-4.webp" alt="Image 1" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -1319,7 +1274,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-17.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-17.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1340,19 +1295,19 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery17" href="./content/17-1.webp" class="col-span-1">
-        <img src="./content/17-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/17-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery17" href="./content/17-2.webp" class="col-span-1">
-        <img src="./content/17-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/17-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery17" href="./content/17-3.webp" class="col-span-1">
-        <img src="./content/17-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/17-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery17" href="./content/17-4.webp" class="col-span-1">
-        <img src="./content/17-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/17-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery17" href="./content/17-5.webp" class="col-span-1">
-        <img src="./content/17-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/17-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
 </div>
 
@@ -1367,7 +1322,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-18.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-18.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1388,25 +1343,25 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery18" href="./content/18-1.webp" class="col-span-1">
-        <img src="./content/18-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/18-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery18" href="./content/18-2.webp" class="col-span-1">
-        <img src="./content/18-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/18-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery18" href="./content/18-3.webp" class="col-span-1">
-        <img src="./content/18-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/18-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery18" href="./content/18-4.webp" class="col-span-1">
-        <img src="./content/18-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/18-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery18" href="./content/18-5.webp" class="col-span-1">
-        <img src="./content/18-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/18-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery18" href="https://vimeo.com/1070757609/e08295982b" class="col-span-1">
-        <img src="./content/18-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/18-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery18" href="https://vimeo.com/1070757612/81bb47d645" class="col-span-1">
-        <img src="./content/18-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/18-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
 </div>
 
@@ -1422,7 +1377,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-11.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-11.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1445,17 +1400,17 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery11" href="https://vimeo.com/1057474091/62f298f66f" class="col-span-1">
-            <img src="./content/11-2.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/11-2.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery11" href="https://vimeo.com/1057472247/f5651ffbab" class="col-span-1">
-            <img src="./content/11-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/11-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
         
         <a data-fancybox="gallery11" href="https://vimeo.com/1057473818/2dd5a83db3" class="col-span-1">
-            <img src="./content/11-4.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/11-4.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery11" href="https://vimeo.com/1057474000/8eeaf0c631" class="col-span-1">
-            <img src="./content/11-3.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/11-3.webp" alt="Image 1" class="w-full h-auto">
         </a>
         
     </div>
@@ -1471,7 +1426,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-19.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-19.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1490,10 +1445,10 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery19" href="./content/19-1.webp" class="col-span-1">
-            <img src="./content/19-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/19-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery19" href="./content/19-2.webp" class="col-span-1">
-            <img src="./content/19-2.webp" alt="Image 2" class="w-full h-auto">
+            <img loading="lazy" src="./content/19-2.webp" alt="Image 2" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -1509,7 +1464,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-21.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-21.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1530,7 +1485,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery21" href="./content/21-1.webp" class="col-span-1">
-            <img src="./content/21-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/21-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -1544,7 +1499,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-22.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-22.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1563,16 +1518,16 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery22" href="./content/22-1.webp" class="col-span-1">
-        <img src="./content/22-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/22-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery22" href="./content/22-2.webp" class="col-span-1">
-        <img src="./content/22-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/22-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery22" href="./content/22-3.webp" class="col-span-1">
-        <img src="./content/22-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/22-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery22" href="./content/22-4.webp" class="col-span-1">
-        <img src="./content/22-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/22-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
 </div>
 
@@ -1587,7 +1542,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-23.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-23.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1606,7 +1561,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery23" href="./content/23-1.webp" class="col-span-1">
-            <img src="./content/23-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/23-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -1620,7 +1575,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-24.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-24.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1639,13 +1594,13 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery24" href="./content/24-1.webp" class="col-span-1">
-            <img src="./content/24-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/24-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery24" href="./content/24-2.webp" class="col-span-1">
-            <img src="./content/24-2.webp" alt="Image 2" class="w-full h-auto">
+            <img loading="lazy" src="./content/24-2.webp" alt="Image 2" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery24" href="https://vimeo.com/1062040537/fa920f13c2" class="col-span-1">
-            <img src="./content/24-3.webp" alt="Image 3" class="w-full h-auto">
+            <img loading="lazy" src="./content/24-3.webp" alt="Image 3" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -1659,7 +1614,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-25.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-25.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1681,16 +1636,16 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery25" href="./content/25-1.webp" class="col-span-1">
-        <img src="./content/25-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/25-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery25" href="./content/25-2.webp" class="col-span-1">
-        <img src="./content/25-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/25-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery25" href="https://vimeo.com/1069124729/24a5d03908" class="col-span-1">
-        <img src="./content/25-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/25-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery25" href="./content/25-4.webp" class="col-span-1">
-        <img src="./content/25-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/25-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
 </div>
 
@@ -1705,7 +1660,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-26.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-26.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1724,7 +1679,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery26" href="https://vimeo.com/1068769256/17a50cc869" class="col-span-1">
-            <img src="./content/26-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/26-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -1738,7 +1693,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-27.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-27.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1757,28 +1712,28 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery27" href="./content/27-1.webp" class="col-span-1">
-        <img src="./content/27-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/27-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery27" href="./content/27-2.webp" class="col-span-1">
-        <img src="./content/27-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/27-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery27" href="./content/27-3.webp" class="col-span-1">
-        <img src="./content/27-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/27-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery27" href="./content/27-4.webp" class="col-span-1">
-        <img src="./content/27-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/27-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery27" href="./content/27-5.webp" class="col-span-1">
-        <img src="./content/27-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/27-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery27" href="./content/27-6.webp" class="col-span-1">
-        <img src="./content/27-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/27-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery27" href="./content/27-7.webp" class="col-span-1">
-        <img src="./content/27-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/27-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery27" href="./content/27-8.webp" class="col-span-1">
-        <img src="./content/27-8.webp" alt="Image 8" class="w-full h-auto">
+        <img loading="lazy" src="./content/27-8.webp" alt="Image 8" class="w-full h-auto">
     </a>
 </div>
 
@@ -1794,7 +1749,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-28.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-28.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1813,13 +1768,13 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery28" href="./content/28-1.webp" class="col-span-1">
-        <img src="./content/28-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/28-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery28" href="./content/28-2.webp" class="col-span-1">
-        <img src="./content/28-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/28-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery28" href="./content/28-3.webp" class="col-span-1">
-        <img src="./content/28-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/28-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
 </div>
 
@@ -1835,7 +1790,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-29.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-29.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1855,25 +1810,25 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery29" href="./content/29-1.webp" class="col-span-1">
-        <img src="./content/29-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/29-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery29" href="./content/29-2.webp" class="col-span-1">
-        <img src="./content/29-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/29-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery29" href="./content/29-3.webp" class="col-span-1">
-        <img src="./content/29-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/29-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery29" href="./content/29-4.webp" class="col-span-1">
-        <img src="./content/29-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/29-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery29" href="./content/29-5.webp" class="col-span-1">
-        <img src="./content/29-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/29-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery29" href="./content/29-6.webp" class="col-span-1">
-        <img src="./content/29-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/29-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery29" href="./content/29-7.webp" class="col-span-1">
-        <img src="./content/29-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/29-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
 </div>
 
@@ -1888,7 +1843,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-30.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-30.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1909,13 +1864,13 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery30" href="./content/30-1.webp" class="col-span-1">
-        <img src="./content/30-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/30-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery30" href="./content/30-2.webp" class="col-span-1">
-        <img src="./content/30-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/30-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery30" href="./content/30-3.webp" class="col-span-1">
-        <img src="./content/30-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/30-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
 </div>
 
@@ -1931,7 +1886,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-31.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-31.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1951,13 +1906,13 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery31" href="./content/31-1.webp" class="col-span-1">
-            <img src="./content/31-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/31-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery31" href="./content/31-2.webp" class="col-span-1">
-            <img src="./content/31-2.webp" alt="Image 2" class="w-full h-auto">
+            <img loading="lazy" src="./content/31-2.webp" alt="Image 2" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery31" href="./content/31-3.webp" class="col-span-1">
-            <img src="./content/31-3.webp" alt="Image 3" class="w-full h-auto">
+            <img loading="lazy" src="./content/31-3.webp" alt="Image 3" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -1972,7 +1927,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
         <!-- Картинка для мобильной версии -->
-        <img src="./content/h/h-32.webp" class="w-full h-auto">
+        <img loading="lazy" src="./content/h/h-32.webp" class="w-full h-auto">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -1992,16 +1947,16 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery32" href="./content/32-1.webp" class="col-span-1">
-        <img src="./content/32-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/32-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery32" href="./content/32-2.webp" class="col-span-1">
-        <img src="./content/32-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/32-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery32" href="./content/32-3.webp" class="col-span-1">
-        <img src="./content/32-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/32-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery32" href="./content/32-4.webp" class="col-span-1">
-        <img src="./content/32-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/32-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
 </div>
 
@@ -2017,7 +1972,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
         <!-- Картинка для мобильной версии -->
-        <img src="./content/h/h-33.webp" class="w-full h-auto">
+        <img loading="lazy" src="./content/h/h-33.webp" class="w-full h-auto">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2037,25 +1992,25 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery33" href="./content/33-1.webp" class="col-span-1">
-        <img src="./content/33-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/33-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery33" href="./content/33-2.webp" class="col-span-1">
-        <img src="./content/33-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/33-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery33" href="./content/33-3.webp" class="col-span-1">
-        <img src="./content/33-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/33-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery33" href="./content/33-4.webp" class="col-span-1">
-        <img src="./content/33-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/33-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery33" href="./content/33-5.webp" class="col-span-1">
-        <img src="./content/33-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/33-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery33" href="./content/33-6.webp" class="col-span-1">
-        <img src="./content/33-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/33-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery33" href="./content/33-7.webp" class="col-span-1">
-        <img src="./content/33-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/33-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
 </div>
 
@@ -2071,7 +2026,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
         <!-- Картинка для мобильной версии -->
-        <img src="./content/h/h-34.webp" class="w-full h-auto">
+        <img loading="lazy" src="./content/h/h-34.webp" class="w-full h-auto">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2091,19 +2046,19 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery34" href="./content/34-1.webp" class="col-span-1">
-        <img src="./content/34-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/34-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery34" href="./content/34-2.webp" class="col-span-1">
-        <img src="./content/34-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/34-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery34" href="./content/34-3.webp" class="col-span-1">
-        <img src="./content/34-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/34-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery34" href="./content/34-4.webp" class="col-span-1">
-        <img src="./content/34-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/34-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery34" href="./content/34-5.webp" class="col-span-1">
-        <img src="./content/34-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/34-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
 </div>
 
@@ -2119,7 +2074,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
         <!-- Картинка для мобильной версии -->
-        <img src="./content/h/h-35.webp" class="w-full h-auto">
+        <img loading="lazy" src="./content/h/h-35.webp" class="w-full h-auto">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2139,22 +2094,22 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery35" href="./content/35-1.webp" class="col-span-1">
-            <img src="./content/35-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/35-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery35" href="./content/35-2.webp" class="col-span-1">
-            <img src="./content/35-2.webp" alt="Image 2" class="w-full h-auto">
+            <img loading="lazy" src="./content/35-2.webp" alt="Image 2" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery35" href="./content/35-3.webp" class="col-span-1">
-            <img src="./content/35-3.webp" alt="Image 3" class="w-full h-auto">
+            <img loading="lazy" src="./content/35-3.webp" alt="Image 3" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery35" href="./content/35-4.webp" class="col-span-1">
-            <img src="./content/35-4.webp" alt="Image 4" class="w-full h-auto">
+            <img loading="lazy" src="./content/35-4.webp" alt="Image 4" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery35" href="./content/35-4.webp" class="col-span-1">
-            <img src="./content/35-5.webp" alt="Image 5" class="w-full h-auto">
+            <img loading="lazy" src="./content/35-5.webp" alt="Image 5" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery35" href="https://vimeo.com/1062040602/0130d30c67?ts=0&share=copy" class="col-span-1">
-            <img src="./content/35-6.webp" alt="Image 6" class="w-full h-auto">
+            <img loading="lazy" src="./content/35-6.webp" alt="Image 6" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -2169,7 +2124,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
         <!-- Картинка для мобильной версии -->
-        <img src="./content/h/h-36.webp" class="w-full h-auto">
+        <img loading="lazy" src="./content/h/h-36.webp" class="w-full h-auto">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2191,19 +2146,19 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery36" href="./content/36-1.webp" class="col-span-1">
-        <img src="./content/36-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/36-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery36" href="./content/36-2.webp" class="col-span-1">
-        <img src="./content/36-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/36-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery36" href="./content/36-3.webp" class="col-span-1">
-        <img src="./content/36-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/36-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery36" href="./content/36-4.webp" class="col-span-1">
-        <img src="./content/36-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/36-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery36" href="./content/36-5.webp" class="col-span-1">
-        <img src="./content/36-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/36-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
 </div>
 
@@ -2219,7 +2174,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
         <!-- Картинка для мобильной версии -->
-        <img src="./content/h/h-37.webp" class="w-full h-auto">
+        <img loading="lazy" src="./content/h/h-37.webp" class="w-full h-auto">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2239,22 +2194,22 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery37" href="https://vimeo.com/1061508729/1902842c15?ts=0&share=copy" class="col-span-1">
-            <img src="./content/37-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/37-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery37" href="./content/37-2.webp" class="col-span-1">
-            <img src="./content/37-2.webp" alt="Image 2" class="w-full h-auto">
+            <img loading="lazy" src="./content/37-2.webp" alt="Image 2" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery37" href="./content/37-3.webp" class="col-span-1">
-            <img src="./content/37-3.webp" alt="Image 3" class="w-full h-auto">
+            <img loading="lazy" src="./content/37-3.webp" alt="Image 3" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery37" href="./content/37-4.webp" class="col-span-1">
-            <img src="./content/37-4.webp" alt="Image 4" class="w-full h-auto">
+            <img loading="lazy" src="./content/37-4.webp" alt="Image 4" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery37" href="./content/37-5.webp" class="col-span-1">
-            <img src="./content/37-5.webp" alt="Image 5" class="w-full h-auto">
+            <img loading="lazy" src="./content/37-5.webp" alt="Image 5" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery37" href="./content/37-6.webp" class="col-span-1">
-            <img src="./content/37-6.webp" alt="Image 6" class="w-full h-auto">
+            <img loading="lazy" src="./content/37-6.webp" alt="Image 6" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -2269,7 +2224,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
         <!-- Картинка для мобильной версии -->
-        <img src="./content/h/h-38.webp" class="w-full h-auto">
+        <img loading="lazy" src="./content/h/h-38.webp" class="w-full h-auto">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2291,16 +2246,16 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery38" href="./content/38-1.webp" class="col-span-1">
-            <img src="./content/38-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/38-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery38" href="./content/38-2.webp" class="col-span-1">
-            <img src="./content/38-2.webp" alt="Image 2" class="w-full h-auto">
+            <img loading="lazy" src="./content/38-2.webp" alt="Image 2" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery38" href="./content/38-3.webp" class="col-span-1">
-            <img src="./content/38-3.webp" alt="Image 3" class="w-full h-auto">
+            <img loading="lazy" src="./content/38-3.webp" alt="Image 3" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery38" href="https://vimeo.com/1062030413/3359b546e9?ts=0&share=copy" class="col-span-1">
-            <img src="./content/38-4.webp" alt="Image 4" class="w-full h-auto">
+            <img loading="lazy" src="./content/38-4.webp" alt="Image 4" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -2316,7 +2271,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
         <!-- Картинка для мобильной версии -->
-        <img src="./content/h/h-39.webp"  class="w-full h-auto">
+        <img loading="lazy" src="./content/h/h-39.webp"  class="w-full h-auto">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2336,22 +2291,22 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery39" href="./content/39-1.webp" class="col-span-1">
-        <img src="./content/39-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/39-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery39" href="./content/39-2.webp" class="col-span-1">
-        <img src="./content/39-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/39-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery39" href="./content/39-3.webp" class="col-span-1">
-        <img src="./content/39-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/39-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery39" href="./content/39-4.webp" class="col-span-1">
-        <img src="./content/39-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/39-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery39" href="./content/39-5.webp" class="col-span-1">
-        <img src="./content/39-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/39-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery39" href="./content/39-6.webp" class="col-span-1">
-        <img src="./content/39-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/39-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
 </div>
 
@@ -2369,7 +2324,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
         <!-- Картинка для мобильной версии -->
-        <img src="./content/h/h-40.webp" class="w-full h-auto">
+        <img loading="lazy" src="./content/h/h-40.webp" class="w-full h-auto">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2389,28 +2344,28 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery40" href="./content/40-1.webp" class="col-span-1">
-        <img src="./content/40-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/40-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery40" href="./content/40-2.webp" class="col-span-1">
-        <img src="./content/40-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/40-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery40" href="./content/40-3.webp" class="col-span-1">
-        <img src="./content/40-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/40-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery40" href="./content/40-4.webp" class="col-span-1">
-        <img src="./content/40-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/40-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery40" href="./content/40-5.webp" class="col-span-1">
-        <img src="./content/40-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/40-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery40" href="./content/40-6.webp" class="col-span-1">
-        <img src="./content/40-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/40-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery40" href="./content/40-7.webp" class="col-span-1">
-        <img src="./content/40-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/40-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery40" href="./content/40-8.webp" class="col-span-1">
-        <img src="./content/40-8.webp" alt="Image 8" class="w-full h-auto">
+        <img loading="lazy" src="./content/40-8.webp" alt="Image 8" class="w-full h-auto">
     </a>
 </div>
 
@@ -2427,7 +2382,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
         <!-- Картинка для мобильной версии -->
-        <img src="./content/h/h-41.webp"  class="w-full h-auto">
+        <img loading="lazy" src="./content/h/h-41.webp"  class="w-full h-auto">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2447,31 +2402,31 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery41" href="./content/41-1.webp" class="col-span-1">
-        <img src="./content/41-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/41-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery41" href="./content/41-2.webp" class="col-span-1">
-        <img src="./content/41-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/41-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery41" href="./content/41-3.webp" class="col-span-1">
-        <img src="./content/41-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/41-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery41" href="./content/41-4.webp" class="col-span-1">
-        <img src="./content/41-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/41-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery41" href="./content/41-5.webp" class="col-span-1">
-        <img src="./content/41-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/41-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery41" href="./content/41-6.webp" class="col-span-1">
-        <img src="./content/41-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/41-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery41" href="./content/41-7.webp" class="col-span-1">
-        <img src="./content/41-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/41-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery41" href="./content/41-8.webp" class="col-span-1">
-        <img src="./content/41-8.webp" alt="Image 8" class="w-full h-auto">
+        <img loading="lazy" src="./content/41-8.webp" alt="Image 8" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery41" href="./content/41-9.webp" class="col-span-1">
-        <img src="./content/41-9.webp" alt="Image 9" class="w-full h-auto">
+        <img loading="lazy" src="./content/41-9.webp" alt="Image 9" class="w-full h-auto">
     </a>
 </div>
 
@@ -2487,7 +2442,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
         <!-- Картинка для мобильной версии -->
-        <img src="./content/h/h-42.webp"  class="w-full h-auto">
+        <img loading="lazy" src="./content/h/h-42.webp"  class="w-full h-auto">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2507,19 +2462,19 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery42" href="./content/42-1.webp" class="col-span-1">
-            <img src="./content/42-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/42-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery42" href="./content/42-2.webp" class="col-span-1">
-            <img src="./content/42-2.webp" alt="Image 2" class="w-full h-auto">
+            <img loading="lazy" src="./content/42-2.webp" alt="Image 2" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery42" href="./content/42-3.webp" class="col-span-1">
-            <img src="./content/42-3.webp" alt="Image 3" class="w-full h-auto">
+            <img loading="lazy" src="./content/42-3.webp" alt="Image 3" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery42" href="./content/42-4.webp" class="col-span-1">
-            <img src="./content/42-4.webp" alt="Image 4" class="w-full h-auto">
+            <img loading="lazy" src="./content/42-4.webp" alt="Image 4" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery42" href="https://vimeo.com/1062036379/5660e40e07?share=copy" class="col-span-1">
-            <img src="./content/42-5.webp" alt="Image 5" class="w-full h-auto">
+            <img loading="lazy" src="./content/42-5.webp" alt="Image 5" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -2534,7 +2489,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
         <!-- Картинка для мобильной версии -->
-        <img src="./content/h/h-43.webp" class="w-full h-auto">
+        <img loading="lazy" src="./content/h/h-43.webp" class="w-full h-auto">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2557,31 +2512,31 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery43" href="./content/43-1.webp" class="col-span-1">
-        <img src="./content/43-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/43-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery43" href="./content/43-2.webp" class="col-span-1">
-        <img src="./content/43-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/43-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery43" href="./content/43-3.webp" class="col-span-1">
-        <img src="./content/43-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/43-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery43" href="./content/43-4.webp" class="col-span-1">
-        <img src="./content/43-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/43-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery43" href="./content/43-5.webp" class="col-span-1">
-        <img src="./content/43-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/43-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery43" href="./content/43-6.webp" class="col-span-1">
-        <img src="./content/43-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/43-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery43" href="./content/43-7.webp" class="col-span-1">
-        <img src="./content/43-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/43-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery43" href="./content/43-8.webp" class="col-span-1">
-        <img src="./content/43-8.webp" alt="Image 8" class="w-full h-auto">
+        <img loading="lazy" src="./content/43-8.webp" alt="Image 8" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery43" href="./content/43-9.webp" class="col-span-1">
-        <img src="./content/43-9.webp" alt="Image 9" class="w-full h-auto">
+        <img loading="lazy" src="./content/43-9.webp" alt="Image 9" class="w-full h-auto">
     </a>
 </div>
 
@@ -2596,7 +2551,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-44.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-44.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2616,37 +2571,37 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery44" href="./content/44-1.webp" class="col-span-1">
-        <img src="./content/44-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/44-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery44" href="./content/44-2.webp" class="col-span-1">
-        <img src="./content/44-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/44-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery44" href="./content/44-3.webp" class="col-span-1">
-        <img src="./content/44-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/44-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery44" href="./content/44-4.webp" class="col-span-1">
-        <img src="./content/44-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/44-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery44" href="./content/44-5.webp" class="col-span-1">
-        <img src="./content/44-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/44-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery44" href="./content/44-6.webp" class="col-span-1">
-        <img src="./content/44-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/44-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery44" href="./content/44-7.webp" class="col-span-1">
-        <img src="./content/44-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/44-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery44" href="./content/44-8.webp" class="col-span-1">
-        <img src="./content/44-8.webp" alt="Image 8" class="w-full h-auto">
+        <img loading="lazy" src="./content/44-8.webp" alt="Image 8" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery44" href="./content/44-9.webp" class="col-span-1">
-        <img src="./content/44-9.webp" alt="Image 9" class="w-full h-auto">
+        <img loading="lazy" src="./content/44-9.webp" alt="Image 9" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery44" href="./content/44-10.webp" class="col-span-1">
-        <img src="./content/44-10.webp" alt="Image 10" class="w-full h-auto">
+        <img loading="lazy" src="./content/44-10.webp" alt="Image 10" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery44" href="./content/44-11.webp" class="col-span-1">
-        <img src="./content/44-11.webp" alt="Image 11" class="w-full h-auto">
+        <img loading="lazy" src="./content/44-11.webp" alt="Image 11" class="w-full h-auto">
     </a>
 </div>
 
@@ -2662,7 +2617,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-45.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-45.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2683,25 +2638,25 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery45" href="./content/45-1.webp" class="col-span-1">
-        <img src="./content/45-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/45-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery45" href="./content/45-2.webp" class="col-span-1">
-        <img src="./content/45-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/45-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery45" href="./content/45-3.webp" class="col-span-1">
-        <img src="./content/45-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/45-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery45" href="./content/45-4.webp" class="col-span-1">
-        <img src="./content/45-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/45-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery45" href="./content/45-5.webp" class="col-span-1">
-        <img src="./content/45-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/45-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery45" href="./content/45-6.webp" class="col-span-1">
-        <img src="./content/45-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/45-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery45" href="./content/45-7.webp" class="col-span-1">
-        <img src="./content/45-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/45-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
 </div>
 
@@ -2717,7 +2672,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-46.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-46.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2737,31 +2692,31 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
 <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
     <a data-fancybox="gallery46" href="./content/46-1.webp" class="col-span-1">
-        <img src="./content/46-1.webp" alt="Image 1" class="w-full h-auto">
+        <img loading="lazy" src="./content/46-1.webp" alt="Image 1" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery46" href="./content/46-2.webp" class="col-span-1">
-        <img src="./content/46-2.webp" alt="Image 2" class="w-full h-auto">
+        <img loading="lazy" src="./content/46-2.webp" alt="Image 2" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery46" href="./content/46-3.webp" class="col-span-1">
-        <img src="./content/46-3.webp" alt="Image 3" class="w-full h-auto">
+        <img loading="lazy" src="./content/46-3.webp" alt="Image 3" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery46" href="./content/46-4.webp" class="col-span-1">
-        <img src="./content/46-4.webp" alt="Image 4" class="w-full h-auto">
+        <img loading="lazy" src="./content/46-4.webp" alt="Image 4" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery46" href="./content/46-5.webp" class="col-span-1">
-        <img src="./content/46-5.webp" alt="Image 5" class="w-full h-auto">
+        <img loading="lazy" src="./content/46-5.webp" alt="Image 5" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery46" href="./content/46-6.webp" class="col-span-1">
-        <img src="./content/46-6.webp" alt="Image 6" class="w-full h-auto">
+        <img loading="lazy" src="./content/46-6.webp" alt="Image 6" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery46" href="./content/46-7.webp" class="col-span-1">
-        <img src="./content/46-7.webp" alt="Image 7" class="w-full h-auto">
+        <img loading="lazy" src="./content/46-7.webp" alt="Image 7" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery46" href="./content/46-8.webp" class="col-span-1">
-        <img src="./content/46-8.webp" alt="Image 8" class="w-full h-auto">
+        <img loading="lazy" src="./content/46-8.webp" alt="Image 8" class="w-full h-auto">
     </a>
     <a data-fancybox="gallery46" href="./content/46-9.webp" class="col-span-1">
-        <img src="./content/46-9.webp" alt="Image 9" class="w-full h-auto">
+        <img loading="lazy" src="./content/46-9.webp" alt="Image 9" class="w-full h-auto">
     </a>
 </div>
 
@@ -2777,7 +2732,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-47.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-47.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2797,34 +2752,34 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery47" href="./content/47-1.webp" class="col-span-1">
-            <img src="./content/47-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/47-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery47" href="./content/47-2.webp" class="col-span-1">
-            <img src="./content/47-2.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/47-2.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery47" href="./content/47-3.webp" class="col-span-1">
-            <img src="./content/47-3.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/47-3.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery47" href="./content/47-4.webp" class="col-span-1">
-            <img src="./content/47-4.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/47-4.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery47" href="./content/47-5.webp" class="col-span-1">
-            <img src="./content/47-5.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/47-5.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery47" href="./content/47-6.webp" class="col-span-1">
-            <img src="./content/47-6.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/47-6.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery47" href="./content/47-7.webp" class="col-span-1">
-            <img src="./content/47-7.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/47-7.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery47" href="./content/47-8.webp" class="col-span-1">
-            <img src="./content/47-8.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/47-8.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery47" href="./content/47-9.webp" class="col-span-1">
-            <img src="./content/47-9.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/47-9.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery47" href="https://www.youtube.com/watch?v=o-9AnCPMpsk&list=PL4vC35-Sg9DmlcFveZhoBY2_O5rvTo2cQ&index=2" class="col-span-1">
-            <img src="./content/47-10.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/47-10.webp" alt="Image 1" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -2838,7 +2793,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-48.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-48.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2858,7 +2813,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
         <a data-fancybox="gallery48" href="https://vimeo.com/1060082667/5f79b596d3" class="col-span-1">
-            <img src="./content/48.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/48.webp" alt="Image 1" class="w-full h-auto">
         </a>
     </div>
 </div>
@@ -2873,7 +2828,7 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 
     <!-- Контент -->
     <div class="col-span-2 col-start-1 col-end-3  lg:hidden">
-        <!-- Картинка для мобильной версии --> <img src="./content/h/h-49.webp" class="w-full object-cover">
+        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-49.webp" class="w-full object-cover">
     </div>
 
     <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
@@ -2895,22 +2850,22 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     <!-- Галерея -->
     <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
         <a data-fancybox="gallery49" href="./content/49-1.webp" class="col-span-1">
-            <img src="./content/49-1.webp" alt="Image 1" class="w-full h-auto">
+            <img loading="lazy" src="./content/49-1.webp" alt="Image 1" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery49" href="./content/49-2.webp" class="col-span-1">
-            <img src="./content/49-2.webp" alt="Image 2" class="w-full h-auto">
+            <img loading="lazy" src="./content/49-2.webp" alt="Image 2" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery49" href="./content/49-3.webp" class="col-span-1">
-            <img src="./content/49-3.webp" alt="Image 3" class="w-full h-auto">
+            <img loading="lazy" src="./content/49-3.webp" alt="Image 3" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery49" href="./content/49-4.webp" class="col-span-1">
-            <img src="./content/49-4.webp" alt="Image 4" class="w-full h-auto">
+            <img loading="lazy" src="./content/49-4.webp" alt="Image 4" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery49" href="./content/49-5.webp" class="col-span-1">
-            <img src="./content/49-5.webp" alt="Image 3" class="w-full h-auto">
+            <img loading="lazy" src="./content/49-5.webp" alt="Image 3" class="w-full h-auto">
         </a>
         <a data-fancybox="gallery49" href="./content/49-6.webp" class="col-span-1">
-            <img src="./content/49-6.webp" alt="Image 4" class="w-full h-auto">
+            <img loading="lazy" src="./content/49-6.webp" alt="Image 4" class="w-full h-auto">
         </a>
     </div>
 </div>
