@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selected works</title>
+    <!--<link rel="stylesheet" href="portfolio-o.css">-->
+    <!--<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <style>
+
+/* html {
+    font-size: 80%;
+} */
+
+@layer base {
+    @media (min-width: 1024px) {
+        html {
+            font-size: 80%;
+        }
+    }
+}
+
+@font-face {
+  font-family: 'horus';
+  src: url('./assets/premio.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+svg {
+  overflow: visible;
+} 
+
+.hello-image {
+    background-image: url('./assets/sw-1.jpg'); /* Укажи правильный путь к изображению */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+.hello-svg {
+    height: 75%;
+    width: auto; /* Чтобы сохранить пропорции */
+    mix-blend-mode: exclusion; /* Режим наложения */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+        .text-custom-lg {
+            font-size: 2rem;
+        }
+
+        .text-custom-base {
+            font-size: 1.5rem;
+        }
+
+        .tracking-custom {
+            letter-spacing: -0.05em;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+
+        body {
+            font-family: "stevie-sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+
+        .title {
+            
+            font-family: 'horus';
+            /*
+            font-family: "antipol-variable", sans-serif;
+            font-variation-settings: "STCH"50, "wght"700, "wdth"100;
+            */
+        }
+
+        .stevie-italic {
+            font-family: "stevie-sans", sans-serif;
+            font-weight: 400;
+            opacity: 100%;
+        }
+
+
+        /* Настройка высоты для демонстрации эффекта sticky */
+        .sticky-div {
+            height: 33vh;
+            /* Устанавливаем высоту для демонстрации */
+        }
+
+
+        /*для стики меню*/
+
+
+
+        .sticky-container {
+            position: relative;
+            height: 100%;
+            /* Установи нужную высоту */
+            overflow: visible;
+            z-index: 20;
+        }
+
+
+
+        .sticky-row {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .sticky-container::after {
+            content: '';
+            position: absolute;
+            bottom: -25px;
+            /* Position it at the bottom of the sticky container */
+            left: 0;
+            right: 0;
+            height: 25px;
+            /* Height of the gradient */
+            background: linear-gradient(to bottom, white, transparent);
+            /* Gradient from white to transparent */
+            z-index: 1;
+            /* Ensure it's below other content in the container */
+        }
+
+        .hidden-on-scroll {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        @media (max-width: 1024px) {
+    .title {
+      margin-bottom: 10px;
+    }
+    .breakme{
+        margin-top: 16px;
+    } 
+  }
+
+  .inactive-link {
+    pointer-events: none; /* Делает ссылку неактивной */
+    cursor: default; /* Меняет курсор на стандартный */
+}
+
+
+
+.menu {
+    display: flex;
+    align-items: center; /* Выравнивание элементов по центру по вертикали */
+    justify-content: space-between; /* Распределение элементов по краям */
+}
+
+.dog {
+          width: 124px;
+          height: 124px;
+          transition: transform 0.3s ease-in-out;
+          translate: 0 -12px;
+      }
+
+      .dog:hover {
+          transform: rotate(-90deg);
+          cursor: pointer;
+      }
+
+      .arrow {
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .dog:hover .arrow {
+    animation: bounce 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes bounce {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(200px, -50px); } /* Чуть вверх и вправо */
+    100% { transform: translate(0, 0); }
+  }
+
+  .menu a:not(.inactive-link) {
+  transition: letter-spacing 0.5s ease; /* Плавное изменение леттерспейсинга */
+}
+
+.menu a:not(.inactive-link):hover {
+  letter-spacing: -4px; /* Уменьшаем расстояние между буквами */
+}
+
+.logo-container a {
+  display: inline-block;
+  transition: transform 1s ease-in-out; /* Увеличили время анимации и плавная интерполяция */
+}
+
+.logo-container a:hover {
+  transform: rotate(-15deg); /* Вращение на 15 градусов */
+}
+
+.mob-arrow {
+    position: absolute;
+    bottom: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.menu-mob {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px; /* Чтобы контент не прилип к краям */
+    padding-right: 20px;
+}
+
+.lazy-img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.lazy-img.loaded {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+    </style>
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 1024px)">
+    <link rel="stylesheet" href="https://use.typekit.net/pyu5jsd.css">
+</head>
+
+<body class=" text-custom-base tracking-custom text-lg lg:text-2xl">
+
+
+    <div class="grid mx-5 mt-5 gap-0 grid-cols-12">
+
+
+
+        <!-- menu -->
+        <div class="menudesk hidden lg:grid h-12 grid-cols-12 col-span-12">
+
+            <div class="logo-container">
+                <a href="https://heez.us/" target="_blank">
+                    <img src="./assets/logo.svg" alt="Logo" class="logo h-12 col-span-1">
+                  </a>
+                
+            </div>
+            
+            <div class="menu title uppercase text-custom-lg hidden lg:flex col-span-11 h-12 items-center justify-end space-x-2 pr-4" >
+            
+                <a class="opacity-50 inactive-link align-middle" href="">selected works</a> 
+    <span>/</span>
+    <a href="/projects">studies</a> 
+    <span>/</span>
+    <a href="/ar">AR experiences</a> 
+    <span>/</span>
+    <a href="https://smorgasbord.heez.us/">proto genesis</a> 
+    <span>/</span>
+    <a href="/who-is">about me</a>
+   
+           </div>
+        </div>
+
+        
+
+        <!-- br -->
+
+        <div class="breakme hidden lg:block h-px mt-5 mb-8 col-span-12 bg-black">
+        </div>
+
+        <!-- hello image -->
+        <div
+            class="hello-image h-[33vh] col-span-12 col-start-1 col-end-13 bg-black lg:col-span-6 lg:col-start-7 lg:col-end-13">
+            
+            <!-- <img src="./sw-coded.svg" alt="SVG Overlay" class="hello-svg word"> -->
+            <!-- <p>blah blh blah</p> -->
+        </div>
+
+        <!-- br -->
+
+        <div class="breakme h-px mt-8 col-span-12 bg-black lg:mt-14 lg:col-span-5 lg:col-start-7"></div>
+
+        <!-- menu -->
+
+        <div
+            class="menu-mob bg-white pt-8 grid lg:hidden gap-2 grid-cols-12 col-span-12  sticky-container sticky-row">
+
+            <!-- Первый блок с col-start-1 до col-end-3 -->
+            <div class="col-start-1 col-end-3 bg-white">
+                <!-- Ваш контент для первого блока --><a href="https://heez.us/" target="_blank">
+                    <img src="./assets/logo.svg" alt="Logo" class="logo h-12">
+                </a>
+            </div>
+
+            <!-- Второй блок с col-start-4 до col-end-13 -->
+            <div class="col-start-4 col-end-13">
+                <!-- Первая строка с ссылками, col-start-4 до col-end-13 -->
+                <div class="grid grid-cols-9 gap-x-2 ">
+                    <div class="col-start-1 col-end-10 flex flex-wrap gap-x-5 title uppercase">
+                        <!-- Здесь ваши ссылки -->
+                        <a href="https://heez.us/" class="font-medium   whitespace-nowrap">heezus</a>
+                        <!--<p class="font-medium whitespace-nowrap italic inline">selected works</p>-->
+                        <a href="/projects" class="font-medium  whitespace-nowrap">studies</a>
+                        <a href="/ar" class="font-medium  whitespace-nowrap">AR experiences</a>
+                        <a href="https://smorgasbord.heez.us/" class="font-medium  whitespace-nowrap">proto genesis</a>
+                        <a href="/who-is" class="font-medium  whitespace-nowrap">about me</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Третья строка с блоком "tags:" и текстом -->
+
+            <div class="title col-start-1 col-end-2 uppercase">
+                <p>tags:</p>
+                <img src="./assets/mob-arrow-2.svg" alt="Logo" class="mob-arrow h-12 hidden cursor-pointer">
+            </div>
+            <div class="filter_buttons col-start-4 col-end-13">
+                <!--new ones-->
+                <button class="boton active stevie-italic whitespace-nowrap block" data-filter="*">
+                    everything
+                </button>
+                <button class="boton whitespace-nowrap" data-filter=".direction">art direction</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".social">social media</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".motion">motion</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".identity">identity</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".collage">collage</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".3d">3d</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".web">web</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".print">print</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".merch">merch</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".photo">photo</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".video">video</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".lurmish">lurmish</button>     
+                <!--filter buttons-->
+                
+
+                    
+
+            </div>
+
+        </div>
+
+
+        <!-- sticky row -->
+        <div
+            class="hidden lg:grid gap-0 grid-cols-9 col-start-1 col-end-10 sticky-container sticky-row pt-8 bg-white">
+            <!-- Desktop Hidden Content Скрытый контент-->
+
+
+
+
+            <div class="lg:grid grid-cols-5 col-span-5 col-start-1 col-end-6 hidden-on-scroll hidden md:block">
+
+                <div class="col-span-1 col-start-1 title uppercase text-custom-lg">selected works</div>
+
+                <div class="col-span-2 col-start-3 ">
+                    <a class="opacity-50 hover:opacity-100" href="/projects">studies</a><br>
+                    <a class="opacity-50 hover:opacity-100" href="/ar">ar experiences</a><br>
+                    <a class="opacity-50 hover:opacity-100" href="https://smorgasbord.heez.us/">proto genesis</a><br>
+                    <a class="opacity-50 hover:opacity-100" href="/who-is">about me</a>
+                </div>
+
+
+
+                
+                
+            </div>
+
+            <!-- Tags Section -->
+            <div class="col-span-1 col-start-7  title uppercase text-custom-lg content">tags:</div>
+            <div class="filter_buttons col-span-2 col-start-8 content">
+                <!--filter buttons-->
+                <button class="boton active stevie-italic whitespace-nowrap block" data-filter="*">
+                    everything
+                </button>
+                <button class="boton whitespace-nowrap" data-filter=".direction">art direction</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".social">social media</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".motion">motion</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".identity">identity</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".collage">collage</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".3d">3d</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".web">web</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".print">print</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".merch">merch</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".photo">photo</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".video">video</button><span>, </span>
+                <button class="boton whitespace-nowrap" data-filter=".lurmish">lurmish</button>                
+            </div>
+        </div>
+
+
+        <!-- content -->
+        <div class="filterable_cards  gap-2 col-span-12 lg:col-span-9 lg:col-start-1">
+            
+            <!-- Карточка 1 холод-->
+<div class="card direction collage lurmish grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-end-10"
+id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
+<!-- Линия -->
+<div class="breakme h-px mb-8 col-start-1 col-end-13 bg-black lg:mt-14 lg:col-span-9 lg:col-start-1 lg:col-end-10">
+</div>
+
+<!-- Контент -->
+<div class="col-span-2 col-start-1 col-end-3 lg:hidden">
+    <!-- Картинка для мобильной версии --> <img src="./content/h/h-01.webp" class="w-full object-cover">
+</div>
+
+<div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
+    <!-- Название -->
+    <div class="title col-span-9 col-start-1 uppercase text-custom-lg   lg:col-span-2 lg:col-start-1">
+        Holod Remix EP</div>
+    <!-- Описание -->
+    <div class="col-span-9 col-start-1   opacity-50 lg:col-span-4 lg:col-start-4">art direction, collage, lurmish</div>
+    <!-- Год -->
+    <div class="col-span-9 col-start-1   lg:col-span-1 lg:col-start-9">2025</div>
+</div>
+
+<!-- Текст -->
+<div class="col-start-1 col-end-13   indent-[25%] lg:col-span-7 lg:col-start-1 lg:col-end-8 lg:indent-[42.86%]">
+    A chilling exploration of loneliness and the freezing feeling of being lost in pain. For the <em>Holod</em> Remix EP, I reimagined the artwork from the <em>Superposition</em> album, expanding on its theme of overlapping elements. The new visuals explore this concept from a digital standpoint, merging emotion and technology. Stay tuned for the upcoming release.
+</div>
+
+
+<!-- Галерея -->
+<div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9 lg:col-end-10">
+    <a data-fancybox="gallery1" href="./content/1-1.webp" class="col-span-1">
+        <div class="relative w-full" style="aspect-ratio: 1080 / 1080;">
+            <img loading="lazy" class="lazy-img" src="./content/1-1.webp" alt="Image 1" class="absolute inset-0 w-full h-full object-cover">
+        </div>
+    </a>
+    <a data-fancybox="gallery1" href="./content/1-2.webp" class="col-span-1">
+        <div class="relative w-full" style="aspect-ratio: 876 / 1080;">
+            <img loading="lazy" class="lazy-img" src="./content/1-2.webp" alt="Image 2" class="absolute inset-0 w-full h-full object-cover">
+        </div>
+    </a>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+        
+
+
+        <!-- Липкий элемент с изображением справа -->
+        <div class="mt-16 col-span-2 col-start-11 sticky top-0 sticky-div pt-8 desktop">
+            <img id="mainImage" src="./content/h/h-0x.webp" alt="Sticky Image" class="w-full h-auto">
+            
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--   *****   JQuery Link   *****   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!--   *****   Isotope Filter Link   *****  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+        
+    <script>
+        const images = document.querySelectorAll('img[loading="lazy"]');
+
+images.forEach(img => {
+  img.onload = () => {
+    img.classList.add('loaded');
+  };
+});
+
+    </script>
+
+    <script>
+    $(document).ready(function () {
+    var urlParams = new URLSearchParams(window.location.search);
+    var filterParam = urlParams.get("filter");
+
+    if (filterParam) {
+        var filterValue = `.${filterParam}`;
+        var $targetButton = $('.filter_buttons .boton[data-filter="' + filterValue + '"]');
+
+        if ($targetButton.length) {
+            $targetButton.trigger("click"); // Активируем фильтр из URL
+            return; // Не выбираем "*"
+        }
+    }
+
+    // Если параметр фильтра не задан, выбираем "everything"
+    $('.filter_buttons .boton[data-filter="*"]').trigger("click");
+
+    // Обновляем URL при клике на кнопки фильтра
+    $('.filter_buttons .boton').on('click', function () {
+        var value = $(this).attr('data-filter');
+        var newUrl = new URL(window.location);
+
+        if (value === "*") {
+            newUrl.searchParams.delete("filter"); // Убираем параметр, если выбрано всё
+        } else {
+            newUrl.searchParams.set("filter", value.replace(".", "")); // Добавляем параметр
+        }
+
+        window.history.replaceState({}, "", newUrl); // Обновляем URL без перезагрузки
+    });
+});
+
+</script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            Fancybox.bind("[data-fancybox]", {});
+        });
+    </script>
+
+    <script type="text/javascript">
+        var $galleryContainer = $('.filterable_cards').isotope({
+    itemSelector: '.card',
+    layoutMode: 'vertical',
+    stagger: 30,
+    hiddenStyle: { opacity: 0 },
+    visibleStyle: { opacity: 1 },
+    isOriginLeft: false,
+    isOriginTop: true
+});
+
+function updateOpacity() {
+    $('.filter_buttons .boton').each(function () {
+        if ($(this).hasClass('stevie-italic')) {
+            $(this).css('opacity', '1').next('span').css('opacity', '1');
+        } else {
+            $(this).css('opacity', '0.5').next('span').css('opacity', '0.5');
+        }
+    });
+}
+
+// Обработчик клика
+$('.filter_buttons .boton').on('click', function () {
+    $('.filter_buttons .boton').removeClass('stevie-italic');
+    $(this).addClass('stevie-italic');
+
+    var value = $(this).attr('data-filter');
+    $galleryContainer.isotope({ filter: value });
+
+    updateOpacity();
+});
+
+// Обработчики наведения
+$('.filter_buttons .boton').on('mouseenter', function () {
+    if (!$(this).hasClass('stevie-italic')) {
+        $(this).css('opacity', '0.75').next('span').css('opacity', '0.75');
+    }
+}).on('mouseleave', function () {
+    if (!$(this).hasClass('stevie-italic')) {
+        $(this).css('opacity', '0.5').next('span').css('opacity', '0.5');
+    }
+});
+
+// Устанавливаем "everything" как активную кнопку при загрузке
+$(document).ready(function () {
+    var $defaultButton = $('.filter_buttons .boton[data-filter="*"]');
+
+    // Принудительная задержка для предотвращения сброса
+    setTimeout(function () {
+        $defaultButton.addClass('stevie-italic');
+        $galleryContainer.isotope({ filter: '*' });
+        updateOpacity();
+    }, 100);
+});
+
+    </script>
+
+    <script>
+        function setupHoverEffect(hoverDivId, hoverImageSrc) {
+            const hoverDiv = document.getElementById(hoverDivId);
+            const mainImage = document.getElementById('mainImage');
+
+            hoverDiv.addEventListener('mouseenter', () => {
+                mainImage.src = hoverImageSrc; // Изображение при наведении
+            });
+
+            hoverDiv.addEventListener('mouseleave', () => {
+                mainImage.src = './content/h/h-0x.webp'; // Исходное изображение
+            });
+        }
+    </script>
+
+    <!--sticky -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menu = document.querySelector('.menu');
+            const hiddenContent = document.querySelector('.hidden-on-scroll');
+
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (!entry.isIntersecting) {
+                        // Если меню не видно на экране, показываем скрытый контент
+                        hiddenContent.style.opacity = '1';
+                    } else {
+                        // Если меню видно, скрываем контент
+                        hiddenContent.style.opacity = '0';
+                    }
+                }, {
+                    threshold: 0
+                } // Следим за любым пересечением меню
+            );
+
+            observer.observe(menu); // Отслеживаем элемент меню
+        });
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+
+<script>
+const wordGroups = document.querySelectorAll('.word');
+
+wordGroups.forEach(wordGroup => {
+  const letters = wordGroup.querySelectorAll('.letter');
+  let isHovered = false; // Флаг для отслеживания наведения курсора
+
+  function startFloating() {
+    if (isHovered) return; // Если курсор наведен, не запускаем циклическую анимацию
+
+    anime({
+      targets: letters,
+      translateX: () => Math.random() * 5 - 2.5, // Уменьшенная амплитуда
+      translateY: () => Math.random() * 5 - 2.5,
+      rotate: () => Math.random() * 5 - 2.5,
+      scale: () => 1 + (Math.random() * 0.05 - 0.025),
+      duration: 5000, // 5 секунд парения
+      easing: 'easeInOutSine',
+      complete: resetPosition
+    });
+  }
+
+  function resetPosition() {
+    if (isHovered) return;
+
+    anime({
+      targets: letters,
+      translateX: 0,
+      translateY: 0,
+      rotate: 0,
+      scale: 1,
+      duration: 5000, // 5 секунд возврата
+      easing: 'easeOutQuad',
+      complete: () => setTimeout(startFloating, 5000) // Подождать 5 секунд и снова запустить
+    });
+  }
+
+  function hoverEffect() {
+    isHovered = true;
+    anime.remove(letters); // Остановить циклическую анимацию
+
+    anime({
+      targets: letters,
+      translateX: () => Math.random() * 10 - 5, // При наведении больше амплитуда
+      translateY: () => Math.random() * 10 - 5,
+      rotate: () => Math.random() * 10 - 5,
+      scale: () => 1 + (Math.random() * 0.1 - 0.05),
+      duration: 1000,
+      easing: 'easeInOutSine'
+    });
+  }
+
+  function leaveEffect() {
+    isHovered = false;
+    resetPosition(); // Возвращаем к циклическому движению
+  }
+
+  wordGroup.addEventListener('mouseenter', hoverEffect);
+  wordGroup.addEventListener('mouseleave', leaveEffect);
+
+  setTimeout(startFloating, 5000); // Запускаем через 5 секунд
+});
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const mobArrow = document.querySelector(".mob-arrow");
+    const menuMob = document.querySelector(".menu-mob");
+
+    function checkMenuPosition() {
+        if (menuMob.getBoundingClientRect().top <= 0) {
+            mobArrow.classList.remove("hidden");
+        } else {
+            mobArrow.classList.add("hidden");
+        }
+    }
+
+    mobArrow.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    window.addEventListener("scroll", checkMenuPosition);
+});
+
+</script>
+
+</body>
+
+</html>
