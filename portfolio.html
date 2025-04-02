@@ -224,6 +224,19 @@ svg {
     padding-right: 20px;
 }
 
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
 
 
 
@@ -232,6 +245,51 @@ svg {
     <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 1024px)">
     <link rel="stylesheet" href="https://use.typekit.net/pyu5jsd.css">
 </head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const cards = Array.from(document.querySelectorAll(".card")); // Преобразуем в массив
+
+    async function showCardsSequentially() {
+        for (let i = 0; i < cards.length; i++) {
+            await waitForImages(cards[i]); // Ждём загрузки всех картинок в текущей карточке
+            cards[i].classList.add("visible"); // Делаем карточку видимой
+        }
+    }
+
+    function waitForImages(card) {
+        return new Promise((resolve) => {
+            const images = card.querySelectorAll("img[loading='lazy']");
+            let loaded = 0;
+
+            if (images.length === 0) {
+                resolve();
+                return;
+            }
+
+            images.forEach(img => {
+                if (img.complete) {
+                    loaded++;
+                } else {
+                    img.addEventListener("load", () => {
+                        loaded++;
+                        if (loaded === images.length) resolve();
+                    });
+                    img.addEventListener("error", () => {
+                        loaded++; // Игнорируем ошибки загрузки
+                        if (loaded === images.length) resolve();
+                    });
+                }
+            });
+
+            if (loaded === images.length) resolve();
+        });
+    }
+
+    showCardsSequentially();
+});
+
+</script>
 
 <body class=" text-custom-base tracking-custom text-lg lg:text-2xl">
 
@@ -1117,49 +1175,6 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
 </div>
 
 
-<!--допилить style="display: none;"-->
-<!-- Карточка 10 дмп-->
-<div style="display: none;" class="card motion merch grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9"
-    id="hover10" onmouseover="setupHoverEffect('hover10', './content/h-10.jpg');">
-    <!-- Линия -->
-    <div class="breakme h-px mb-8 col-start-1 col-end-13 bg-black lg:mt-14 lg:col-span-9 lg:col-end-10">
-    </div>
-
-    <!-- Контент -->
-    <div class="col-span-2 col-start-1 col-end-3 bg-blue-300 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-02.webp" class="w-full object-cover">
-    </div>
-
-    <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
-        <!-- Название -->
-        <div class="title col-span-9 col-start-1 uppercase text-custom-lg lg:col-span-2 lg:col-start-1">
-            Design Support for DMP</div>
-        <!-- Описание -->
-        <div class="col-span-9 col-start-1 opacity-50 lg:col-span-4 lg:col-start-4">motion, merch</div>
-        <!-- Год -->
-        <div class="col-span-9 col-start-1 lg:col-span-1 lg:col-start-9">2024</div>
-    </div>
-
-    <!-- Текст -->
-    <div class="col-start-1 col-end-13 indent-[25%] lg:col-span-7 lg:col-start-1 lg:indent-[42.86%]">
-        I designed a dynamic backdrop for DMP’s live performance and created merch items, including band postcards and a retro-inspired concert photo zone. While the backdrop set the stage visually, the photo zone brought the band’s nostalgic theme to life—featuring vintage photos, memos, and school-like achievement diplomas, all celebrating the warmth of childhood memories.
-    </div>
-
-    <!-- Галерея -->
-    <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4 lg:grid-cols-9">
-        <a data-fancybox="gallery10" href="./content/10-1.webp" class="col-span-1">
-            <img loading="lazy" src="./content/10-1.webp" alt="Image 1" class="w-full h-auto">
-        </a>
-        <a data-fancybox="gallery10" href="./content/10-2.webp" class="col-span-1">
-            <img loading="lazy" src="./content/10-2.webp" alt="Image 2" class="w-full h-auto">
-        </a>
-        <a data-fancybox="gallery10" href="./content/10-3.webp" class="col-span-1">
-            <img loading="lazy" src="./content/10-3.webp" alt="Image 3" class="w-full h-auto">
-        </a>
-    </div>
-</div>
-
-
 <!-- Карточка 14 бернштейн-->
 <div class="card social collage print grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9"
     id="hover14" onmouseover="setupHoverEffect('hover14', './content/h/h-14.webp');">
@@ -1495,54 +1510,6 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
     </div>
 </div>
 
-<!--допилить style="display: none;"-->
-<!-- Карточка 20 пром-->
-<div style="display: none;" class="card social motion 3d grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9"
-    id="hover20" onmouseover="setupHoverEffect('hover20', './content/h/h-20.webp');">
-    <!-- Линия -->
-    <div class="breakme h-px mb-8 col-start-1 col-end-13 bg-black lg:mt-14 lg:col-span-9 lg:col-end-10">
-    </div>
-
-    <!-- Контент -->
-    <div class="col-span-2 col-start-1 col-end-3 lg:hidden">
-        <!-- Картинка для мобильной версии --> <img loading="lazy" src="./content/h/h-20.webp" class="w-full object-cover">
-    </div>
-
-    <div class="lg:grid lg:gap-2 col-start-4 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-span-9">
-        <!-- Название -->
-        <div class="title col-span-9 col-start-1 uppercase text-custom-lg   lg:col-span-2 lg:col-start-1">
-            Industrial Visions</div>
-        <!-- Описание -->
-        <div class="col-span-9 col-start-1  opacity-50 lg:col-span-4 lg:col-start-4">social media, motion, 3d</div>
-        <!-- Год -->
-        <div class="col-span-9 col-start-1   lg:col-span-1 lg:col-start-9">2023</div>
-    </div>
-
-    <!-- Текст -->
-    <div class="col-start-1 col-end-13   indent-[25%] lg:col-span-7 lg:col-start-1 lg:indent-[42.86%]">I collaborated on multiple industrial projects, both B2B and B2C, where I created a range of digital and print banners, social media graphics, and 3D animations. For some projects, I reconstructed entire factories to showcase their progress, rendering them in a minimalistic style that emphasized the innovative processes taking place. These visuals were used across various mediums to highlight the evolution and cutting-edge nature of the industry.</div>
-
-    <!-- Галерея -->
-    <div class="gallery grid grid-cols-4 gap-2 col-start-1 col-end-13 mt-4   lg:grid-cols-9">
-        <a data-fancybox="gallery20" href="./content/20-1.webp" class="col-span-1">
-            <img loading="lazy" src="./content/20-1.webp" alt="Image 1" class="w-full h-auto">
-        </a>
-        <a data-fancybox="gallery20" href="./content/20-2.webp" class="col-span-1">
-            <img loading="lazy" src="./content/20-2.webp" alt="Image 2" class="w-full h-auto">
-        </a>
-        <a data-fancybox="gallery20" href="./content/20-3.webp" class="col-span-1">
-            <img loading="lazy" src="./content/20-3.webp" alt="Image 3" class="w-full h-auto">
-        </a>
-        <a data-fancybox="gallery20" href="./content/20-4.webp" class="col-span-1">
-            <img loading="lazy" src="./content/20-4.webp" alt="Image 4" class="w-full h-auto">
-        </a>
-        <a data-fancybox="gallery20" href="./content/20-5.webp" class="col-span-1">
-            <img loading="lazy" src="./content/20-5.webp" alt="Image 5" class="w-full h-auto">
-        </a>
-        <a data-fancybox="gallery20" href="./content/20-6.webp" class="col-span-1">
-            <img loading="lazy" src="./content/20-6.webp" alt="Image 6" class="w-full h-auto">
-        </a>
-    </div>
-</div>
 
 
 <!-- Карточка 21 нова-->
@@ -2977,14 +2944,6 @@ id="hover1" onmouseover="setupHoverEffect('hover1', './content/h/h-01.webp');">
             <img id="mainImage" src="./content/h/h-0x.webp" alt="Sticky Image" class="w-full h-auto">
             
         </div>
-    </div>
-
-
-    <div class="grid m-5 gap-2 grid-cols-12">
-
-
-
-        
     </div>
 
 
