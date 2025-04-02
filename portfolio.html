@@ -248,16 +248,11 @@ svg {
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-    const cards = Array.from(document.querySelectorAll(".card")); // Преобразуем в массив
+    const cards = Array.from(document.querySelectorAll(".card"));
+    let queue = []; // Очередь карточек
+    let isProcessing = false; // Флаг выполнения
 
-    async function showCardsSequentially() {
-        for (let i = 0; i < cards.length; i++) {
-            await waitForImages(cards[i]); // Ждём загрузки всех картинок в текущей карточке
-            cards[i].classList.add("visible"); // Делаем карточку видимой
-        }
-    }
-
-    function waitForImages(card) {
+    function preloadImages(card) {
         return new Promise((resolve) => {
             const images = card.querySelectorAll("img[loading='lazy']");
             let loaded = 0;
@@ -268,6 +263,9 @@ svg {
             }
 
             images.forEach(img => {
+                img.loading = "eager"; // Принудительная загрузка
+                img.src = img.src; 
+
                 if (img.complete) {
                     loaded++;
                 } else {
@@ -276,7 +274,7 @@ svg {
                         if (loaded === images.length) resolve();
                     });
                     img.addEventListener("error", () => {
-                        loaded++; // Игнорируем ошибки загрузки
+                        loaded++;
                         if (loaded === images.length) resolve();
                     });
                 }
@@ -286,7 +284,34 @@ svg {
         });
     }
 
-    showCardsSequentially();
+    async function processQueue() {
+        if (isProcessing) return; // Если уже обрабатываем - ждем
+        isProcessing = true;
+
+        while (queue.length > 0) {
+            let card = queue.shift(); // Берем первую карточку из очереди
+            await preloadImages(card); // Ждём загрузки её картинок
+            card.classList.add("visible"); // Показываем
+        }
+
+        isProcessing = false;
+    }
+
+    function initObserver() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    observer.unobserve(entry.target); // Убираем слежку
+                    queue.push(entry.target); // Добавляем карточку в очередь
+                    processQueue(); // Запускаем обработку
+                }
+            });
+        });
+
+        cards.forEach(card => observer.observe(card));
+    }
+
+    initObserver();
 });
 
 </script>
