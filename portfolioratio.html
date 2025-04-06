@@ -155,6 +155,10 @@ svg {
     .breakme{
         margin-top: 16px;
     } 
+
+    .desktop{
+        display: none;
+    }
   }
 
   .inactive-link {
@@ -235,6 +239,43 @@ svg {
   opacity: 1;
 }
 
+/* Для мобильной версии */
+.popupmob {
+    display: none; /* скрыто по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.popup-contentmob {
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px; /* максимальная ширина */
+    margin: auto;
+}
+
+.closemob {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.contactmob {
+    cursor: pointer;
+}
+
 
 
 
@@ -263,7 +304,7 @@ svg {
             </a>
           </div>
       <span>/</span>
-      <a class="title uppercase text-custom-lg hidden lg:flex" id="toggle" href="#">contact me</a>
+      <a class="title uppercase text-custom-lg hidden lg:flex" id="toggle" href="#">contact me!</a>
   
       <!-- МОДУЛЬ -->
       <div id="popover"
@@ -356,16 +397,30 @@ svg {
                 <div class="grid grid-cols-9 gap-x-2 ">
                     <div class="col-start-1 col-end-10 flex flex-wrap gap-x-5 title uppercase">
                         <!-- Здесь ваши ссылки -->
-                        <a href="https://heez.us/" class="font-medium   whitespace-nowrap">heezus</a>
+                        <a href="#" class="font-medium contactmob  whitespace-nowrap">contact me!</a>
                         <!--<p class="font-medium whitespace-nowrap italic inline">selected works</p>-->
                         <a href="/projects" class="font-medium  whitespace-nowrap">studies</a>
-                        <a href="/ar" class="font-medium  whitespace-nowrap">AR experiences</a>
+                        <a href="/ar" class="font-medium  whitespace-nowrap">AR</a>
                         <a href="https://smorgasbord.heez.us/" class="font-medium  whitespace-nowrap">proto genesis</a>
                         <a href="/who-is" class="font-medium  whitespace-nowrap">about me</a>
                     </div>
                 </div>
 
             </div>
+
+            <!-- Popup с контактами -->
+    <div id="popupmob" class="popupmob  hidden lg:hidden fixed inset-0 bg-black bg-opacity-30 z-50">
+        <div class="popup-contentmob shadow-lg border border-black relative text-center mx-auto my-auto bg-white p-4 w-3/4 md:w-1/2">
+            <button id="closemob" class="closemob absolute top-4 right-4 text-gray-500 hover:text-black text-lg">&times;</button>
+            <p class="title uppercase">drop me a message! c:</p>
+            <img class="lazy mb-3 " src="/content/nm.webp" alt="">
+            <a href="mailto:nico@heez.us" class="opacity-50 hover:opacity-75 transition-opacity duration-300">nico@heez.us</a></br>
+            <a href="https://www.linkedin.com/in/nikita-myshkin-828993234/" target="_blank" class="opacity-50 hover:opacity-75 transition-opacity duration-300">linkedin</a></br>
+            <a href="https://instagram.com/whoisheezus" target="_blank" class="opacity-50 hover:opacity-75 transition-opacity duration-300">instagram</a></br>
+            <a href="https://heezus.bsky.social" target="_blank" class="opacity-50 hover:opacity-75 transition-opacity duration-300">bluesky</a></br>
+            <a href="https://t.me/kdflsh" target="_blank" class="opacity-50 hover:opacity-75 transition-opacity duration-300">telegram</a></br>
+        </div>
+    </div>
 
             <!-- Третья строка с блоком "tags:" и текстом -->
 
@@ -3070,12 +3125,42 @@ svg {
                 <a class="opacity-50 hover:opacity-75 transition-opacity duration-300" href="https://heezus.bsky.social" target="_blank">bluesky</a></br>
                 <a class="opacity-50 hover:opacity-75 transition-opacity duration-300" href="https://t.me/kdflsh" target="_blank">telegram</a></p>
             </div>
-            <p class="title uppercase text-custom-lg text-right cursor-pointer" id="toggle2">contact me</p>
+            <p class="title uppercase text-custom-lg text-right cursor-pointer desktop" id="toggle2">contact me!</p>
         </div>
         
 
     </div>
 
+    <!--моб попап-->
+
+    <script>
+        // Получаем элементы
+const contactLink = document.querySelector('.contactmob');
+const popupmob = document.getElementById('popupmob');
+const closemob = document.getElementById('closemob');
+
+// Открытие попапа при клике на ссылку "contact me!"
+contactLink.addEventListener('click', (event) => {
+    event.preventDefault(); // Отменяем действие по умолчанию (переход по ссылке)
+    popupmob.classList.remove('hidden');
+    popupmob.classList.add('flex');
+});
+
+// Закрытие попапа при клике на крестик
+closemob.addEventListener('click', () => {
+    popupmob.classList.add('hidden');
+    popupmob.classList.remove('flex');
+});
+
+// Закрытие попапа при клике на темный фон (не на контент)
+popupmob.addEventListener('click', (event) => {
+    if (event.target === popupmob) {
+        popupmob.classList.add('hidden');
+        popupmob.classList.remove('flex');
+    }
+});
+
+    </script>
 
 <!--первые контакты-->
 
