@@ -413,7 +413,7 @@ svg {
         <div class="popup-contentmob shadow-lg border border-black relative text-center mx-auto my-auto bg-white p-4 w-3/4 md:w-1/2">
             <button id="closemob" class="closemob absolute top-4 right-4 text-gray-500 hover:text-black text-lg">&times;</button>
             <p class="title uppercase">drop me a message! c:</p>
-            <img class="lazy mb-3 " src="/content/nm.webp" alt="">
+            <img class="lazy mb-4 " src="/content/nm.webp" alt="">
             <a href="mailto:nico@heez.us" class="opacity-50 hover:opacity-75 transition-opacity duration-300">nico@heez.us</a></br>
             <a href="https://www.linkedin.com/in/nikita-myshkin-828993234/" target="_blank" class="opacity-50 hover:opacity-75 transition-opacity duration-300">linkedin</a></br>
             <a href="https://instagram.com/whoisheezus" target="_blank" class="opacity-50 hover:opacity-75 transition-opacity duration-300">instagram</a></br>
@@ -3135,32 +3135,47 @@ svg {
 
     <script>
         // Получаем элементы
-const contactLink = document.querySelector('.contactmob');
-const popupmob = document.getElementById('popupmob');
-const closemob = document.getElementById('closemob');
-
-// Открытие попапа при клике на ссылку "contact me!"
-contactLink.addEventListener('click', (event) => {
-    event.preventDefault(); // Отменяем действие по умолчанию (переход по ссылке)
-    popupmob.classList.remove('hidden');
-    popupmob.classList.add('flex');
-});
-
-// Закрытие попапа при клике на крестик
-closemob.addEventListener('click', () => {
-    popupmob.classList.add('hidden');
-    popupmob.classList.remove('flex');
-});
-
-// Закрытие попапа при клике на темный фон (не на контент)
-popupmob.addEventListener('click', (event) => {
-    if (event.target === popupmob) {
-        popupmob.classList.add('hidden');
-        popupmob.classList.remove('flex');
-    }
-});
-
+        const contactLink = document.querySelector('.contactmob');
+        const popupmob = document.getElementById('popupmob');
+        const popupContent = document.querySelector('.popup-contentmob'); // Получаем popup-contentmob
+        const closemob = document.getElementById('closemob');
+    
+        // Функция для добавления случайного движения с использованием transform
+        function randomMove() {
+            const randomX = (Math.random() - 0.5) * 8; // Рандомное смещение по X в диапазоне от -4 до +4
+            const randomY = (Math.random() - 0.5) * 8; // Рандомное смещение по Y в диапазоне от -4 до +4
+    
+            popupContent.style.transition = 'transform 0.5s ease'; // Плавный переход для трансформации
+            popupContent.style.transform = `translate(${randomX}px, ${randomY}px)`; // Применяем случайное движение
+        }
+    
+        // Открытие попапа при клике на ссылку "contact me!"
+        contactLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Отменяем действие по умолчанию (переход по ссылке)
+            popupmob.classList.remove('hidden');
+            popupmob.classList.add('flex');
+    
+            // Каждые 500мс добавляем случайное движение
+            setInterval(randomMove, 500);
+        });
+    
+        // Закрытие попапа при клике на крестик
+        closemob.addEventListener('click', () => {
+            popupmob.classList.add('hidden');
+            popupmob.classList.remove('flex');
+        });
+    
+        // Закрытие попапа при клике на темный фон (не на контент)
+        popupmob.addEventListener('click', (event) => {
+            if (event.target === popupmob) {
+                popupmob.classList.add('hidden');
+                popupmob.classList.remove('flex');
+            }
+        });
     </script>
+    
+    
+    
 
 <!--первые контакты-->
 
