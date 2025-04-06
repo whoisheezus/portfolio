@@ -101,8 +101,7 @@ svg {
 
         /* Настройка высоты для демонстрации эффекта sticky */
         .sticky-div {
-            height: calc(100vh - 2rem);
-            /* height: 33vh; */
+            height: 33vh;
             /* Устанавливаем высоту для демонстрации */
         }
 
@@ -118,7 +117,6 @@ svg {
             overflow: visible;
             z-index: 20;
         }
-        
 
 
 
@@ -240,6 +238,7 @@ svg {
 
 
 
+
     </style>
     <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 1024px)">
     <link rel="stylesheet" href="https://use.typekit.net/pyu5jsd.css">
@@ -253,45 +252,29 @@ svg {
 
 
         <!-- menu -->
-<div class="menudesk hidden lg:grid h-12 grid-cols-12 col-span-12">
+        <div class="menudesk hidden lg:grid h-12 grid-cols-12 col-span-12">
 
-    <!-- Левая часть: Лого + контакт -->
-    <div class="flex items-center col-span-5 space-x-2">
-        <div class="logo-container h-12">
-            <a href="https://heez.us/" target="_blank">
-              <img src="./assets/logo.svg" alt="Logo" class="logo h-12">
-            </a>
-          </div>
-      <span>/</span>
-      <a class="title uppercase text-custom-lg hidden lg:flex" id="toggle" href="#">contact me</a>
-  
-      <!-- МОДУЛЬ -->
-      <div id="popover"
-        class="absolute w-[200px] bg-white shadow-lg border border-black p-4 transition-all duration-500 ease-out opacity-0 scale-y-0 origin-top z-50"
-        style="display: none">
-        <button id="close" class="absolute top-5 right-5 text-gray-500 hover:text-black text-lg leading-none">&times;</button>
-        <a class="opacity-50 hover:opacity-75 transition-opacity duration-300" href="mailto:nico@heez.us">nico@heez.us</a></br>
-            <a class="opacity-50 hover:opacity-75 transition-opacity duration-300" href="https://www.linkedin.com/in/nikita-myshkin-828993234/" target="_blank">linkedin</a></br>
-            <a class="opacity-50 hover:opacity-75 transition-opacity duration-300" href="https://instagram.com/whoisheezus" target="_blank">instagram</a></br>
-            <a class="opacity-50 hover:opacity-75 transition-opacity duration-300" href="https://heezus.bsky.social" target="_blank">bluesky</a></br>
-            <a class="opacity-50 hover:opacity-75 transition-opacity duration-300" href="https://t.me/kdflsh" target="_blank">telegram</a></p>
-      </div>
-    </div>
-  
-    <!-- Правая часть: Меню -->
-    <div class="menu title uppercase text-custom-lg hidden lg:flex col-span-7 h-12 items-center justify-end space-x-2 pr-4 whitespace-nowrap">
-        <a class="opacity-50 inactive-link align-middle max-[1199px]:hidden" href="">selected works</a> 
-        <span class="max-[1199px]:hidden">/</span>
-        <a href="/projects">studies</a> 
-        <span>/</span>
-        <a href="/ar">AR experiences</a> 
-        <span>/</span>
-        <a href="https://smorgasbord.heez.us/">proto genesis</a> 
-        <span>/</span>
-        <a href="/who-is">about me</a>
-      </div>
-  
-  </div>
+            <div class="logo-container">
+                <a href="https://heez.us/" target="_blank">
+                    <img src="./assets/logo.svg" alt="Logo" class="logo h-12 col-span-1">
+                  </a>
+                
+            </div>
+            
+            <div class="menu title uppercase text-custom-lg hidden lg:flex col-span-11 h-12 items-center justify-end space-x-2 pr-4" >
+            
+                <a class="opacity-50 inactive-link align-middle" href="">selected works</a> 
+    <span>/</span>
+    <a href="/projects">studies</a> 
+    <span>/</span>
+    <a href="/ar">AR experiences</a> 
+    <span>/</span>
+    <a href="https://smorgasbord.heez.us/">proto genesis</a> 
+    <span>/</span>
+    <a href="/who-is">about me</a>
+   
+           </div>
+        </div>
 
         
 
@@ -3055,172 +3038,14 @@ svg {
         <!-- Липкий элемент с изображением справа -->
         <div class="mt-16 col-span-2 col-start-11 sticky top-0 sticky-div pt-8 desktop">
             <img id="mainImage" src="./content/h/h-0x.webp" alt="Sticky Image" class="w-full h-auto">
-            <!-- Ссылка в нижнем правом углу -->
+            
         </div>
-
-  
-      
-
-        <div class="hiddencontact lg:fixed bottom-0 right-0 text-black mr-5 mb-8">
-            <div class="bg-white shadow-lg border border-black p-4 mb-4" id="popover2">
-                <button id="close2" class="absolute bottom-6 right-5 text-gray-500 hover:text-black text-lg leading-none text-right">&times;</button>
-                <a class="opacity-50 hover:opacity-75 transition-opacity duration-300" href="mailto:nico@heez.us">nico@heez.us</a></br>
-                <a class="opacity-50 hover:opacity-75 transition-opacity duration-300" href="https://www.linkedin.com/in/nikita-myshkin-828993234/" target="_blank">linkedin</a></br>
-                <a class="opacity-50 hover:opacity-75 transition-opacity duration-300" href="https://instagram.com/whoisheezus" target="_blank">instagram</a></br>
-                <a class="opacity-50 hover:opacity-75 transition-opacity duration-300" href="https://heezus.bsky.social" target="_blank">bluesky</a></br>
-                <a class="opacity-50 hover:opacity-75 transition-opacity duration-300" href="https://t.me/kdflsh" target="_blank">telegram</a></p>
-            </div>
-            <p class="title uppercase text-custom-lg text-right cursor-pointer" id="toggle2">contact me</p>
-        </div>
-        
-
     </div>
 
 
-<!--первые контакты-->
 
-<script>
-    const toggle = document.getElementById('toggle');
-    const popover = document.getElementById('popover');
-    const closeBtn = document.getElementById('close');
-    let intervalId; // Переменная для хранения ID интервала
-  
-    // Функция для случайного движения
-    function randomMovement() {
-      const randomX = (Math.random() - 0.5) * 8; // Случайное смещение по X в диапазоне ±4px
-      const randomY = (Math.random() - 0.5) * 8; // Случайное смещение по Y в диапазоне ±4px
-  
-      // Применяем плавное изменение позиции
-      popover.style.transition = 'transform 0.2s ease-out'; // Плавное движение
-      popover.style.transform = `translate(${randomX}px, ${randomY}px)`;
-    }
-  
-    toggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      const rect = toggle.getBoundingClientRect();
-  
-      // Позиционируем поповер по левому краю с ссылкой
-      popover.style.left = `${rect.left + window.scrollX - 12}px`;
-      popover.style.top = `${rect.bottom + window.scrollY + 6}px`;
-  
-      // Показываем с анимацией
-      popover.style.display = 'block';
-      requestAnimationFrame(() => {
-        popover.classList.remove('opacity-0', 'scale-y-0');
-        popover.classList.add('opacity-100', 'scale-y-100');
-      });
-  
-      // Останавливаем предыдущий таймер, если поповер уже был открыт
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
-  
-      // Запускаем случайное движение поповера с интервалом 500 мс
-      intervalId = setInterval(randomMovement, 500); // Каждые 500 мс
-    });
-  
-    closeBtn.addEventListener('click', () => {
-      // Плавно скрываем
-      popover.classList.remove('opacity-100', 'scale-y-100');
-      popover.classList.add('opacity-0', 'scale-y-0');
-  
-      // Ждём завершения анимации и скрываем
-      setTimeout(() => {
-        popover.style.display = 'none';
-      }, 500);
-  
-      // Останавливаем таймер при закрытии поповера
-      clearInterval(intervalId);
-    });
-  
-    document.addEventListener('click', (e) => {
-      if (!popover.contains(e.target) && e.target !== toggle) {
-        popover.classList.remove('opacity-100', 'scale-y-100');
-        popover.classList.add('opacity-0', 'scale-y-0');
-        setTimeout(() => {
-          popover.style.display = 'none';
-        }, 500);
-  
-        // Останавливаем таймер при клике вне поповера
-        clearInterval(intervalId);
-      }
-    });
-  
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        popover.classList.remove('opacity-100', 'scale-y-100');
-        popover.classList.add('opacity-0', 'scale-y-0');
-        setTimeout(() => {
-          popover.style.display = 'none';
-        }, 500);
-  
-        // Останавливаем таймер при нажатии Escape
-        clearInterval(intervalId);
-      }
-    });
-  </script>
-  
 
-<!--вторые контакты-->
 
-<script>
-    // Получаем элементы
-    const toggleButton = document.getElementById('toggle2');
-    const popover2 = document.getElementById('popover2');
-    const closeButton = document.getElementById('close2');
-    let intervalId2; // Переменная для хранения ID интервала второго попапа
-  
-    // Функция для случайного движения
-    function randomMovement2() {
-      const randomX = (Math.random() - 0.5) * 8; // Случайное смещение по X в диапазоне ±4px
-      const randomY = (Math.random() - 0.5) * 8; // Случайное смещение по Y в диапазоне ±4px
-
-      // Применяем плавное изменение позиции
-      popover2.style.transition = 'transform 0.2s ease-out'; // Плавное движение
-      popover2.style.transform = `translate(${randomX}px, ${randomY}px)`;
-    }
-  
-    // Функция для открытия popover
-    function openPopover() {
-      popover2.classList.remove('opacity-0', 'scale-y-0');
-      popover2.classList.add('opacity-100', 'scale-y-100');
-  
-      // Останавливаем предыдущий таймер, если поповер уже был открыт
-      if (intervalId2) {
-        clearInterval(intervalId2);
-      }
-
-      // Запускаем случайное движение поповера с интервалом 500 мс
-      intervalId2 = setInterval(randomMovement2, 500); // Каждые 500 мс
-    }
-  
-    // Функция для закрытия popover
-    function closePopover() {
-      popover2.classList.remove('opacity-100', 'scale-y-100');
-      popover2.classList.add('opacity-0', 'scale-y-0');
-  
-      // Останавливаем таймер при закрытии поповера
-      clearInterval(intervalId2);
-    }
-  
-    // Слушаем события
-    toggleButton.addEventListener('click', openPopover);
-    closeButton.addEventListener('click', closePopover);
-  
-    // Закрытие popover при нажатии клавиши ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closePopover();
-      }
-    });
-  
-    // Закрытие popover при клике за пределами popover
-    document.addEventListener('click', (e) => {
-      if (!popover2.contains(e.target) && e.target !== toggleButton) {
-        closePopover();
-      }
-    });
-</script>
 
 
 
@@ -3402,28 +3227,24 @@ $(document).ready(function () {
         document.addEventListener("DOMContentLoaded", () => {
             const menu = document.querySelector('.menu');
             const hiddenContent = document.querySelector('.hidden-on-scroll');
-            const hiddenContact = document.querySelector('.hiddencontact');  // Добавлен новый элемент
-    
+
             const observer = new IntersectionObserver(
                 ([entry]) => {
                     if (!entry.isIntersecting) {
                         // Если меню не видно на экране, показываем скрытый контент
                         hiddenContent.style.opacity = '1';
-                        hiddenContact.style.opacity = '1';  // Показать также новый элемент
                     } else {
                         // Если меню видно, скрываем контент
                         hiddenContent.style.opacity = '0';
-                        hiddenContact.style.opacity = '0';  // Скрыть новый элемент
                     }
                 }, {
                     threshold: 0
                 } // Следим за любым пересечением меню
             );
-    
+
             observer.observe(menu); // Отслеживаем элемент меню
         });
     </script>
-    
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
 
@@ -3512,9 +3333,6 @@ wordGroups.forEach(wordGroup => {
 });
 
 </script>
-
-
-
 
 </body>
 
