@@ -5,6 +5,14 @@
     color: white;
 }
 
+@font-face {
+    font-family: 'horus';
+    src: url('/assets/premio.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
 html,
 body {
     margin: 0;
@@ -12,7 +20,7 @@ body {
     max-width: 100%; */
     overflow: hidden;
     background-color: #463a5f;
-    font-family: 'Helvetica';
+    font-family: 'horus';
     text-transform: uppercase;
 }
 
@@ -184,7 +192,7 @@ body {
 /* navigation */
 
 .navbar{
-    font-family: Helvetica;
+    font-family: 'horus';
     text-transform: uppercase;
     z-index: 20;
     width: 100%;
@@ -201,7 +209,6 @@ body {
   .navbar .media li {
     display: inline-block;
     padding-left: 24px;
-    font-style: italic;
   }
   
   .navbar .media li a {
@@ -241,7 +248,7 @@ h1 {
     padding: 0;
     font-size: 6em;
     text-align: center;
-    font-family: Helvetica;
+    font-family: 'horus';
     text-transform: uppercase;
     position: absolute;
     top: 50%;
@@ -284,12 +291,13 @@ h1 {
 
 }
 
-.mazo img {
-    /* max-width: 450px; */
+.mazframe img.slide {
     position: absolute;
-   
-    transform: translateX(-50%) translateY(-50%);
-
+    opacity: 0;
+    transform: scale(0.95) rotate(0deg);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    transform: translate(-50%, -50%) scale(0.95) rotate(0deg);
+    cursor: crosshair;
 }
 
 .mazo .one{
@@ -486,7 +494,7 @@ h1 {
     padding: 15px 0;
     font-size: 1.5em;
     text-align: center;
-    font-family: Helvetica;
+    font-family: 'horus';
     text-transform: uppercase;
     }
 
@@ -501,7 +509,7 @@ h1 {
         transform-origin: left top;
         top: 18px;
         left: calc(100vw - 20px);
-        font-family: Helvetica;
+        font-family: 'horus';
     text-transform: uppercase;
     font-size: 20px;
     
@@ -525,7 +533,7 @@ h1 {
         z-index: 2;
         transform: rotate(-90deg) translateX(-100%);
         transform-origin: left top;
-        font-family: Helvetica;
+        font-family: 'horus';
         text-transform: uppercase;
         font-size: 24px;
         margin-left: 18px; */
@@ -537,7 +545,7 @@ h1 {
         transform: rotate(270deg) translateX(-100vh);
         transform-origin: left top;
         height: 40px;
-        font-family: Helvetica;
+        font-family: 'horus';
         text-transform: uppercase;
         font-size: 20px;
         margin-left: 18px;
