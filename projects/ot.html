@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projects + studies > otvaal</title>
+    <title>personal studies > otvaal</title>
     <link rel="stylesheet" href="css/ot.css">
     <link rel="shortcut icon" href="../img/heezus.ico" />
 </head>
@@ -29,45 +29,41 @@
 
     <!-- mobile navigation -->
 
-    <div class="right">
-        <div class="pages">
-            <a href="/personalities">personalities</a> /
-            <a href="/classics">classics</a> /
-            <a href="/ar">AR</a> /
-            <a href="/3d">3D</a> /
-            <a href="https://smorgasbord.heez.us/">misc gigs</a> /
-            <a href="https://honoryourvomit.heez.us/">wip</a> /
-            <a href="/whois">about</a>
-        </div>
+<div class="right">
+    <div class="pages">
+        <a href="/portfolio">selected works</a> /
+        <a href="/ar">AR</a> /
+        <a href="https://smorgasbord.heez.us/">proto genesis</a> /
+        <a href="/whois">about me</a>
+    </div>
+</div>
+
+<div class="left">
+    <div class="lpages">
+        <a href="/index">heezus</a> /
+        <a href="/projects">personal studies > otvaal</a>
+    </div>
+</div>
+
+<!-- navigation -->
+
+<nav class="navbar">
+    <div class="logo">
+        <a href="/index"><img src="/img/logo-2.png" alt=""></a>
     </div>
 
-    <div class="left">
-        <div class="lpages">
-            <a href="/index">heezus</a> /
-            <a href="/projects">projects + studies > otvaal</a>
-        </div>
+    <div class="media">
+        <ul>
+            <li><a href="/projects">studies</a><p style="opacity: 50%; display: inline;"> > otvaal</p></li>
+            <li><a href="/portfolio">selected works</a></li>
+            <li><a href="/ar">AR</a></li>
+            <li><a href="https://smorgasbord.heez.us/">proto genesis</a></li>
+            <li><a href="/whois.html">about me</a></li>
+        </ul>
     </div>
+</nav>
 
-    <!-- navigation -->
-
-    <nav class="navbar">
-        <div class="logo">
-            <a href="/index"><img src="/img/logo-2.png" alt=""></a>
-        </div>
-
-        <div class="media">
-            <ul>
-                <li><a href="/projects">projects + studies</a> > otvaal </li>
-                <li><a href="/personalities">personalities</a></li>
-                <li><a href="/classics">classics</a></li>
-                <li><a href="/ar">AR</a></li>
-                <li><a href="/3d">3D</a></li>
-                <li><a href="https://smorgasbord.heez.us/">misc gigs</a></li>
-                <li><a href="https://honoryourvomit.heez.us/">wip</a></li>
-                <li><a href="/whois">about</a></li>
-            </ul>
-        </div>
-    </nav>
+   
 
     <!-- content  -->
 
@@ -155,6 +151,24 @@
         loader.style.display="none";
     })
 </script>
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+    const slides = Array.from(document.querySelectorAll(".mazframe img.slide"));
+    slides.reverse(); // Сначала нижние, потом верхние
+    slides.forEach((img, index) => {
+        const delay = index * 200;
+        const angle = (Math.random() - 0.5) * 10;
+        setTimeout(() => {
+            img.style.opacity = "1";
+            img.style.transform = `translate(-50%, -50%) scale(1) rotate(${angle}deg)`;
+        }, delay);
+    });
+});
+
+</script>
+
+
 </body>
 
 </html>

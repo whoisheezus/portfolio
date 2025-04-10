@@ -209,6 +209,7 @@ body {
   .navbar .media li {
     display: inline-block;
     padding-left: 24px;
+    font-style: italic;
   }
   
   .navbar .media li a {
