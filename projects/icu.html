@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projects + studies > I See You</title>
+    <title>personal studies > I See You</title>
     <link rel="stylesheet" href="css/icu.css">
     <link rel="shortcut icon" href="../img/heezus.ico" />
 </head>
@@ -27,26 +27,24 @@
         </div>
     </div>
 
-     <!-- mobile navigation -->
+    <!-- mobile navigation -->
 
-     <div class="right">
-        <div class="pages">
-            <a href="/personalities">personalities</a> /
-            <a href="/classics">classics</a> /
-            <a href="/ar">AR</a> /
-            <a href="/3d">3D</a> /
-            <a href="https://smorgasbord.heez.us/">misc gigs</a> /
-            <a href="https://honoryourvomit.heez.us/">wip</a> /
-            <a href="/whois">about</a>
-        </div>
+<div class="right">
+    <div class="pages">
+        <a href="/portfolio">selected works</a> /
+        <a href="/ar">AR</a> /
+        <a href="https://smorgasbord.heez.us/">proto genesis</a> /
+        <a href="/whois">about me</a>
     </div>
+</div>
 
-    <div class="left">
-        <div class="lpages">
-            <a href="/index">heezus</a> /
-            <a href="/projects">projects + studies > i see you</a>
-        </div>
+<div class="left">
+    <div class="lpages">
+        <a href="/index">heezus</a> /
+        <a href="/projects">personal studies > i see you</a>
     </div>
+</div>
+
 
     <!-- navigation -->
 
@@ -57,16 +55,14 @@
 
         <div class="media">
             <ul>
-                <li><a href="/projects">projects + studies</a> > i see you </li>
-                <li><a href="/personalities">personalities</a></li>
-                <li><a href="/classics">classics</a></li>
+                <li><a href="/projects">studies</a><p style="opacity: 50%; display: inline;"> > i see you</p></li>
+                <li><a href="/portfolio">selected works</a></li>
                 <li><a href="/ar">AR</a></li>
-                <li><a href="/3d">3D</a></li>
-                <li><a href="https://smorgasbord.heez.us/">misc gigs</a></li>
-                <li><a href="https://honoryourvomit.heez.us/">wip</a></li>
-                <li><a href="/whois">about</a></li>
+                <li><a href="https://smorgasbord.heez.us/">proto genesis</a></li>
+                <li><a href="/whois.html">about me</a></li>
             </ul>
         </div>
+        
     </nav>
 
     <!-- content  -->
@@ -90,7 +86,7 @@
             <img src="projectsw/icu/15.jpg" alt="" class="fifteen slide">
             <img src="projectsw/icu/16.jpg" alt="" class="sixteen slide">
 
-            <div class="hidden_text"><a href="../../projects">projects + studies</a> <BR> <a
+            <div class="hidden_text"><a href="../../projects">personal studies</a> <BR> <a
                     href="javascript:history.go(0)">reload</a> </div>
 
 
@@ -114,7 +110,7 @@
 
     <div class="zone">
 
-        <!-- <p class="hmobile">projects + studies</p> -->
+        <!-- <p class="hmobile">personal studies</p> -->
         <!-- <p>it's winter, 2019</p> -->
         <img src="projectsw/icu/1.jpg" alt="" >
             <img src="projectsw/icu/2.jpg" alt="" >
@@ -157,6 +153,22 @@
     window.addEventListener("load", function(){
         loader.style.display="none";
     })
+</script>
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+    const slides = Array.from(document.querySelectorAll(".mazframe img.slide"));
+    slides.reverse(); // Сначала нижние, потом верхние
+    slides.forEach((img, index) => {
+        const delay = index * 200;
+        const angle = (Math.random() - 0.5) * 10;
+        setTimeout(() => {
+            img.style.opacity = "1";
+            img.style.transform = `translate(-50%, -50%) scale(1) rotate(${angle}deg)`;
+        }, delay);
+    });
+});
+
 </script>
 
 </body>
