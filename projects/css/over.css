@@ -17,7 +17,7 @@ html,
 body {
     margin: 0;
     overflow: hidden;
-    background-color: #c38d9b;
+    background-color: #dfb3a1;
     font-family: 'horus';
     text-transform: uppercase;
 }
@@ -25,7 +25,7 @@ body {
 /* preloader */
 #preloader{
     /* background: rgba(194,255,37,1); */
-    background: #c38d9b;
+    background: #dfb3a1;
     height: 100vh;
     width: 100%;
     position: fixed;
