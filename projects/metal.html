@@ -140,6 +140,23 @@
     })
 </script>
 
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+    const slides = Array.from(document.querySelectorAll(".mazframe img.slide"));
+    slides.reverse(); // Сначала нижние, потом верхние
+    slides.forEach((img, index) => {
+        const delay = index * 200;
+        const angle = (Math.random() - 0.5) * 10;
+        setTimeout(() => {
+            img.style.opacity = "1";
+            img.style.transform = `translate(-50%, -50%) scale(1) rotate(${angle}deg)`;
+        }, delay);
+    });
+});
+
+</script>
+
+
 </body>
 
 </html>

@@ -134,6 +134,8 @@ body {
 }
 
 
+
+
 @keyframes rotateAnim {
 	from {
 		transform: rotate(360deg);
@@ -282,13 +284,16 @@ h1 {
 
 }
 
-.mazo img {
-    /* max-width: 450px; */
-    position: absolute;
-   
-    transform: translateX(-50%) translateY(-50%);
 
+.mazframe img.slide {
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.95) rotate(0deg);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    transform: translate(-50%, -50%) scale(0.95) rotate(0deg);
 }
+
+
 
 .mazo .one{
     top: 50%;
