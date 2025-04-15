@@ -592,7 +592,7 @@ svg {
     </div>
     </div>
     <!-- Карточка 2 фестех-->
-    <div class="card social direction web print merch grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-end-10" id="hover2" onmouseover="setupHoverEffect('hover2', './content/h/h-02.webp');">
+    <div class="card social direction web print merch grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-end-10" data-card-id="festtech24" id="hover2" onmouseover="setupHoverEffect('hover2', './content/h/h-02.webp');">
     <!-- Линия -->
     <div class="breakme h-px mb-8 col-start-1 col-end-13 bg-black lg:mt-14 lg:col-span-9 lg:col-start-1 lg:col-end-10">
     </div>
@@ -695,7 +695,7 @@ svg {
     </div>
     </div>
     <!-- Карточка 4 ммс-->
-    <div class="card social direction print merch grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-end-10" id="hover4" onmouseover="setupHoverEffect('hover4', './content/h/h-04.webp');">
+    <div class="card social direction print merch grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-end-10" data-card-id="mms" id="hover4" onmouseover="setupHoverEffect('hover4', './content/h/h-04.webp');">
     <!-- Линия -->
     <div class="breakme h-px mb-8 col-start-1 col-end-13 bg-black lg:mt-14 lg:col-span-9 lg:col-start-1 lg:col-end-10">
     </div>
@@ -786,7 +786,7 @@ svg {
     </div>
     </div>
     <!-- Карточка 5 анти-->
-    <div class="card direction social print grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-end-10" id="hover5" onmouseover="setupHoverEffect('hover5', './content/h/h-05.webp');">
+    <div class="card direction social print grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-end-10" data-card-id="anti" id="hover5" onmouseover="setupHoverEffect('hover5', './content/h/h-05.webp');">
     <!-- Линия -->
     <div class="breakme h-px mb-8 col-start-1 col-end-13 bg-black lg:mt-14 lg:col-span-9 lg:col-start-1 lg:col-end-10">
     </div>
@@ -832,7 +832,7 @@ svg {
     </div>
     </div>
     <!-- Карточка 6 фм -->
-    <div class="card identity direction social motion print merch grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-end-10" id="hover6" onmouseover="setupHoverEffect('hover6', './content/h/h-06.webp');">
+    <div class="card identity direction social motion print merch grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-end-10" data-card-id="fm" id="hover6" onmouseover="setupHoverEffect('hover6', './content/h/h-06.webp');">
     <!-- Линия -->
     <div class="breakme h-px mb-8 col-start-1 col-end-13 bg-black lg:mt-14 lg:col-span-9 lg:col-start-1 lg:col-end-10">
     </div>
@@ -1096,7 +1096,7 @@ svg {
     </div>
     </div>
     <!-- Карточка 13 громче-->
-    <div class="card identity direction social motion web print merch grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-end-10" id="hover13" onmouseover="setupHoverEffect('hover13', './content/h/h-13.webp');">
+    <div class="card identity direction social motion web print merch grid gap-2 grid-cols-12 col-span-12 col-start-1 col-end-13 lg:grid-cols-9 lg:col-start-1 lg:col-end-10" data-card-id="gromche" id="hover13" onmouseover="setupHoverEffect('hover13', './content/h/h-13.webp');">
     <!-- Линия -->
     <div class="breakme h-px mb-8 col-start-1 col-end-13 bg-black lg:mt-14 lg:col-span-9 lg:col-start-1 lg:col-end-10">
     </div>
@@ -3264,13 +3264,13 @@ svg {
 
 <!--вторые контакты-->
 
-<script>
+<script> 
     // Получаем элементы
     const toggleButton = document.getElementById('toggle2');
     const popover2 = document.getElementById('popover2');
     const closeButton = document.getElementById('close2');
     let intervalId2; // Переменная для хранения ID интервала второго попапа
-  
+
     // Функция для случайного движения
     function randomMovement2() {
       const randomX = (Math.random() - 0.5) * 8; // Случайное смещение по X в диапазоне ±4px
@@ -3280,12 +3280,12 @@ svg {
       popover2.style.transition = 'transform 0.2s ease-out'; // Плавное движение
       popover2.style.transform = `translate(${randomX}px, ${randomY}px)`;
     }
-  
+
     // Функция для открытия popover
     function openPopover() {
       popover2.classList.remove('opacity-0', 'scale-y-0');
       popover2.classList.add('opacity-100', 'scale-y-100');
-  
+
       // Останавливаем предыдущий таймер, если поповер уже был открыт
       if (intervalId2) {
         clearInterval(intervalId2);
@@ -3294,27 +3294,36 @@ svg {
       // Запускаем случайное движение поповера с интервалом 500 мс
       intervalId2 = setInterval(randomMovement2, 500); // Каждые 500 мс
     }
-  
+
     // Функция для закрытия popover
     function closePopover() {
       popover2.classList.remove('opacity-100', 'scale-y-100');
       popover2.classList.add('opacity-0', 'scale-y-0');
-  
+
       // Останавливаем таймер при закрытии поповера
       clearInterval(intervalId2);
     }
-  
+
+    // Проверка параметров URL при загрузке страницы
+    const urlParams = new URLSearchParams(window.location.search);
+    const cardParam = urlParams.get("card");
+
+    // Закрываем попап, если он не должен открываться с URL
+    if (cardParam) {
+      closePopover();
+    }
+
     // Слушаем события
     toggleButton.addEventListener('click', openPopover);
     closeButton.addEventListener('click', closePopover);
-  
+
     // Закрытие popover при нажатии клавиши ESC
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         closePopover();
       }
     });
-  
+
     // Закрытие popover при клике за пределами popover
     document.addEventListener('click', (e) => {
       if (!popover2.contains(e.target) && e.target !== toggleButton) {
@@ -3322,6 +3331,7 @@ svg {
       }
     });
 </script>
+
 
 
 
@@ -3351,6 +3361,8 @@ images.forEach(img => {
     });
 </script>
 
+<!-- фильтрация -->
+
 <script>
     $(document).ready(function () {
         // 1. Инициализация Isotope
@@ -3376,24 +3388,26 @@ images.forEach(img => {
         }
     
         // 3. Обработчик клика по кнопкам
-        $('.filter_buttons .boton').on('click', function () {
-            $('.filter_buttons .boton').removeClass('stevie-italic');
-            $(this).addClass('stevie-italic');
-    
-            var value = $(this).attr('data-filter');
-            $galleryContainer.isotope({ filter: value });
-    
-            // Обновление URL
-            var newUrl = new URL(window.location);
-            if (value === "*") {
-                newUrl.searchParams.delete("filter");
-            } else {
-                newUrl.searchParams.set("filter", value.replace(".", ""));
-            }
-            window.history.replaceState({}, "", newUrl);
-    
-            updateOpacity();
-        });
+$('.filter_buttons .boton').on('click', function () {
+    $('.filter_buttons .boton').removeClass('stevie-italic');
+    $(this).addClass('stevie-italic');
+
+    var value = $(this).attr('data-filter');
+    $galleryContainer.isotope({ filter: value });
+
+    // Обновление URL
+    var newUrl = new URL(window.location);
+    newUrl.searchParams.delete("card"); // <-- Удаляем card
+    if (value === "*") {
+        newUrl.searchParams.delete("filter");
+    } else {
+        newUrl.searchParams.set("filter", value.replace(".", ""));
+    }
+    window.history.replaceState({}, "", newUrl);
+
+    updateOpacity();
+});
+
     
         // 4. Hover эффекты
         $('.filter_buttons .boton').on('mouseenter', function () {
@@ -3405,23 +3419,35 @@ images.forEach(img => {
                 $(this).css('opacity', '0.5').next('span').css('opacity', '0.5');
             }
         });
-    
+
         // 5. Применяем фильтр из URL
-        var urlParams = new URLSearchParams(window.location.search);
-        var filterParam = urlParams.get("filter");
-    
-        if (filterParam) {
-            var filterValue = `.${filterParam}`;
-            var $targetButton = $('.filter_buttons .boton[data-filter="' + filterValue + '"]');
-    
-            if ($targetButton.length) {
-                $targetButton.trigger("click");
-            } else {
-                $('.filter_buttons .boton[data-filter="*"]').trigger("click");
-            }
-        } else {
-            $('.filter_buttons .boton[data-filter="*"]').trigger("click");
-        }
+var urlParams = new URLSearchParams(window.location.search);
+var filterParam = urlParams.get("filter");
+var cardParam = urlParams.get("card");
+
+if (cardParam) {
+    // Если указан параметр card — показываем только одну карточку
+    var cardSelector = `.card[data-card-id="${cardParam}"]`;
+    $galleryContainer.isotope({ filter: cardSelector });
+
+    // Снимаем активность со всех кнопок
+    $('.filter_buttons .boton').removeClass('stevie-italic');
+    updateOpacity();
+} else if (filterParam) {
+    // Если указан параметр filter — применяем соответствующий фильтр
+    var filterValue = `.${filterParam}`;
+    var $targetButton = $('.filter_buttons .boton[data-filter="' + filterValue + '"]');
+
+    if ($targetButton.length) {
+        $targetButton.trigger("click");
+    } else {
+        $('.filter_buttons .boton[data-filter="*"]').trigger("click");
+    }
+} else {
+    // По умолчанию — "всё"
+    $('.filter_buttons .boton[data-filter="*"]').trigger("click");
+}
+
     });
     </script>
     
