@@ -322,7 +322,9 @@ svg {
   
     <!-- Правая часть: Меню -->
     <div class="menu title uppercase text-custom-lg hidden lg:flex col-span-7 h-12 items-center justify-end space-x-2 pr-4 whitespace-nowrap">
-        <a class="opacity-50 inactive-link align-middle max-[1199px]:hidden" href="">selected works</a> 
+        <a href="#" id="selectedWorksLink" class="opacity-50 align-middle max-[1199px]:hidden cursor-pointer">
+            selected works
+          </a>
         <span class="max-[1199px]:hidden">/</span>
         <a href="/projects">studies</a> 
         <span>/</span>
@@ -382,8 +384,7 @@ svg {
 
         <!-- menu -->
 
-        <div
-            class="menu-mob bg-white pt-8 grid lg:hidden gap-2 grid-cols-12 col-span-12  sticky-container sticky-row">
+        <div class="menu-mob bg-white pt-8 grid lg:hidden gap-2 grid-cols-12 col-span-12  sticky-container sticky-row">
 
             <!-- Первый блок с col-start-1 до col-end-3 -->
             <div class="col-start-1 col-end-3 bg-white">
@@ -466,7 +467,10 @@ svg {
 
             <div class="lg:grid grid-cols-5 col-span-5 col-start-1 col-end-6 hidden-on-scroll hidden md:block">
 
-                <div class="col-span-1 col-start-1 title uppercase text-custom-lg">selected works</div>
+                <div id="selectedWorksDiv" class="col-span-1 col-start-1 title uppercase text-custom-lg cursor-pointer">
+                    selected works
+                  </div>
+                  
 
                 <div class="col-span-2 col-start-3 ">
                     <a class="opacity-50 hover:opacity-100" href="/projects">studies</a><br>
@@ -3449,6 +3453,21 @@ if (cardParam) {
 }
 
     });
+    </script>
+
+    <script>
+        // Клик по "selected works" (вторая версия, со стилями)
+$('#selectedWorksLink').on('click', function (e) {
+    e.preventDefault();
+    $('.filter_buttons .boton[data-filter="*"]').trigger("click");
+});
+
+// Клик по "selected works" (первая версия — div)
+$('#selectedWorksDiv').on('click', function () {
+    $('.filter_buttons .boton[data-filter="*"]').trigger("click");
+});
+
+
     </script>
     
 
