@@ -3345,104 +3345,80 @@ images.forEach(img => {
 
     </script>
 
-    <script>
+<script>
     $(document).ready(function () {
-    var urlParams = new URLSearchParams(window.location.search);
-    var filterParam = urlParams.get("filter");
-
-    if (filterParam) {
-        var filterValue = `.${filterParam}`;
-        var $targetButton = $('.filter_buttons .boton[data-filter="' + filterValue + '"]');
-
-        if ($targetButton.length) {
-            $targetButton.trigger("click"); // Активируем фильтр из URL
-            return; // Не выбираем "*"
-        }
-    }
-
-    // Если параметр фильтра не задан, выбираем "everything"
-    $('.filter_buttons .boton[data-filter="*"]').trigger("click");
-
-    // Обновляем URL при клике на кнопки фильтра
-    $('.filter_buttons .boton').on('click', function () {
-        var value = $(this).attr('data-filter');
-        var newUrl = new URL(window.location);
-
-        if (value === "*") {
-            newUrl.searchParams.delete("filter"); // Убираем параметр, если выбрано всё
-        } else {
-            newUrl.searchParams.set("filter", value.replace(".", "")); // Добавляем параметр
-        }
-
-        window.history.replaceState({}, "", newUrl); // Обновляем URL без перезагрузки
-    });
-});
-
-</script>
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            Fancybox.bind("[data-fancybox]", {});
-        });
-    </script>
-
-    <script type="text/javascript">
+        // 1. Инициализация Isotope
         var $galleryContainer = $('.filterable_cards').isotope({
-    itemSelector: '.card',
-    layoutMode: 'vertical',
-    stagger: 30,
-    hiddenStyle: { opacity: 0 },
-    visibleStyle: { opacity: 1 },
-    isOriginLeft: false,
-    isOriginTop: true
-});
-
-function updateOpacity() {
-    $('.filter_buttons .boton').each(function () {
-        if ($(this).hasClass('stevie-italic')) {
-            $(this).css('opacity', '1').next('span').css('opacity', '1');
+            itemSelector: '.card',
+            layoutMode: 'vertical',
+            stagger: 30,
+            hiddenStyle: { opacity: 0 },
+            visibleStyle: { opacity: 1 },
+            isOriginLeft: false,
+            isOriginTop: true
+        });
+    
+        // 2. Обновление opacity кнопок
+        function updateOpacity() {
+            $('.filter_buttons .boton').each(function () {
+                if ($(this).hasClass('stevie-italic')) {
+                    $(this).css('opacity', '1').next('span').css('opacity', '1');
+                } else {
+                    $(this).css('opacity', '0.5').next('span').css('opacity', '0.5');
+                }
+            });
+        }
+    
+        // 3. Обработчик клика по кнопкам
+        $('.filter_buttons .boton').on('click', function () {
+            $('.filter_buttons .boton').removeClass('stevie-italic');
+            $(this).addClass('stevie-italic');
+    
+            var value = $(this).attr('data-filter');
+            $galleryContainer.isotope({ filter: value });
+    
+            // Обновление URL
+            var newUrl = new URL(window.location);
+            if (value === "*") {
+                newUrl.searchParams.delete("filter");
+            } else {
+                newUrl.searchParams.set("filter", value.replace(".", ""));
+            }
+            window.history.replaceState({}, "", newUrl);
+    
+            updateOpacity();
+        });
+    
+        // 4. Hover эффекты
+        $('.filter_buttons .boton').on('mouseenter', function () {
+            if (!$(this).hasClass('stevie-italic')) {
+                $(this).css('opacity', '0.75').next('span').css('opacity', '0.75');
+            }
+        }).on('mouseleave', function () {
+            if (!$(this).hasClass('stevie-italic')) {
+                $(this).css('opacity', '0.5').next('span').css('opacity', '0.5');
+            }
+        });
+    
+        // 5. Применяем фильтр из URL
+        var urlParams = new URLSearchParams(window.location.search);
+        var filterParam = urlParams.get("filter");
+    
+        if (filterParam) {
+            var filterValue = `.${filterParam}`;
+            var $targetButton = $('.filter_buttons .boton[data-filter="' + filterValue + '"]');
+    
+            if ($targetButton.length) {
+                $targetButton.trigger("click");
+            } else {
+                $('.filter_buttons .boton[data-filter="*"]').trigger("click");
+            }
         } else {
-            $(this).css('opacity', '0.5').next('span').css('opacity', '0.5');
+            $('.filter_buttons .boton[data-filter="*"]').trigger("click");
         }
     });
-}
-
-// Обработчик клика
-$('.filter_buttons .boton').on('click', function () {
-    $('.filter_buttons .boton').removeClass('stevie-italic');
-    $(this).addClass('stevie-italic');
-
-    var value = $(this).attr('data-filter');
-    $galleryContainer.isotope({ filter: value });
-
-    updateOpacity();
-});
-
-// Обработчики наведения
-$('.filter_buttons .boton').on('mouseenter', function () {
-    if (!$(this).hasClass('stevie-italic')) {
-        $(this).css('opacity', '0.75').next('span').css('opacity', '0.75');
-    }
-}).on('mouseleave', function () {
-    if (!$(this).hasClass('stevie-italic')) {
-        $(this).css('opacity', '0.5').next('span').css('opacity', '0.5');
-    }
-});
-
-// Устанавливаем "everything" как активную кнопку при загрузке
-$(document).ready(function () {
-    var $defaultButton = $('.filter_buttons .boton[data-filter="*"]');
-
-    // Принудительная задержка для предотвращения сброса
-    setTimeout(function () {
-        $defaultButton.addClass('stevie-italic');
-        $galleryContainer.isotope({ filter: '*' });
-        updateOpacity();
-    }, 100);
-});
-
     </script>
+    
 
     <script>
         function setupHoverEffect(hoverDivId, hoverImageSrc) {
