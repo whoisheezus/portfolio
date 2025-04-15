@@ -3346,6 +3346,12 @@ images.forEach(img => {
     </script>
 
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        Fancybox.bind("[data-fancybox]", {});
+    });
+</script>
+
+<script>
     $(document).ready(function () {
         // 1. Инициализация Isotope
         var $galleryContainer = $('.filterable_cards').isotope({
