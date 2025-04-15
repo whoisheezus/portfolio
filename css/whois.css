@@ -2,16 +2,27 @@
     box-sizing: border-box;
   }
   
+  @font-face {
+    font-family: 'horus';
+    src: url('./assets/premio.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  
+
   html, body {
     font-size: 16px;
     /* font-family: Helvetica; */
-    font-family: 'IBM Plex Mono', monospace;
+     font-family: 'IBM Plex Mono', monospace; 
     /* font-weight: 300;
     line-height: 1.25; */
     overflow: scroll;
     overflow-x: hidden;
     margin: 0;
   }
+
 
   body {
     background: radial-gradient(50% 50% at 50% 50%, #262521 0%, #000 100%), #0c0c0c;
@@ -220,7 +231,8 @@ to {
     transform: rotate(270deg) translateX(-100vh);
     transform-origin: left top;
     height: 40px;
-    font-family: Helvetica;
+    /* font-family: Helvetica; */
+    font-family: 'IBM Plex Mono', monospace; 
     text-transform: uppercase;
     font-size: 20px;
     margin-left: 20px;
@@ -243,7 +255,8 @@ to {
     transform: rotate(90deg);
     transform-origin: left top;
     left: calc(100vw - 20px);
-    font-family: Helvetica;
+    /* font-family: Helvetica; */
+    font-family: 'IBM Plex Mono', monospace; 
     text-transform: uppercase;
     font-size: 20px;
     z-index: 25;
@@ -395,12 +408,21 @@ mark {
     grid-row: 1 / 6;
     z-index: 1;
   }
+  
 
   .bio{
+    position: relative;
+    z-index: 25;
     width: 800px;
     margin: 0 auto;  
     padding: 40px 0;
-    font-family: Helvetica;
+    /*font-family: Helvetica;*/
+    font-family: "stevie-sans", sans-serif;
+    letter-spacing: -0.05em;
+
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.2rem;
   }
 
   @media screen and (max-width: 900px){

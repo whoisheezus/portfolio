@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>who is heezus?</title>
+    
+    <link rel="stylesheet" href="https://use.typekit.net/pyu5jsd.css">
     <link rel="stylesheet" href="css/whois.css">
     <link rel="shortcut icon" href="/img/heezus.ico" />
 </head>
@@ -28,21 +30,19 @@
 
     <div class="left">
         <div class="lpages">
+
+          <a href="/index">heezus</a> /
+          <a href="/portfolio">selected works</a> /
             
-            <a href="/projects">projects + studies</a> /
-            <a href="/personalities">personalities</a> /
-            <a href="/classics">classics</a> /
-            <a href="/ar">AR</a> /
-            <a href="/3d">3D</a> 
+            <a href="/projects">personal studies</a>
         </div>
     </div>
 
     <div class="right">
         <div class="rpages">
-            <a href="/index">heezus</a> /
-            about /
-            <a href="https://smorgasbord.heez.us/">misc gigs</a> /
-            <a href="https://honoryourvomit.heez.us/">wip</a> 
+          <a href="https://smorgasbord.heez.us/">proto genesis</a> /
+          <a href="/ar">AR</a> /
+            about me
         </div>
         
     </div>
@@ -59,6 +59,7 @@
 
             <div class="grid-container">
                 <div class="grid" aria-hidden="true">
+                  
                   <div class="grid__item grid__item--bg">
                   <img src="/img/me-0.png" alt="">
                 </div>
@@ -110,14 +111,50 @@
           <a href="http://instagram.com/whoisheezus">instagram</a> or <a href="http://twitter.com/whoisheezus">twitter</a>. 
         </p>
       </div>
+      
 
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-    <script src="/js/about-me.js"></script>
+    <!-- <script src="/js/about-me.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script>
+      const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    
+      // Проверяем настройки пользователя
+      if (!motionMediaQuery.matches) {
+        new Rellax('.rellax', {
+          breakpoints: [576, 768, 1201],
+          center: false
+        });
+      }
+    </script>
+
+
+     
     <script>
       var loader = document.getElementById("preloader");
       window.addEventListener("load", function(){
           loader.style.display="none";
       })
+  </script>
+
+  <script>
+    const floatingElements = document.querySelectorAll('.grid__item');
+
+floatingElements.forEach(el => {
+  const randomAngle = (Math.random() * 10 - 5).toFixed(2);  // Случайное число от -5 до 5
+
+  // Добавляем CSS-анимацию для поворота
+  el.style.transition = 'transform 3s ease-in-out'; // Плавность анимации
+  el.style.transform = `rotate(${randomAngle}deg)`;  // Применяем случайный поворот
+
+  // Повторяем анимацию через setInterval для постепенного обновления
+  setInterval(() => {
+    const randomAngle = (Math.random() * 10 - 5).toFixed(2);
+    el.style.transform = `rotate(${randomAngle}deg)`;
+  }, 3000);  // Перезапуск анимации каждые 3 секунды
+});
+
   </script>
 
 </body>
