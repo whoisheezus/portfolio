@@ -3782,13 +3782,14 @@
         }
 
         // Проверка параметров URL при загрузке страницы
-        const urlParams = new URLSearchParams(window.location.search);
-        const cardParam = urlParams.get("card");
+    const urlParams = new URLSearchParams(window.location.search);
+    const cardParam = urlParams.get("card");
+    const filterParam = urlParams.get("filter");
 
-        // Закрываем попап, если он не должен открываться с URL
-        if (cardParam) {
-            closePopover();
-        }
+    // Если есть параметр card или filter=freelance — не показывать поповер
+    if (cardParam || filterParam === 'freelance') {
+      closePopover(); // Закрываем поповер, если условия выполнены
+    }
 
         // Слушаем события
         toggleButton.addEventListener('click', openPopover);
