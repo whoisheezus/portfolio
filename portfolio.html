@@ -3928,6 +3928,17 @@
     // Снимаем активность со всех кнопок
     $('.filter_buttons .boton').removeClass('stevie-italic');
     updateOpacity();
+
+} else if (filterParam === "freelance") {
+    // Специальный скрытый фильтр, доступный только по ссылке
+    $galleryContainer.isotope({
+        filter: ".freelance"
+    });
+
+    // Снимаем активность со всех кнопок
+    $('.filter_buttons .boton').removeClass('stevie-italic');
+    updateOpacity();
+
 } else if (filterParam) {
     // Если указан параметр filter — применяем соответствующий фильтр
     var filterValue = `.${filterParam}`;
@@ -3938,10 +3949,12 @@
     } else {
         $('.filter_buttons .boton[data-filter="*"]').trigger("click");
     }
+
 } else {
     // По умолчанию — "всё"
     $('.filter_buttons .boton[data-filter="*"]').trigger("click");
 }
+
 
 
         });
