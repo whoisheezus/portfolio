@@ -3912,29 +3912,32 @@
             var cardParam = urlParams.get("card");
 
             if (cardParam) {
-                // Если указан параметр card — показываем только одну карточку
-                var cardSelector = `.card[data-card-id="${cardParam}"]`;
-                $galleryContainer.isotope({
-                    filter: cardSelector
-                });
+    // Если указан параметр card — показываем одну или несколько карточек
+    var cardIds = cardParam.split(/\s|\+/); // Разделение по пробелу или +
+    var cardSelector = cardIds.map(id => `.card[data-card-id="${id}"]`).join(', ');
 
-                // Снимаем активность со всех кнопок
-                $('.filter_buttons .boton').removeClass('stevie-italic');
-                updateOpacity();
-            } else if (filterParam) {
-                // Если указан параметр filter — применяем соответствующий фильтр
-                var filterValue = `.${filterParam}`;
-                var $targetButton = $('.filter_buttons .boton[data-filter="' + filterValue + '"]');
+    $galleryContainer.isotope({
+        filter: cardSelector
+    });
 
-                if ($targetButton.length) {
-                    $targetButton.trigger("click");
-                } else {
-                    $('.filter_buttons .boton[data-filter="*"]').trigger("click");
-                }
-            } else {
-                // По умолчанию — "всё"
-                $('.filter_buttons .boton[data-filter="*"]').trigger("click");
-            }
+    // Снимаем активность со всех кнопок
+    $('.filter_buttons .boton').removeClass('stevie-italic');
+    updateOpacity();
+} else if (filterParam) {
+    // Если указан параметр filter — применяем соответствующий фильтр
+    var filterValue = `.${filterParam}`;
+    var $targetButton = $('.filter_buttons .boton[data-filter="' + filterValue + '"]');
+
+    if ($targetButton.length) {
+        $targetButton.trigger("click");
+    } else {
+        $('.filter_buttons .boton[data-filter="*"]').trigger("click");
+    }
+} else {
+    // По умолчанию — "всё"
+    $('.filter_buttons .boton[data-filter="*"]').trigger("click");
+}
+
 
         });
     </script>
