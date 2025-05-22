@@ -3940,7 +3940,19 @@
     $('.filter_buttons .boton').removeClass('stevie-italic');
     updateOpacity();
 
-} else if (filterParam) {
+} else if (filterParam === "slides") {
+    // Специальный скрытый фильтр, доступный только по ссылке
+    $galleryContainer.isotope({
+        filter: ".slides"
+    });
+
+    // Снимаем активность со всех кнопок
+    $('.filter_buttons .boton').removeClass('stevie-italic');
+    updateOpacity();
+
+}
+
+else if (filterParam) {
     // Если указан параметр filter — применяем соответствующий фильтр
     var filterValue = `.${filterParam}`;
     var $targetButton = $('.filter_buttons .boton[data-filter="' + filterValue + '"]');
