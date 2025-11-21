@@ -275,10 +275,10 @@ h1 {
 }
 
 .kurt-2 {
-    width: 25vw;
+    width: 28vw;
     position: absolute;
-    left: 64%;
-    top: 22%;
+    left: 57%;
+    top: 13%;
     z-index: 1;
 }
 
@@ -296,18 +296,18 @@ h1 {
 }
 
 .kurt-4 {
-    width: 25vw;
+    width: 26vw;
     position: absolute;
     left: 49%;
-    top: 70%;
+    top: 68%;
     z-index: 1;
 }
 
 .kurt-5 {
-    width: 18vw;
+    width: 19vw;
     position: absolute;
-    left: 40%;
-    top: 6%;
+    left: 43%;
+    top: 3%;
     z-index: 1;
 }
 
@@ -315,22 +315,22 @@ h1 {
     width: 20vw;
     position: absolute;
     left: 80%;
-    top: 42%;
+    top: 17%;
     z-index: 1;
 }
 
 .kurt-7 {
-    width: 15vw;
+    width: 25vw;
     position: absolute;
-    left: 27%;
+    left: 24%;
     top: 69%;
     z-index: 1;
 }
 
 .kurt-8 {
-    width: 12vw;
+    width: 19vw;
     position: absolute;
-    left: 24%;
+    left: 18%;
     top: 0%;
     z-index: 1;
 

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal studies</title>
+    <link rel="stylesheet" href="/css/projects.css">
+    <link rel="shortcut icon" href="/img/heezus.ico" />
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
+
+        @font-face {
+  font-family: 'horus';
+  src: url('./assets/premio.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+        #container {
+            position: absolute;
+            filter: url(#threshold) blur(0.6px);
+            height: 75vh;
+            width: 70%;
+            margin: 0;
+            padding: 0;
+            font-size: 6em;
+            text-align: center;
+            text-transform: uppercase;
+            z-index: 50;
+            pointer-events: none;
+            line-height: 90px;
+        }
+
+        #text1,
+        #text2 {
+            position: absolute;
+            top: 70%;
+    left: 57%;
+    transform: translateX(-50%) translateY(-50%);
+            width: 70%;
+            display: inline-block;
+            font-family: 'horus', sans-serif;
+            font-size: 90pt;
+            text-align: center;
+        }
+
+        /* SVG для фильтра */
+        #filters {
+            position: absolute;
+            visibility: hidden;
+        }
+
+
+        .media{
+            width: 600px;
+            text-align: right;
+        }
+        /* Применяем стиль ко всем текстовым элементам */
+        .media li, .media a, .logo {
+            font-family: 'horus', sans-serif;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: filter 2s ease-out, transform 2s ease-out; /* Плавное изменение фильтра и трансформации */
+        }
+
+        /* Применяем эффект только при наведении на li или a */
+        .media li:hover, .media a:hover, .logo:hover {
+            filter: url(#threshold-bleed); /* Применение эффекта при наведении */
+        }
+
+        /* плавание куртов */
+
+    .kurt-1,
+.kurt-2,
+.kurt-3,
+.kurt-4,
+.kurt-5,
+.kurt-6,
+.kurt-7,
+.kurt-8 {
+    will-change: transform;
+    transition: transform 4s cubic-bezier(0.605, 0.010, 0.535, 0.995);
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- preloader -->
+
+    <div id="preloader">
+        <div class="overlay-loader">
+            <div class="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- mobile navigation -->
+
+    <div class="right">
+        <div class="pages">
+            <a href="/portfolio">selected works</a> /
+            <a href="/ar">AR</a> /
+            <a href="https://smorgasbord.heez.us/">proto genesis</a> /
+            <a href="/whois">about me</a>
+        </div>
+    </div>
+
+    <div class="left">
+        <div class="lpages">
+            <a href="/index">heezus</a> /
+            <a href="/projects">personal studies</a>
+        </div>
+    </div>
+
+    <!-- navigation -->
+
+<nav class="navbar">
+    <div class="logo">
+        <a href="/index"><img src="/img/logo-2.png" alt=""></a>
+    </div>
+
+    <div class="media">
+        <ul>
+            <li style="opacity: 50%;">studies</li>
+            <li><a href="/portfolio">selected works</a></li>
+            <li><a href="/ar">AR</a></li>
+            <li><a href="https://smorgasbord.heez.us/">proto genesis</a></li>
+            <li><a href="/whois.html">about me</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+    <!-- Text containers wrapped in a parent container -->
+    <div id="container">
+        <span id="text1">personal studies</span>
+        <span id="text2"></span>
+    </div>
+
+
+
+
+    <!-- main base -->
+
+    <!--<h1 id="title">projects + studies</h1>-->
+
+    <div class="main" id="mainBg">
+    </div>
+
+
+    <!-- items -->
+
+    <div id="kurt1" class="kurt-1">
+        <a href="/projects/ot">
+            <img onmouseover="changeLayout('#c3203c', 'otvaal', 'kurt1')" onmouseout="returnLayout('kurt1')"
+                src="img/webp/ot2.png" alt="">
+        </a>
+    </div>
+
+    <div id="kurt2" class="kurt-2">
+        <a href="/projects/inturist">
+            <img onmouseover="changeLayout('#515877', 'inturist', 'kurt2')" onmouseout="returnLayout('kurt2')"
+                src="img/webp/in2.png" alt="">
+        </a>
+    </div>
+
+    <div id="kurt3" class="kurt-3">
+        <a href="/projects/over">
+            <img onmouseover="changeLayout('#dfb3a1', 'postcards of overexposed healing', 'kurt3')"
+                onmouseout="returnLayout('kurt3')" src="img/webp/overexposed2.png" alt="">
+        </a>
+    </div>
+
+    <div id="kurt4" class="kurt-4">
+        <a href="/projects/mazo">
+            <img onmouseover="changeLayout('#992315', 'it is winter', 'kurt4')" onmouseout="returnLayout('kurt4')"
+                src="img/webp/sh2.png" alt="">
+        </a>
+    </div>
+
+    <div id="kurt5" class="kurt-5">
+        <a href="/projects/oq">
+            <img onmouseover="changeLayout('#e34b24', 'oqjav', 'kurt5')" onmouseout="returnLayout('kurt5')"
+                src="img/webp/oqjav2.png" alt="">
+        </a>
+    </div>
+
+    <div id="kurt6" class="kurt-6">
+        <a href="/projects/icu">
+            <img onmouseover="changeLayout('#c38d9b', 'i see you', 'kurt6')" onmouseout="returnLayout('kurt6')"
+                src="img/webp/icu2.png" alt="">
+        </a>
+    </div>
+
+    <div id="kurt7" class="kurt-7">
+        <a href="/projects/cph">
+            <img onmouseover="changeLayout('#463a5f', 'cph', 'kurt7')" onmouseout="returnLayout('kurt7')"
+                src="img/webp/cph2.png" alt="">
+        </a>
+    </div>
+
+    <div id="kurt8" class="kurt-8">
+        <a href="/projects/metal">
+            <img onmouseover="changeLayout('#0b86e1', 'metallostroy', 'kurt8')" onmouseout="returnLayout('kurt8')"
+                src="img/webp/meta2.png" alt="">
+        </a>
+    </div>
+
+
+
+    </div>
+
+    <!-- mobile options -->
+
+    <div class="zone">
+
+        <!-- <p class="hmobile">projects + studies</p> -->
+        <a href="/projects/mazo"><img src="img/webp/sh2.png " alt=""></a>
+        <p>it's winter</p>
+        <a href="/projects/inturist"><img src="img/webp/in2.png " alt=""></a>
+        <p>inturist</p>
+        <a href="/projects/icu"><img src="img/webp/icu2.png " alt=""></a>
+        <p>I See You</p>
+        <a href="/projects/over"><img src="img/webp/overexposed2.png" alt=""></a>
+        <p>overexposed healing</p>
+        <a href="/projects/ot"><img src="img/webp/ot2.png " alt=""></a>
+        <p>otvaal</p>
+        <a href="/projects/cph"><img src="img/webp/cph2.png " alt=""></a>
+        <p>cph</p>
+        <a href="/projects/metal"><img src="img/webp/meta2.png " alt=""></a>
+        <p>metallostroy</p>
+        <a href="/projects/oq"><img src="img/webp/oqjav2.png" alt=""></a>
+        <p>oqjav</p>
+    </div>
+
+
+
+    <!-- overlay  -->
+
+    <div id="mainOverlay" class="overlay">
+    </div>
+
+    <!-- SVG-фильтр -->
+    <svg id="filters">
+        <defs>
+            <filter id="threshold">
+                <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                        0 1 0 0 0
+                        0 0 1 0 0
+                        0 0 0 255 -140" />
+            </filter>
+
+            <!-- Threshold с эффектом bleeding (уменьшенный блюр) -->
+            <filter id="threshold-bleed">
+                <!-- Уменьшенное размытие для эффекта растекания -->
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1.1" result="blur" /> <!-- Уменьшенный блюр -->
+                <!-- Применение порога для сохранения жёсткости -->
+                <feColorMatrix 
+                    in="blur" 
+                    type="matrix" 
+                    values="1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 255 -100" />
+            </filter>
+        </defs>
+    </svg>
+
+
+
+    <script>
+        const elts = {
+            text1: document.getElementById("text1"),
+            text2: document.getElementById("text2")
+        };
+
+        const defaultText = "personal studies"; // Default text
+        const morphTime = 1; // Morph duration in seconds
+
+        // Morphing function for text change
+        function setText(word) {
+            if (elts.text1.textContent === word) return; // If the text is the same, do nothing
+
+            // Reset current text and initiate new text animation
+            elts.text2.textContent = word;
+
+            let startTime = null;
+
+            function animateMorph(time) {
+                if (!startTime) startTime = time;
+                const elapsed = (time - startTime) / 1000;
+                const fraction = Math.min(elapsed / morphTime, 1);
+
+                // Apply blur and opacity for smooth transition
+                elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+                elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+                const reverseFraction = 1 - fraction;
+                elts.text1.style.filter = `blur(${Math.min(8 / reverseFraction - 8, 100)}px)`;
+                elts.text1.style.opacity = `${Math.pow(reverseFraction, 0.4) * 100}%`;
+
+                if (fraction < 1) {
+                    requestAnimationFrame(animateMorph);
+                } else {
+                    elts.text1.textContent = word;
+                    elts.text1.style.filter = "";
+                    elts.text1.style.opacity = "100%";
+                    elts.text2.style.filter = "";
+                    elts.text2.style.opacity = "0%";
+                }
+            }
+
+            requestAnimationFrame(animateMorph);
+        }
+
+        // Layout change logic for each kurt item
+        function changeLayout(newMainBg, newTitle, newBlock) {
+    document.getElementById('mainBg').style.backgroundColor = newMainBg;
+    
+    // Устанавливаем плавный переход для оверлея
+    const overlay = document.getElementById("mainOverlay");
+    overlay.style.transition = "background-color 0.5s ease, opacity 0.5s ease"; // Включаем плавность
+    
+    overlay.style.backgroundColor = newMainBg; // Устанавливаем новый цвет фона
+    overlay.style.opacity = '0.7'; // Устанавливаем прозрачность
+    overlay.style.zIndex = '2'; // Устанавливаем z-index для оверлея
+
+    setText(newTitle); // Обновляем текст через morph эффект
+
+    var imgElement = document.querySelector(`#${newBlock} img`);
+    imgElement.style.transform = `rotate(${Math.random() * 10 - 5}deg) scale(${1 + (Math.random() * 0.2)})`; // Легкое вращение и масштабирование
+
+    document.getElementById(newBlock).style.zIndex = '10';
+
+    setTimeout(() => {
+        applySVGFilter(newMainBg);
+    }, 500);
+}
+
+function returnLayout(newBlock) {
+    document.getElementById("mainBg").style.backgroundColor = '#060606';
+    
+    const overlay = document.getElementById("mainOverlay");
+    overlay.style.transition = "background-color 0.5s ease, opacity 0.5s ease"; // Включаем плавный переход при возврате
+    overlay.style.backgroundColor = '#060606'; // Возвращаем цвет фона
+    overlay.style.opacity = '0'; // Убираем прозрачность
+    overlay.style.zIndex = '0'; // Убираем с переднего плана
+
+    setText(defaultText); // Возвращаем исходный текст
+
+    var imgElement = document.querySelector(`#${newBlock} img`);
+    imgElement.style.transform = 'rotate(0deg) scale(1)'; // Сбрасываем трансформацию
+
+    document.getElementById(newBlock).style.zIndex = '1';
+
+    removeSVGFilter(); // Убираем SVG фильтр
+}
+
+    </script>
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+    </script>
+
+
+<script>
+    function randomFloat(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+    
+    function animateFloating(el) {
+        const x = randomFloat(-30, 30);
+        const y = randomFloat(-30, 30);
+        el.style.transform = `translate(${x}px, ${y}px)`;
+        
+        setTimeout(() => animateFloating(el), 4000); // повтор через 4 сек
+    }
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll('[id^="kurt"]');
+        elements.forEach(el => animateFloating(el));
+    });
+    </script>
+
+    
+    
+</body>
+
+</html>
